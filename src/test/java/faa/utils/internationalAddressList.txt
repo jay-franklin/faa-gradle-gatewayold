@@ -1,0 +1,50 @@
+International Addresses
+FRA,65 Bis Rue d'Anjou, Versailles, Versailles, France, 78000
+FRA,61 Bis Rue d'Anjou, Versailles, Versailles, France, 78000
+FRA,60 Bis Rue d'Anjou, Versailles, Versailles, France, 78000
+FRA,33 Rue Saint-Louis, Versailles, Versailles, France, 78000
+FRA,13 Rue Mgr Gibier,  Versailles, Versailles, France, 78000
+FRA,14 Rue Mgr Gibier,  Versailles, Versailles, France, 78000
+FRA,14 Rue d'Anjou,  Versailles, Versailles, France, 78000
+FRA,16 Rue des Francs Bourgeois,  Paris, Paris, France, 75003
+FRA,152 Boulevard Voltaire,  Paris, Paris, France, 75011
+NLD, Gedempte Zuiderdiep 78, 9711 HL Groningen, Groningen, Netherlands
+NLD, Vismarkt 27, 9712 CA Groningen, Groningen, Netherlands
+FRA, Rue Port Notre Dame, 17740 Sainte-Marie-de-Ré, Sainte-Marie-de-Ré, France
+fra, 1-3 Rue Thiers, 17000 La Rochelle, France
+FRA, 30 Rue Rameau, La Rochelle, La Rochelle , 17000,France
+
+BEL, Avenue de l'Atomium, 1020 Bruxelles, Belgium
+BEL, 1083 Ganshoren, Belgium
+BEL, Avenue de Jette 406, 1083 Ganshoren, Belgium
+BEL, Avenue de Jette 366, 1090 Jette, Belgium
+BEL, Rue Léon Dopéré 78, 1090 Jette (Bruxelles), Belgium
+BEL, Avenue de Jette 257, 1083 Ganshoren, Belgium
+CHN, NO. 9 Jiangguo Mennei Street, Beijing, Beijing 100005, China
+CHN, Building 1, No.11 Sanlitun Road, Beijing,Beijing  100027, China
+CHN, Baochao Hutong NO. 65 Gulou East Main Street, Beijing 100009, China
+TUR, Alemdar Mahallesi Catalcesme Sok No:21, Istanbul 34110, Turkey
+
+JOR, Mahmoud Ibrahim Al Badawi & Partners Co, Al Qastalani St 42, Amman 11591, Jordan
+JOR, Suleiman Mohammad Al Banna & Sons Co, Ubay Bin Muath St 48, Amman 11593, Jordan
+JOR, Arizona Foodstuff Distribution Co, Al Fakeh Bin Al Sakan St 4, Amman 11511, Jordan
+JOR, Complex No 31, Moh'd Maqboul Al Talafeeh St 31, Amman, Jordan
+JOR, Prince Hashim Bin Al Hussein, Amman, Jordan
+JOR, Complex No 62, Mohammad Reda Al Shabibi St 62, Jordan
+JOR Al Khader Complex, Al Hurriyah St 243, 11623, Jordan
+
+GBR, St. Martin's Pl, London WC2H 0HE, United Kingdom
+GBR, 111 New Bond St, London W1S 1DP, United Kingdom
+GBR, 10 Downing St, London SW1A 2AA, United Kingdom
+GBR, London SW1A 0AA, United Kingdom
+GBR, 20 Deans Yd, London SW1P 3PA, United KiGBR, Marlborough Rd, London SW1A 1BS, United Kingdom
+GBR, Lambeth Rd, London SE1 6HZ, United Kingdom
+GBR, Whitehorse Ln, London SE25 6PU, United Kingdom
+GBR, Marine Parade, Weston-super-Mare BS23 1AL, United Kingdom
+GBR, 81 Beach Rd, Kewstoke, Weston-super-Mare BS22 9UQ, United Kingdom
+GBR, 67 Beach Rd, Kewstoke, Weston-super-Mare BS22 9UR, United Kingdom
+GBR, Queens's Way, Weston-super-Mare BS22 6BP, United Kingdom
+GBR, St Marks Rd, Weston-super-Mare BS22 7PW, United Kingdom
+6, 56 Hope Rd, Kingston, Jamaica
+JAM, 6, 56 Hope Rd, Kingston, Jamaica
+JAM, 25 Dominica Drive, Towers Building: 10th floor, Kingston 5, Jamaica

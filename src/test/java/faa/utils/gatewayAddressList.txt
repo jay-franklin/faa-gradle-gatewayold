@@ -1,0 +1,123 @@
+United States,21000 Atlantic Blvd Ste 100,,Sterling,Virginia,20166
+United States,967 North Broadway-Andrus Pavillion-Saint John's Riverside,,Yonkers,New York,10701
+United States,10000 North 31 Avenue,,Phoenix,Arizona,85051
+United States,2460 Clay Bank Road (Building 1),,Fairfield,California,94533
+United States,2221 Argonne Avenue ,,Long Beach,California,90815
+United States,5959 Greenback Lane #500,,Citrus Heights,California,95621
+United States,22250 Elkwood Street,,Canoga Park,California,91304
+United States,369 College Road ,,Richlands,Virginia,24641
+United States,5001 Lyndon B. Johnson Freeway  Heritage Square,,Farmers Branch,Texas,75244
+United States,50 Penn Place Office Tower,,Oklahoma City,Oklahoma,73118
+United States,1380 Lawrence Street  Lawrence Street Center,,Denver,Colorado,80217
+United States,364 Henry Administration Building  506 S Wright Street,,Urbana,Illinois,61801
+United States,680 Sonoma Mountain Parkway,,Petaluma,California,94954
+United States,1950 N. Stemmons Freeway,,Dallas,Texas,75207
+United States,8441 State Hwy 47  Clinical Building 1 - Suite 3100,,Bryan,Texas,77807
+United States,100 Universal City Plaza  Building 9128 / Suite 179,,Universal City,California,91608
+United States,13699 South Quince Quince Avenue and Tiller Avenue,,Caruthers,California,93609
+United States,10 Sonoma Avenue Building 942 Camp San Luis Obispo,,San Luis Obispo,California,93405
+United States,2 Teleport Drive  Suite 203,,Staten Island,New York,10311
+United States,111 S. Independence Mall East,,Philadelphia,Pennsylvania,19106
+United States,13801 Riverport Dr,,Saint Louis,Missouri,63043
+United States,100 Universal City Plaza  Building 9128  Suite 179,,Universal City,California,91608
+United States,Highway 32 And Los Robles Street 300 Sixth Street,,Hamilton City,California,95951
+United States,Loma Vista Adult Center - 1266 San Carlos Avenue.,,Concord,California,94518
+United States,1430 N Street  Suite 5401 School Fiscal Services,,Sacramento,California,94214
+United States,6930 State Highway 3 Highway 3 and School Street,,Hayfork,California,96041
+United States,1900 S. Knoles Dr  Babbitt Administrative Center,,Flagstaff,Arizona,86011
+United States,6302 E. Dr. Martin Luther King Jr. Blvd  Ste 400,,Tampa,Florida,33619
+United States,Three Lakepointe Plaze  2110 Water Ridge Parkway,,Charlotte,North Carolina,28217
+United States,Claiborne Building  1201 N. 3rd St.  Suite 7-300,,Baton Rouge,Louisiana,70802
+United States,Rochester Tech Park  Building 9  160 Wallace Way,,Rochester,New York,14624
+United States,1000 East Victoria Street  Building SAC3 rm3117,,Carson,California,90747
+United States,22250 Elkwood Street c/o Columbus Middle School,,Canoga Park,California,91304
+United States,651 Eighth Street  Building 229 Treasure Island,,San Francisco,California,94130
+United States,1000 South Fremont Avenue  Bldg A-11  Ste 11010,,Alhambra,California,91803
+United States,Michael J. Grant Campus  1001 Crooked Hill Road,,Brentwood,New York,11717
+United States,2592 Eastern Blvd  Kingston Square Shopping Ctr,,York,Pennsylvania,17402
+United States,4300 Fashion Square Blvd.  2nd Floor  Suite 202,,Saginaw,Michigan,48603
+United States,1755 Airport Boulevard  Adminstration Building,,Red Bluff,California,96080
+United States,10315 Professional Circle  Suite 201 (2nd Flr),,Reno,Nevada,89521
+United States,LIU/Westchester Campus  735 Anderson Hill Road,,Purchase,New York,10577
+United States,2400 East Highland Drive  3rd Floor  Suite 300,,Jonesboro,Arkansas,72401
+United States,Springfield College - School of Human Services,,Springfield,Massachusetts,01109
+United States,1729 West Martin Luther King Junior Boulevard,,Los Angeles,California,90062
+United States,2009 West Martin Luther King Junior Boulevard,,Los Angeles,California,90062
+United States,915 South Mooney Boulevard  Mariposa Building,,Visalia,California,93277
+United States,910 Yukon Drive  Suite 202 Butrovich Building,,Fairbanks,Alaska,99775
+United States,408 Administration Building  201 Dowman Drive,,Atlanta,Georgia,30322
+United States,800 Georgia Southwestern State University Dr.,,Americus,Georgia,31709
+United States,Miller Administration Building  Graham Avenue,,Cortland,New York,13045
+United States,Iverson Mall  3705 Branch Avenue  Lower Level,,Hillcrest Heights,Maryland,20748
+United States,6600 Peachtree Dunwoody Road  500 Embassy Row,,Atlanta,Georgia,30328
+United States,200 Ballardvale Street  Building 1  Suite 200,,Wilmington,Massachusetts,01887
+United States,Analytic Studies 401 Golden Shore  6th Floor,,Long Beach,California,90802
+United States,6600 Peachtree Dunwoody Rd.  100 Embassy Row,,Atlanta,Georgia,30328
+United States,1621 N. Kent St  Suite 1617 Ll Rosslyn Plaza,,Arlington,Virginia,22209
+United States,Two Liberty Square  75 Beattie Place Ste 100,,Greenville,South Carolina,29601
+United States,5775 Peachtree-Dunwoody Road  NE  Suite A100,,Atlanta,Georgia,30342
+United States,3906 East Frontage Highway 52 Road Northwest,,Rochester,Minnesota,55901
+United States,Administration Bldg 200; 1509 N Boulder Ave,,Russellville,Arkansas,72801
+United States,8025 Black Horse Pike Bayport One Suite 250,,West  Atlantic City,New Jersey,08232
+United States,Triangle Corporate Park  13221 SW 68th Pkwy,,Tigard,Oregon,97223
+United States,10131 Coors Boulevard North West Suite I-01,,Albuquerque,New Mexico,87114
+United States,2 Greentree Centre  9000 Lincoln Dr Ste 100,,Marlton,New Jersey,08053
+United States,1505 Northeast Kentucky Industrial Parkway,,Greenup,Kentucky,41144
+United States,600 South La Fayette Park Place  1st Floor,,Los Angeles,California,90057
+United States,8260 Longleaf Drive  Building C  2nd Floor,,Elk Grove,California,95758
+United States,1331 East Calaveras Boulevard Building 700,,Milpitas,California,95035
+United States,2405 South Mount Shasta Boulevard  Suite 3,,Mount Shasta,California,96067
+United States,1045 W. Redondo Beach Boulevard  Suite 275,,Gardena,California,90247
+United States,3563 Phillips Highway Building E Suite 501,,Jacksonville,Florida,32207
+United States,202 East University Street  suite H  I & J,,Urbana,Illinois,61801
+United States,374 Whitmore Building 181 Presidents Drive,,Amherst,Massachusetts,01003
+United States,LAKESIDE BUSINESS PARK  1500 LIBERTY PLACE,,ERIAL,New Jersey,08081
+United States,1305 Blackwood-Clementon Rd Commerce Plz 2,,Laurel Springs,New Jersey,08021
+United States,1049 SW Baseline Rd  Suite 500  Building E,,Hillsboro,Oregon,97123
+United States,5250 Seventy-Seven Center Drive  Suite 100,,Charlotte,North Carolina,28217
+United States,3700 S. Jack Kultgen Expressway  Suite 100,,Waco,Texas,76706
+United States,2202 West Martin Luther King Jr Boulevard,,Los Angeles,California,90008
+United States,7905 Valentine Avenue 7611 Huntley Street,,Sebastopol,California,95472
+United States,Whipple Administration Building  Route 20,,Morrisville,New York,13408
+United States,3 Broadway Exec Pk  6501 N. Broadway Ext.,,Oklahoma City,Oklahoma,73116
+United States,15th & Akron  317 Administration Building,,Lubbock,Texas,79409
+United States,IDS Center  80 South 8th Street  Suite 51,,Minneapolis,Minnesota,55402
+United States,300 University Square  111 South Broadway,,Rochester,Minnesota,55904
+United States,Two Columbus Center  4500 Main St Ste 100,,Virginia Beach,Virginia,23462
+United States,56300 Twentynine Palms Highway  Suite 113,,Yucca Valley,California,92284
+United States,9550 Regency Square Boulevard  Suite 1200,,Jacksonville,Florida,32225
+United States,155 West Washington Boulevard  Suite 517,,Los Angeles,California,90015
+United States,3801 West Temple Avenue  Building 128-16,,Pomona,California,91768
+United States,405 South San Gabriel Boulevard  Suite A,,San Gabriel,California,91776
+United States,9300 Valley Children's Place  Suite GE02,,Madera,California,93636
+United States,3525 Martin Luther King Junior Boulevard,,Sacramento,California,95817
+United States,770 North Eighth Street and Ritchie Road,,Grover Beach,California,93433
+United States,Strong Hall  1450 Jayhawk Blvd  Room 230,,Lawrence,Kansas,66045
+United States,2100 State Highway #38 Plaza Cherry Hill,,Cherry Hill,New Jersey,08002
+United States,766 The Avenue of the Americas 4th Floor,,New York,New York,10001
+United States,125 West Station Square Drive  Suite 129,,Pittsburgh,Pennsylvania,15219
+United States,E. Highway 18   101 Antelope Lake Circle,,Mission,South Dakota,57555
+United States,River Oaks Plaza  4140 Southwest Freeway,,Houston,Texas,77027
+United States,980 Hammond Drive  Building 2  Suite 100,,Atlanta,Georgia,30328
+United States,Adult Education Office  8250 State St Rd,,Batavia,New York,14020
+United States,Huntingdon Cnty Campus 1001 Moore Street,,Huntingdon,Pennsylvania,16652
+United States,877 Executive Center Dr. West  Suite 100,,St. Petersburg,Florida,33702
+United States,2890 Inland Empire Boulevard  Suite 100,,Ontario,California,91764
+United States,50 Phelan Avenue Science Hall  Room 127,,San Francisco,California,94112
+United States,6180 Laurel Canyon Boulevard  Suite 101,,North Hollywood,California,91606
+United States,One Cherry Hill  One Mall Drive Ste.700,,Cherry Hill,New Jersey,08002
+United States,6000 Lombardo Center  Suite 200 205 210,,Seven Hills,Ohio,44131
+United States,Vermillion Square - 8919 New Falls Road,,Levittown,Pennsylvania,19054
+United States,11101 Roosevelt Boulevard N.  Suite 100,,Saint Petersburg,Florida,33716
+United States,3231 North Decatur Boulevard Suites 119,,Las Vegas,Nevada,89130
+United States,222 Merchandise Mart Plaza  Suite 4-124,,Chicago,Illinois,60654
+United States,2001 Jefferson Davis Highway  Suite 511,,Arlington,Virginia,22202
+United States,12257 South Business Park Drive-Ste 108,,Draper,Utah,84020
+United States,Shops @ Kings Grant 10075 Weddington Rd,,Concord,North Carolina,28027
+United States,9503 Research Blvd Building 3 Suite 310,,Austin,Texas,78759
+United States,1755 George Washington Memorial Highway,,Gloucester Point,Virginia,23062
+United States,755 Lawrenceville-Suwannee Rd Bldg 1300,,Lawrenceville,Georgia,30043
+United States,13402 North Scottsdale Road; Suite B160,,Scottsdale,Arizona,85254
+United States,6400 Laurel Canyon Boulevard  Suite 270,,North Hollywood,California,91606
+United States,10995-11001 North 99th Avenue  Unit 105,,Peoria,Arizona,85345
+United States,1515 South Buckner Boulevard  Suite 147,,Dallas,Texas,75217

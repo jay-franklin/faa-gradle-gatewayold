@@ -1,0 +1,154 @@
+United States,8206 Philips Hwy. Suite33,,Jacksonville,Florida,32256
+United States,4755 Southwest 46th Court,,Ocala,Florida,34474
+United States,2990 Landrum Education Dr,,Oakwood,Georgia,30566
+United States,900 South GA Tech Parkway,,Americus,Georgia,31709
+United States,1122 North Liberty Street,,Boise,Idaho,83704
+United States,1520 West Division Street,,Chicago,Illinois,60642
+United States,310 South Peoria   5th Fl,,Chicago,Illinois,60607
+United States,3140 South Federal Street,,Chicago,Illinois,60616
+United States,Rte 47 at Waubonsee Drive,,Sugar Grove,Illinois,60554
+United States,1498 South College Avenue,,Rensselaer,Indiana,47978
+United States,1906 College Heights Blvd,,Bowling Green,Kentucky,42101
+United States,2901 South Carrollton Ave,,New Orleans,Louisiana,70118
+United States,1701 Old Minden Rd Ste 36,,Bossier City,Louisiana,71111
+United States,6823 Saint Charles Avenue,,New Orleans,Louisiana,70118
+United States,4000 Mayflower Hill Drive,,Waterville,Maine,04901
+United States,3501 University Blvd East,,Adelphi,Maryland,20783
+United States,16300 Old Emmitsburg Road,,Emmitsburg,Maryland,21727
+United States,7930 Eastern Ave  Suite 5,,Baltimore,Maryland,21224
+United States,1000 Massachusetts Avenue,,Cambridge,Massachusetts,02138
+United States,3333 East Beltline Ave NE,,Grand Rapids,Michigan,49525
+United States,11611 West Pine Lake Road,,Plainwell,Michigan,49080
+United States,1903 West Michigan Avenue,,Kalamazoo,Michigan,49008
+United States,4724 Mike Colalillo Drive,,Dultuh,Minnesota,55807
+United States,1345 Mendota Heights Road,,Mendota Heights,Minnesota,55120
+United States,5001 East Bonanza Ste 110,,Las Vegas,Nevada,89110
+United States,2201 West College Parkway,,Carson City,Nevada,89703
+United States,2800 John F. Kennedy Blvd,,Jersey City,New Jersey,07306
+United States,3003 English Creek Avenue,,Egg Harbor Township,New Jersey,08234
+United States,475 Riverside Dr  Ste 500,,New York,New York,10115
+United States,4585 West Seneca Turnpike,,Syracuse,New York,13215
+United States,120 E 16th St.  4th Floor,,New York,New York,10003
+United States,646 Swift Rd (ATTN: MASG),,West  Point,New York,10996
+United States,100 Belmont-Mt Holly Road,,Belmont,North Carolina,28012
+United States,One Brevard College Drive,,Brevard,North Carolina,28712
+United States,701 B Forest Point Circle,,Charlotte,North Carolina,28273
+United States,9201 University City Blvd,,Charlotte,North Carolina,28223
+United States,11032 E Independance Blvd,,Matthews,North Carolina,28105
+United States,2076 Youngstown Warren Rd,,Niles,Ohio,44446
+United States,Hinsdale Hall Third Floor,,Hiram,Ohio,44234
+United States,2491 State Route 45 South,,Salem,Ohio,44460
+United States,5202 Timber Commons Drive,,Sandusky,Ohio,44870
+United States,1324 Youngstown Warren Rd,,Niles,Ohio,44446
+United States,8494 Northwest Expressway,,Oklahoma City,Oklahoma,73162
+United States,3701 S I-35 Frontage Road,,Moore,Oklahoma,73160
+United States,0615 S W Palatine Hill Rd,,Portland,Oregon,97219
+United States,11830 SW Kerr Pky Ste 330,,Lake Oswego,Oregon,97035
+United States,12000 SE 82nd Avenue K217,,Happy Valley,Oregon,97086
+United States,1057A North Church Street,,Hazleton,Pennsylvania,18201
+United States,1380 S. Valley Forge Road,,Lansdale,Pennsylvania,19446
+United States,College Hill & Valley Rds,,Summerdale,Pennsylvania,17093
+United States,Three Neshaminy Interplex,,Trevose,Pennsylvania,19053
+United States,401 North Fairview Street,,Lock Haven,Pennsylvania,17745
+United States,1991 Sproul Road Suite 42,,Broomall,Pennsylvania,19008
+United States,6001 University Boulevard,,Moon Township,Pennsylvania,15108
+United States,222 E Pittsburgh St Ste A,,Greensburg,Pennsylvania,15601
+United States,4822 East Palmetto Street,,Florence,South Carolina,29506
+United States,1800 Baptist World Ctr Dr,,Nashville,Tennessee,37207
+United States,One University Park Drive,,Nashville,Tennessee,37204
+United States,502 E Lamar Alexander Pky,,Maryville,Tennessee,37804
+United States,3500 John A. Merritt Blvd,,Nashville,Tennessee,37209
+United States,8080 Park Lane  Suite 100,,Dallas,Texas,75231
+United States,2600 Stemmons Fwy Ste 117,,Dallas,Texas,75207
+United States,300 Homer K. Taylor Drive,,Sweetwater,Texas,79556
+United States,1100 E Lagoon St    124-5,,Roosevelt,Utah,84066
+United States,1000 Regent University Dr,,Virginia Beach,Virginia,23464
+United States,13101 Jefferson Davis Hwy,,Chester,Virginia,23831
+United States,905 Lakeside Dr.  Suite A,,Lynchburg,Virginia,24501
+United States,3441 Mountain Empire Road,,Big Stone Gap,Virginia,24219
+United States,737 South Sycamore Street,,Petersburg,Virginia,23803
+United States,One University Hill Drive,,Buena Vista,Virginia,24416
+United States,7525 Tidewater Dr Ste 200,,Norfolk,Virginia,23505
+United States,1620 Edward P Smith Drive,,Aberdeen,Washington,98520
+United States,4425 N Port Washington Rd,,Glendale,Wisconsin,53212
+United States,8701 Watertown Plank Road,,Milwaukee,Wisconsin,53226
+United States,175 Georges Fairchance Rd,,Uniontown,Pennsylvania,15401
+United States,5555 Greenwich Rd Ste 300,,Virginia Beach,Virginia,23462
+United States,7142 San Pedro  Suite 100,,San Antonio,Texas,78216
+United States,5600 Roswell Rd NE Ste 10,,Atlanta,Georgia,30342
+United States,8294 Upper Box Elder Road,,Box Elder,Montana,59521
+United States,9123 Executive Park Drive,,Knoxville,Tennessee,37923
+United States,333 S Twin Oaks Valley Rd,,San Marcos,California,92096
+United States,2088 N. Courtenay Parkway,,Merritt Island,Florida,32953
+United States,2200 Broening Hwy Ste 160,,Baltimore,Maryland,21224
+United States,120 New River Town Center,,Beckley,West Virginia,25801
+United States,5701 E. Hillsborough Ave.,,Tampa,Florida,33610
+United States,3110 Hayes Road Suite 380,,Houston,Texas,77082
+United States,6520 Wadsworth Blvd. #209,,Arvada,Colorado,80003
+United States,7000 Regency Square Blvd.,,Houston,Texas,77036
+United States,9200 Soutpark Center Loop,,Orlando,Florida,32819
+United States,1101 Eastport Plaza Drive,,Collinsville,Illinois,62234
+United States,1140-1150 S. Priest Drive,,Tempe,Arizona,85281
+United States,3525 North State Route 48,,Lebanon,Ohio,45036
+United States,7202 S. I-35 Service Road,,Oklahoma City,Oklahoma,73149
+United States,12125 Day Street  Bldg. L,,Moreno Valley,California,92557
+United States,101 Community College Way,,Johnstown,Pennsylvania,15904
+United States,900  Watervliet Shaker Rd,,Albany,New York,12205
+United States,34050 Glen Drive  Suite 2,,Eastlake,Ohio,44094
+United States,818 North Franklin Street,,Van Wert,Ohio,45891
+United States,425 Pontius Ave N Ste 100,,Seattle,Washington,98109
+United States,17535 Rosbough Dr Ste 100,,Middleburg Heights,Ohio,44130
+United States,1600 South College Street,,Mountain Home,Arkansas,72653
+United States,600 S. Clyde Morris Blvd.,,Daytona Beach,Florida,32114
+United States,510 South Hunt Club Blvd.,,Apopka,Florida,32703
+United States,702 W Town and Country Rd,,Orange,California,92868
+United States,622 George Washington Hwy,,Lincoln,Rhode Island,2865
+United States,6630 Gunpark Dr Suite 200,,Boulder,Colorado,80301
+United States,30522 US Hwy 19 N Ste 300,,Palm Harbor,Florida,34684
+United States,80 River Oaks Ctr-Ste 111,,Calumet City,Illinois,60409
+United States,120 NE 136th Ave- Ste 220,,Vancouver,Washington,98684
+United States,555 E Pikes Peak Ave #108,,Colorado Springs,Colorado,80903
+United States,1701 T.W. Alexander Drive,,Durham,North Carolina,27703
+United States,3309 Hyland Ave.  Suite J,,Costa Mesa,California,92626
+United States,9600 SW Oak St  Suite 400,,Tigard,Oregon,97223
+United States,443 Bruton Terrace Center,,Dallas,Texas,75217
+United States,1810 Lutheran Synod Drive,,Salisbury,North Carolina,28144
+United States,145 Talmadge Rd  Suite 19,,Edison,New Jersey,8817
+United States,3600 Horizon Blvd Ste 100,,Trevose,Pennsylvania,19053
+United States,4201 Central Ave NW-Ste J,,Albuquerque,New Mexico,87105
+United States,113 South Military Avenue,,Lawrenceburg,Tennessee,38464
+United States,1451 Center Crossing Road,,Las Vegas,Nevada,89144
+United States,1515 John B White SR Blvd,,Spartanburg,South Carolina,29301
+United States,1200 Shakopee Town Square,,Shakopee,Minnesota,55379
+United States,48 Bakertown Rd Suite 501,,Monroe,New York,10950
+United States,13650 Apple Harvest Drive,,Martinsburg,West Virginia,25403
+United States,1315 Mendota Heights Road,,Mendota Heights,Minnesota,55120
+United States,9945 W McDowell Road #112,,Avondale,Arizona,85323
+United States,16800 E. Mississippi Ave.,,Aurora,Colorado,80017
+United States,4374 East New York Street,,Aurora,Illinois,60504
+United States,10345 Professional Circle,,Reno,Nevada,89521
+United States,4472 South Eastern Avenue,,Las Vegas,Nevada,89119
+United States,13159-B Northwest Freeway,,Houston,Texas,77040
+United States,1000 Meade St.- Suite 210,,Dunmore,Pennsylvania,18512
+United States,129 S. San Fernando Blvd.,,Burbank,California,91502
+United States,32448 Royal Blvd. Suite A,,Dagsboro,Delaware,19939
+United States,3077 N Mayfair Rd Ste 300,,Milwaukee,Wisconsin,53222
+United States,15301 Ventura Blvd Ste P2,,Sherman Oaks,California,91403
+United States,6901 Security Blvd Ste 21,,Baltimore,Maryland,21244
+United States,2450 Del Paso Road-St 250,,Sacramento,California,95834
+United States,8909 Purdue Rd  Suite 100,,Indianapolis,Indiana,46278
+United States,3680 Pheasant Ridge Dr NE,,Blaine,Minnesota,55449
+United States,20985 Interstate 45 South,,Webster,Texas,77598
+United States,20985 Interstate 45 South,PO 123,Webster,Texas,77598
+United States,1860 NW 118th St  Ste 110,,Clive,Iowa,50325
+United States,2101 East Broadway Avenue,,Bismarck,North Dakota,58501
+United States,410 Blackwell St  Ste 200,,Durham,North Carolina,27701
+United States,6343 Presidential Gateway,,Columbus,Ohio,43231
+United States,125 W Mission Ave Ste 212,,Escondido,California,92025
+United States,200 W Franklin St Ste 110,,Chapel Hill,North Carolina,27516
+United States,4608 S Garnett Rd Ste 110,,Tulsa,Oklahoma,74146
+United States,3901 Capital Blvd Ste 151,,Raleigh,North Carolina,27604
+United States,382 Galleria Pkwy Ste 100,,Madison,Mississippi
+United States,1201 Bishop Farms Parkway,,Watkinsville,Georgia,30677
+United States,601 Broad Street,,LaGrange,Georgia,30240
+United States,512 Stuart Street road,,Lynchburg,Virginia,24502

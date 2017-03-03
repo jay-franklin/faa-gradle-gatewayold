@@ -1,0 +1,481 @@
+
+import org.gradle.logging.internal.*
+
+
+repositories {
+//	mavenLocal()
+	mavenCentral()
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+// Running 'gradle wrapper' will generate gradlew - Getting gradle wrapper working and using it will save you a lot of pain.
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4' 
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+	
+buildscript {
+	repositories {
+	//	mavenLocal()
+		mavenCentral()
+	}
+
+	dependencies 
+	{ 
+		classpath('net.serenity-bdd:serenity-gradle-plugin:'+serenityVersion)
+	}
+}
+
+
+	
+dependencies {
+	testCompile fileTree(dir: 'libs', include: ['*.jar'])
+	testCompile 'com.jayway.restassured:rest-assured:2.7.0'
+	testCompile 'net.serenity-bdd:serenity-rest-assured:'+serenityVersion
+	testCompile 'net.serenity-bdd:serenity-junit:'+serenityVersion
+	testCompile 'net.serenity-bdd:serenity-core:'+serenityVersion
+	testCompile 'net.serenity-bdd:serenity-report-resources:'+serenityVersion
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
+//compile group: 'net.serenity-bdd', name: 'serenity-core', version: +serenityVersion	
+	
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
+compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.1.23'
+
+// https://mvnrepository.com/artifact/com.google.guava/guava
+compile group: 'com.google.guava', name: 'guava', version: '21.0'
+
+
+	testCompile 'junit:junit:4.12'
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.24'
+//	testCompile 'org.slf4j:slf4j-simple:1.7.12'
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.24'
+//testCompile 'org.slf4j:slf4j-api:1.7.12
+// https://mvnrepository.com/artifact/org.assertj/assertj-core
+compile group: 'org.assertj', name: 'assertj-core', version: '3.6.2'
+//testCompile 'org.assertj:assertj-core:3.1.0'
+
+	testCompile 'org.hamcrest:hamcrest-all:1.3'
+	testCompile 'com.jayway.restassured:json-path:2.7.0'
+	testCompile 'com.jayway.restassured:xml-path:2.7.0'
+	testCompile 'com.jayway.restassured:json-schema-validator:2.7.0'
+	//testCompile 'com.jayway.restassured:spring-mock-mvc:2.5.0'
+	//testCompile 'com.oracle:ojdbc6:11.2.0.3.0'
+// https://mvnrepository.com/artifact/org.springframework/spring-core
+////compile group: 'org.springframework', name: 'spring-core', version: '5.0.0.M5'
+//	testCompile 'org.springframework:spring-core:4.2.5.RELEASE'
+
+	testCompile 'com.thoughtworks.paranamer:paranamer:2.6'
+	testCompile 'commons-lang:commons-lang:2.6'
+	testCompile 'org.codehaus.plexus:plexus-utils:3.0.22'
+	
+//https://mvnrepository.com/artifact/org.jsoup/jsoup
+compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
+//testCompile 'org.jsoup:jsoup:1.8.3'
+	
+	
+	//testCompile 'com.google.inject:guice:3.0'
+	testCompile 'org.freemarker:freemarker:2.3.21'
+	testCompile 'org.asciidoctor:asciidoctor-java-integration:0.1.3'
+	//testCompile 'com.googlecode.lambdaj:lambdaj:2.3.3'
+	testCompile 'org.codehaus.groovy:groovy-all:2.4.4'
+
+	testCompile 'com.typesafe:config:1.3.0'
+	testCompile 'com.thoughtworks.xstream:xstream:1.4.8'
+	//testCompile 'com.opera:operadriver:1.5'
+	//testCompile 'com.codeborne:phantomjsdriver:1.2.1'
+	
+// https://mvnrepository.com/artifact/org.fluentlenium/fluentlenium-core
+compile group: 'org.fluentlenium', name: 'fluentlenium-core', version: '3.1.1'
+//testCompile 'org.fluentlenium:fluentlenium-core:0.10.2'
+
+// https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
+compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.2.0'
+//testCompile 'com.jayway.jsonpath:json-path:2.0.0'
+	
+	
+// https://mvnrepository.com/artifact/joda-time/joda-time
+compile group: 'joda-time', name: 'joda-time', version: '2.9.7'
+//testCompile 'joda-time:joda-time:2.9.2'
+	
+	
+	
+	//testCompile 'org.apache.httpcomponents:httpclient:4.5.1'
+	testCompile 'com.jayway.jsonpath:json-path:2.0.0'
+	testCompile 'org.glassfish:javax.json:1.0.4'
+	testCompile 'org.apache.poi:poi:3.9'
+	testCompile 'org.apache.poi:poi-ooxml:3.14'
+	compile 'com.google.api-client:google-api-client:1.22.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.22.0'
+
+// https://mvnrepository.com/artifact/com.google.apis/google-api-services-gmail
+compile group: 'com.google.apis', name: 'google-api-services-gmail', version: 'v1-rev62-1.22.0'
+//compile 'com.google.apis:google-api-services-gmail:v1-rev48-1.22.0'
+    
+
+// https://mvnrepository.com/artifact/au.com.bytecode/opencsv
+/////compile group: 'au.com.bytecode', name: 'opencsv', version: '2.4'
+// https://mvnrepository.com/artifact/com.opencsv/opencsv
+compile group: 'com.opencsv', name: 'opencsv', version: '3.9'
+
+
+
+//Android 
+// https://mvnrepository.com/artifact/io.appium/java-client
+/////compile group: 'io.appium', name: 'java-client', version: '4.1.2'
+// https://mvnrepository.com/artifact/io.appium/java-client
+//////compile group: 'io.appium', name: 'java-client', version: '5.0.0-BETA3'
+// https://mvnrepository.com/artifact/io.appium/java-client
+compile group: 'io.appium', name: 'java-client', version: '4.0.0'
+
+    
+// Drivers
+// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.2.0'
+
+// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver
+compile group: 'org.seleniumhq.selenium', name: 'selenium-ie-driver', version: '3.2.0'
+// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver
+/////compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.2.0'
+
+/////New HtmlUnit Driver///
+// https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
+compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.25'
+
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver
+compile group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.25'
+
+
+//// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver
+///compile group: 'org.seleniumhq.selenium', name: 'selenium-htmlunit-driver', version: '2.52.0'
+// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver
+///////////compile group: 'org.seleniumhq.selenium', name: 'selenium-edge-driver', version: '3.2.0'
+
+// https://mvnrepository.com/artifact/com.github.temyers/cucumber-jvm-parallel-plugin
+compile group: 'com.github.temyers', name: 'cucumber-jvm-parallel-plugin', version: '2.2.0'
+
+
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.5'
+
+// https://mvnrepository.com/artifact/info.cukes/cucumber-junit
+//compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.4'
+// https://mvnrepository.com/artifact/info.cukes/cucumber-java
+compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+// https://mvnrepository.com/artifact/info.cukes/cucumber-core
+compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
+
+//// https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting
+///compile group: 'net.masterthought', name: 'cucumber-reporting', version: '3.5.1'
+
+
+compile 'net.serenity-bdd:serenity-screenplay:1.1.42'
+// https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
+compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '2.19.1'
+
+
+// http://mvnrepository.com/artifact/javax.mail/mail
+////compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'
+
+// https://mvnrepository.com/artifact/com.sun.mail/javax.mail
+compile group: 'com.sun.mail', name: 'javax.mail', version: '1.5.6'
+
+// https://mvnrepository.com/artifact/javax.mail/javax.mail-api
+compile group: 'javax.mail', name: 'javax.mail-api', version: '1.5.6'
+
+	
+}
+
+
+
+gradle.startParameter.continueOnFailure = true
+
+test 
+{
+	systemProperty "i", System.getProperty("storyFilter")
+	systemProperty "cucumber.options", System.getProperty("cucumber.options")
+	
+	doFirst{
+		
+		writePropertyDataForSerenity.execute()
+	}
+	
+	
+	
+	if (project.hasProperty('maxParallelForks'))
+		maxParallelForks = project.maxParallelForks as int
+	if (project.hasProperty('forkEvery'))
+		forkEvery = project.forkEvery as int
+
+//////
+//addCucumberSuite 'cucumberTest'
+
+//cucumber {
+//    maxParallelForks = 3
+//}
+
+//cucumberTest {
+//    stepDefinitionRoots = ['cucumber.steps', 'cucumber.hooks']
+//    systemProperties = [
+//        'myVar': 'myValue'
+//    ]
+//}
+////////		
+
+	
+	  def fileMap = new TreeMap<String, File>();
+    def redirectionMap = new TreeMap<String, String>();
+    def blacklist = new ArrayList<String>();
+    blacklist.add("net.thucydides.core.reflection.StackTraceAnalyser");
+    onOutput { descriptor, event ->
+           def messageBlacklisted = false;
+           for(String blacklistedString : blacklist) {
+                   if(event.message.contains(blacklistedString)){
+                          messageBlacklisted=true;
+                   }
+           }
+           //Gradle Test Executor 1
+           def executor = descriptor;
+           while(executor.getClassName() != null)
+           {
+                   executor = executor.getParent();
+           }
+
+           def originalKey = executor.getName();
+           def key = originalKey;
+           def redirectionMessages = [/Test Suite Started: (.*)$/]
+           for(def regex : redirectionMessages)
+           {
+                   def result = (event.message =~ regex);
+                   if(result.size()>=1)
+                   {
+                          def redirectedLocation = result[0][1];
+                          redirectionMap.put(key, redirectedLocation);
+                          logger.lifecycle("Redirecting "+key+"->"+redirectedLocation);
+                   }
+           }
+           def depth = 0;
+           while(redirectionMap.containsKey(key) && depth < 10)
+           {
+                   depth+1;
+                   key = redirectionMap.get(key);
+           }
+           //key is still gradle test executor, may as well use something more useful
+           if(key.equals(originalKey))
+           {
+                   key = descriptor.getClassName();
+           }
+           def streamName = key.replaceAll("[^a-zA-Z0-9\\._]+", "_");
+           if(!messageBlacklisted) {
+                   if(!fileMap.containsKey(streamName)) {
+                          def outputFile = createSerenityLogFile(streamName+".txt");
+                          fileMap.put(streamName, outputFile);
+                   }
+                   fileMap.get(streamName) << event.message;
+           }
+    }
+
+	if (System.getProperty('DEBUG', 'false') == 'true') {
+		jvmArgs '-Xdebug',
+		'-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9999'
+	}
+
+	doLast{
+		removeProps.execute() 
+	}
+}
+
+/**
+ * Gradle build properties available:
+ * 
+ * -Papp.base.protocol=
+ * -Papp.base.host=
+ * -Papp.base.port=
+ * -Papp.base.basePath=
+ * -Papp.base.loginPath=
+ * -Pmetafilter=
+ * -Ptags=
+ * 
+ * -Punattended=Y - overwrites the properties below to default values specificied in gradle.properties. 
+ * If these need to be specified individually do not use -Punattended
+ * 
+ * -Pwebdriver.remote.driver=
+ * -Pwebdriver.remote.url=
+ * -Pwebdriver.driver=
+ * -Pwebdriver.firefox.profile=
+ */
+task writePropertyDataForSerenity << {
+	//
+	if ((project.hasProperty('unattended')) && (project.property('unattended')=="N") ) {
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry(key: "webdriver.chrome.profile", value: "$projectDir"+chromeProfileLocation)
+			entry(key: "webdriver.remote.driver", value: "")
+			//entry(key: "webdriver.remote.url", value: "")
+			entry(key: "webdriver.driver", value: localBrowser)
+		}
+	} else{
+		if ((project.hasProperty('unattended')) && (project.property('unattended')=="Y") ){
+			println "Running unattended mode"
+			ant.propertyfile(file: "$projectDir/serenity.properties") {
+				entry(key: "webdriver.chrome.profile", value: "")
+				entry(key: "webdriver.remote.driver", value: remoteBrowser)
+				//entry(key: "webdriver.remote.url", value: seleniumGridLocation)
+				entry(key: "webdriver.driver", value: "remote")
+			}
+		}
+	
+	}
+//	if ((project.hasProperty('unattended')) && (project.property('unattended')=="N") ) {
+//		ant.propertyfile(file: "$projectDir/serenity.properties") {
+//			//entry(key: "webdriver.firefox.profile", value: "$projectDir"+firefoxProfileLocation)
+//			entry(key: "webdriver.firefox.profile", value: "C:\\Users\\jfrankl6\\Tools\\Firefox")
+//			entry(key: "webdriver.remote.driver", value: "")
+//			entry(key: "webdriver.remote.url", value: "")
+//			entry(key: "webdriver.driver", value: localBrowser)
+//		}
+//	} else{
+//		if ((project.hasProperty('unattended')) && (project.property('unattended')=="Y") ){
+//			println "Running unattended mode"
+//			ant.propertyfile(file: "$projectDir/serenity.properties") {
+//				entry(key: "webdriver.firefox.profile", value: "")
+//				entry(key: "webdriver.remote.driver", value: remoteBrowser)
+//				//entry(key: "webdriver.remote.url", value: seleniumGridLocation)
+//				entry(key: "webdriver.driver", value: "remote")
+//			}
+//		}
+//	}
+
+//	if (!project.hasProperty('unattended') && !project.hasProperty('webdriver.chrome.driver')) {
+//		println "Setting serenity property webdriver.chrome.profile to: "+ chromeProfileLocation
+//		ant.propertyfile(file: "$projectDir/serenity.properties") {
+//			entry(key: "webdriver.chrome.profile", value: + chromeProfileLocation)
+//		}
+//	}
+
+//	if (!project.hasProperty('unattended') && !project.hasProperty('webdriver.firefox.profile')) {
+//		println "Setting serenity property webdriver.firefox.profile to: "+ "C:\\Users\\jfrankl6\\Tools\\Firefox"
+//		ant.propertyfile(file: "$projectDir/serenity.properties") {
+//			//entry(key: "webdriver.firefox.profile", value: "$projectDir"+firefoxProfileLocation)
+//			 entry(key: "webdriver.firefox.profile", value: "C:\\Users\\jfrankl6\\Tools\\Firefox")
+//		}
+	}
+	
+	if (project.hasProperty('app.base.protocol')) {
+		println "Setting serenity property app.base.protocol to: "+ project.property('app.base.protocol')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "app.base.protocol",value: project.property('app.base.protocol'))
+		}
+	}
+	
+	if (project.hasProperty('app.base.host')) {
+		println "Setting serenity property app.base.host to: "+project.property('app.base.host')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry(key: "app.base.host",value: project.property('app.base.host'))
+		}
+	}
+	
+	if (project.hasProperty('app.base.port')) {
+		println "Setting serenity property app.base.port to: "+project.property('app.base.port')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "app.base.port", value: project.property('app.base.port'))
+		}
+	}
+	
+	if (project.hasProperty('app.base.basePath')) {
+		println "Setting serenity property app.base.basePath to: " + project.property('app.base.basePath')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "app.base.basePath", value: project.property('app.base.basePath'))
+		}
+	}
+	
+	if (project.hasProperty('app.base.loginPath')) {
+		println "Setting serenity property app.base.loginPath to: " + project.property('app.base.loginPath')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "app.base.loginPath", value: project.property('app.base.loginPath'))
+		}
+	}
+	
+	if (project.hasProperty('metafilter')) {
+		println "JBehave metafilter set to: $metafilter"
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "metafilter", value: "$metafilter")
+		}
+	}
+	
+	if (project.hasProperty('tags')) {
+		println "Setting serenity property tags to: $tags"
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry(key: "tags", value: "$tags")
+		}
+	}
+	
+	
+	if (project.hasProperty('webdriver.remote.url')) {
+		println "Setting serenity property webdriver.remote.url to: "+ project.property('webdriver.remote.url')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry(key: "webdriver.remote.url",value: project.property('webdriver.remote.url'))
+		}
+	}
+	
+	if (project.hasProperty('webdriver.remote.driver')) {
+		println "Setting serenity property webdriver.remote.driver to: "+ project.property('webdriver.remote.driver')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "webdriver.remote.driver",value: project.property('webdriver.remote.driver'))
+		}
+	}
+	
+	if (project.hasProperty('webdriver.driver')) {
+		println "Setting serenity property webdriver.driver to: "+ project.property('webdriver.driver')
+		ant.propertyfile(file: "$projectDir/serenity.properties") {
+			entry( key: "webdriver.driver",value: project.property('webdriver.driver'))
+		}
+	}
+	
+//	if (project.hasProperty('webdriver.firefox.profile')) {
+//		println "Setting serenity property webdriver.firefox.profile to: "+ project.property('webdriver.firefox.profile')
+//		ant.propertyfile(file: "$projectDir/serenity.properties") {
+//			entry( key: "webdriver.firefox.profile",value: project.property('webdriver.firefox.profile'))
+//		}
+//	}
+//}
+
+task removeProps <<
+{
+//	if ((!project.hasProperty('unattended')) || (project.property('unattended')=="N")) {
+//		ant.propertyfile(file: "$projectDir/serenity.properties") {
+//			entry( key: "webdriver.firefox.profile", value: "set_when_gradle_task_is_run")
+//		}
+//	}
+
+	//remove the date added by ant at the top of the properties file for versioning purposes
+	ant.replaceregexp(file:"$projectDir/serenity.properties", match:"^#.*\n", replace:"")
+}
+
+public void deleteFile(File f){
+    if(f.exists()) {
+        logger.lifecycle("Deleting ${f}")
+        f.delete();
+    }
+}
+
+public File createSerenityLogFile(String fileName){
+	def buildLogDir = "$projectDir/target/site/serenity/logs"
+	mkdir("${buildLogDir}")
+	def outputFile = new File("${buildLogDir}/${fileName}")
+    deleteFile(outputFile);
+    createFile(outputFile);
+    return outputFile;
+}
+
+public void createFile(File f){
+    if(!f.exists()) {
+        logger.lifecycle("Creating ${f}")
+        f.createNewFile();
+    }
+}
+

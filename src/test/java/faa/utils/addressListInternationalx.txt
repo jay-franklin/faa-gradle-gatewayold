@@ -1,0 +1,19 @@
+Japan,46 Hirao Johsui Machi,,Chuo-ku Fukuoka-Shi,Fukuoka,N/A
+Spain,Bogus 123 Lane Bldg A,,Austin,Texas,77587
+Kenya,33 Boulevard L.D Kabila,,Kananga,Mbuji-Mayi,N/A
+Russian Federation,"Kishinevskaya ul., 6",,Sochi,Krasnodar Krai,N/A
+Thailand,333 Charoen Nakorn,,Bangkok,Khlong San,10600
+Kenya,33 Boulevard L.D Kabila,,Kananga,Mbuji-Mayi,N/A
+Spain,Bogus 123 Lane Bldg A,,Austin,Texas,77587
+Russian Federation,"Kishinevskaya ul., 6",,Sochi,Krasnodar Krai,N/A
+Kenya,33 Boulevard L.D Kabila,,Kananga,Mbuji-Mayi,N/A
+Spain,Bogus 123 Lane Bldg A,,Austin,Texas,77587
+Mexico ,P.O. Box 58,,Austin ,Texas,06600
+United States,6752 W Solano Dr N,,Glen Dale,Arizona,85303
+United States,18474 County Rd 34,,Saint Stephens,Alabama,36569
+United States,8000 Pass Del Norte NE,Suite A,Albuquerque,New Mexico,87122
+United States,2601 Cameron Mills Rd,9,Albuquerque,Virginia,22302
+
+
+
+

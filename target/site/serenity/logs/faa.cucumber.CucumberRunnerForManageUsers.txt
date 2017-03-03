@@ -1,0 +1,36 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.24/d9841ffd9d794ab26446df2c46a2ab2b8d2a183e/slf4j-simple-1.7.24.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-jdk14/1.5.6/cc383fbd07dd1826bbcba1b907bbdc0b5be627f1/slf4j-jdk14-1.5.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/1.5.3/36a3c886235cddd05e55a979cef549196740231a/slf4j-nop-1.5.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.gmailbase.port=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.gmailbase.host=gmail.com
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.gmailbase.loginPath=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.keep.unscaled.screenshots=TRUE
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.gmailbase.protocol=http
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.take.screenshots=AFTER_EACH_STEP
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.console.colors=true
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.base.port=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.base.basePath=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.base.host=public-gateway.csra-dronezone.com
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.verbose.steps=TRUE
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.gmailbase.basePath=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.test.root=faa-gradle-gatewayx
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.base.protocol=https
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.driver=chrome
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - app.base.loginPath=
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.logging=VERBOSE
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.wait.for.timeout=10000
+[Test worker] INFO net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.timeouts.implicitlywait=20000
+[Test worker] INFO net.serenitybdd.core.Serenity - [96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+-------------------------------------------------------------------------------------
+[0m

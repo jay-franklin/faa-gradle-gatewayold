@@ -1,0 +1,21 @@
+Puerto Rico,7843 Calle Nazaret,,Ponce,,00717
+Puerto Rico,1289 Ave. Munoz Rivera,,Ponce,,00717
+United States,8250 Joel St,,Spring Hill,Florida,34606
+United States,8441 S 17th St,,Tacoma,Washington,98465
+United States,8945 W C 476,,Bushnell,Florida,33513
+United States,91 Redwood Dr,,Bristol,Connecticut,06010
+United States,6752 W Solano Dr N,,Glen Dale,Arizona,85303
+United States,3301 South Greenfield Rd,,Gilbert,Arizona,85297
+United States,86 Frontage Road,,Belmont,Massachusetts,02478
+United States,4 Carriage Hill Rd,,Amesbury,Massachusetts,01913
+United States,500 Water St,,Haverhill,Massachusetts,01830
+United States,Box 1550,,New York,New York,10116
+United States,10850 Lincoln Trail Unit 16,,Fairview Heights,Illinois,62208
+United States,18474 County Rd 34,,Saint Stephens,Alabama,36569
+United States,39 Main St,,Roebling,New Jersey,08554
+United States,8000 Pass Del Norte NE,Suite A,Albuquerque,New Mexico,87122
+United States,7701 Landover Rd #5,,Landover,North Carolina,20784
+United States,2601 Cameron Mills Rd,9,Albuquerque,Virginia,22302
+"Virgin Islands, U.S.",3076 Aldersville Ste 3,,Christiansted,,00820
+"Virgin Islands, U.S.",5027 Anchor Way Ste 4,,Christiansted,,00820
+"Virgin Islands, U.S.",78 Hannahs Rst Ste 1,,Frederiksted,,00840
