@@ -46,6 +46,12 @@ public class AddNewUasMap {
 	public void clickOnAddFiveUasButton(){
 		addNewUasSteps.clickToAddFiveUAS();
 	}	
+
+	@Then("i click to Add Ten New UAS Do Not Pay")
+	public void clickToAddTenUasDoNotPay(){
+		addNewUasSteps.clickToAddTenUasDoNotPay();
+	}	
+	
 	
 	@Then("i click to add multiple UAS")
 	public void clickToAddMultipleUAS(){

@@ -12,6 +12,7 @@ import faa.cucumber.stepLibraries.CompleteNewProfileSteps;
 import faa.cucumber.stepLibraries.ManageUserSteps;
 //import faa.cucumber.stepLibraries.MenuUser;
 import faa.cucumber.stepLibraries.UpdateStrikeProfileSteps;
+import faa.models.InviteUser;
 import net.thucydides.core.annotations.Steps;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -30,6 +31,8 @@ public class UserProfileMap {
 	@Steps ManageUserSteps manageUserSteps;
 	@Steps AddNewUasSteps addNewUasSteps;
 
+	InviteUser inviteUser = new InviteUser();
+
 	//private static final String newProfileCssSelector = "div.my-profile h1";
 	@FindBy(css = "div.my-profile h1") private WebElementFacade newProfileCss;
 
@@ -42,11 +45,6 @@ public class UserProfileMap {
 		completeNewProfileSteps.clickOnNonModelAircraftButton();
 	}	
 
-//	@Then("i click on the I Agree button")
-//	public void clickOnIAgreeButton(){
-//		baseUserSteps.clickOnIAgreeButton();
-//	}
-	
 	
 //	click the MANAGE USER ACCOUNTS button
 	@Then("click the MANAGE USER ACCOUNTS button")
@@ -106,6 +104,28 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoInvitedNewUserProfile();
 	}
 	
+	@Then("populate new invited user from model")
+	public void typeIntoPopulateInviteNewUserProfile(){
+		completeNewProfileSteps.fillOutNewInviteUserFormWithModel(inviteUser );
+	}
+	
+	
+//	// create a new user model and set preferred access
+//	UserModel newUser = new UserModel();
+//	newUser.setOverbook(true);
+//	newUser.setSchedule(true);
+//	newUser.setCheckinout(true);
+//	newUser.setUserType("NA");
+//	newUser.setUSCISSiteCode("EAT");
+//	// output names being used
+//	Reporter.log("First Name: " + newUser.getFirstName());
+//	Reporter.log("Last Name: " + newUser.getLastName());
+//	Reporter.log("Email Name: " + newUser.getEmailAddress());
+//
+//	// then type in all of the new user info into the form and save
+//	manageUsers.fillFormWithUserInformation(newUser, driver);
+//
+	
 	
 	@Then("enter existing Invited User Information")
 	public void typeIntoInvitedExistingUserProfile(){
@@ -163,6 +183,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.clickOnRenewHobbyistRegistrationButton();
 	}
 	
+	
 	@Then("i click the logout button")
 	public void clickOnLogoutButton() {
 		manageUserSteps.clickOnLogoutButton();
@@ -205,6 +226,13 @@ public class UserProfileMap {
 		manageUserSteps.clickOnEditNonHobbyistAccountDetailsButton();
 	}
 	
+	
+	@Then("verify success message is displayed")
+	public void verifyProfileUpdatedSuccessMessage() {
+		manageUserSteps.verifyProfileUpdatedSuccessMessage();
+	}
+
+	
 	@Then("edit non hobbyist Account Details")
 	public void clickToEditNonHobbyistAccountDetails(){
 //	public void clickToEditNonHobbyistPersonalInformation(){
@@ -237,6 +265,77 @@ public class UserProfileMap {
 	public void clickOnEditNonHobbyistOrganizationInformationDetailsButton(){
 		manageUserSteps.clickOnEditNonHobbyistOrganizationInformation();
 	}
+
+//	@Then("update the international address in the organization information section")
+////	@Then("edit non hobbyist Organization Information")
+//	public void clickToEditInterantionalOrganizationInformation(){
+//		completeNewProfileSteps.typeIntoCreateProfilePhone();
+//		completeNewProfileSteps.typeIntoCreateProfilePhoneExt();
+//		completeNewProfileSteps.typeIntoCreateProfileTitle();
+//		completeNewProfileSteps.typeIntoCreateProfileAltEmail();
+//		completeNewProfileSteps.typeIntoCreateProfileOrganization();
+//		completeNewProfileSteps.typeIntoCreateProfileDba();
+//
+//		completeNewProfileSteps.selectProfilePhysicalCountryDropDownList();
+//		completeNewProfileSteps.typeIntoCreateProfilePhysicalAddress1();
+//		completeNewProfileSteps.typeIntoCreateProfilePhysicalAddress2();
+//		completeNewProfileSteps.typeIntoCreateProfileCity();
+//		completeNewProfileSteps.selectProfilePhysicalStateDropList();
+//		completeNewProfileSteps.typeIntoCreateProfileZipCode();
+//		completeNewProfileSteps.clickMaSameAsPa();  
+//		completeNewProfileSteps.clickMaSameAsPa();  
+//		completeNewProfileSteps.selectProfileMailingCountryFromDropList();
+//		completeNewProfileSteps.typeIntoCreateProfileMailingAddress1();
+//		completeNewProfileSteps.typeIntoCreateProfileMailingAddress2();
+//		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
+//		completeNewProfileSteps.selectProfileMailingStateDropList();
+//		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+//
+//		Serenity.takeScreenshot();
+//		completeNewProfileSteps.clickOnNextOrSaveButton();
+//		System.out.println("Test is Complete.  Edit Organization Information Profile is saved! " );
+//	}
+	
+	@Then("update the international address in the organization information section")
+	public void completeUserOrganizationInternationalProfile(){
+		completeNewProfileSteps.typeIntoCreateProfilePhone();
+		completeNewProfileSteps.typeIntoCreateProfilePhoneExt();
+		completeNewProfileSteps.typeIntoCreateProfileTitle();
+		completeNewProfileSteps.typeIntoCreateProfileAltEmail();
+		baseUserSteps.waitABit(1000);
+		completeNewProfileSteps.typeIntoCreateProfileOrganization();
+		completeNewProfileSteps.typeIntoCreateProfileDba();
+		//Serenity.takeScreenshot();
+		completeNewProfileSteps.selectProfilePhysicalIntCountryDropDownList();
+		completeNewProfileSteps.typeIntoCreateProfilePhysicalIntAddress1();
+		completeNewProfileSteps.typeIntoCreateProfilePhysicalIntAddress2();
+		completeNewProfileSteps.typeIntoCreateProfilePhysicalIntCity();
+		completeNewProfileSteps.selectProfilePhysicalIntStateDropList();
+		completeNewProfileSteps.typeIntoCreateProfilePhysicalIntZipCode();
+		//Serenity.takeScreenshot();
+		baseUserSteps.waitABit(1000);
+//		completeNewProfileSteps.clickMaSameAsPa();  
+//		completeNewProfileSteps.clickMaSameAsPa();  
+		completeNewProfileSteps.clickOnAddressIsSameCheckbox();  
+		completeNewProfileSteps.selectProfileMailingIntCountryDropDownList();
+		completeNewProfileSteps.typeIntoCreateProfileMailingIntAddress1();
+		completeNewProfileSteps.typeIntoCreateProfileMailingIntAddress2();
+		completeNewProfileSteps.typeIntoCreateProfileMailingIntCity();
+		completeNewProfileSteps.selectProfileMailingIntStateDropList();
+		completeNewProfileSteps.typeIntoCreateProfileMailingIntZipCode();
+		//Serenity.takeScreenshot();
+		baseUserSteps.waitABit(1000);
+//		completeNewProfileSteps.clickOnProceedToCheckoutOrSaveButton();
+		completeNewProfileSteps.clickOnSaveEditButton();
+		System.out.println("Organization Profile updated with International Address Test is Complete.  Profile is saved! " );
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	@Then("edit non hobbyist Organization Information")
 	public void clickToEditNonHobbyistOrganizationInformation(){
@@ -261,6 +360,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		completeNewProfileSteps.clickOnNextOrSaveButton();
 		System.out.println("Test is Complete.  Edit Organization Information Profile is saved! " );
 	}
@@ -294,9 +394,14 @@ public class UserProfileMap {
 			completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 			completeNewProfileSteps.selectProfileMailingStateDropList();
 			completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+			Serenity.takeScreenshot();
 			completeNewProfileSteps.clickOnNextOrSaveButton();
 			System.out.println("Test is Complete.  Edit Personal Information Profile is saved! " );
 		}
+
+	
+	
+	
 	
 	@Then("complete non hobbyist international profile")
 	public void completeNonHobbyistInternationalProfile(){
@@ -324,21 +429,20 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingIntCity();
 		completeNewProfileSteps.selectProfileMailingIntStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingIntZipCode();
+		Serenity.takeScreenshot();
 		completeNewProfileSteps.clickOnProceedToDashboardButton();
 		//completeNewProfileSteps.clickOnProceedToCheckoutButton();
 		System.out.println("International Test is Complete.  Non Hobbyist International Profile is saved! " );
 
 	}
-
-	
-	
 	
 	@Then("update your hobbyist international address")
+//	@Then("update the international address in the personal information section")
 	public void completeHobbyistInternationalProfile(){
-		completeNewProfileSteps.typeIntoCreateProfileFirstName();
-		completeNewProfileSteps.typeIntoCreateProfileMiddleInitial();
-		completeNewProfileSteps.typeIntoCreateProfileLastName();
-		completeNewProfileSteps.typeIntoCreateProfileNameSuffix();
+//		completeNewProfileSteps.typeIntoCreateProfileFirstName();
+//		completeNewProfileSteps.typeIntoCreateProfileMiddleInitial();
+//		completeNewProfileSteps.typeIntoCreateProfileLastName();
+//		completeNewProfileSteps.typeIntoCreateProfileNameSuffix();
 		completeNewProfileSteps.typeIntoCreateProfilePhone();
 		completeNewProfileSteps.typeIntoCreateProfileAltEmail();
 		completeNewProfileSteps.selectProfilePhysicalCountryDropDownList();
@@ -355,6 +459,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		//completeNewProfileSteps.clickOnProceedToCheckoutButton();
 		completeNewProfileSteps.clickOnSaveProfileButton();
 		
@@ -384,6 +489,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		//completeNewProfileSteps.clickOnProceedToCheckoutButton();
 		completeNewProfileSteps.clickOnSaveProfileButton();
 		
@@ -421,6 +527,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		completeNewProfileSteps.clickOnNextOrSaveButton();
 		System.out.println("Test is Complete.  Profile is saved! " );
 
@@ -454,6 +561,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		completeNewProfileSteps.clickOnProceedToDashboardButton();
 		//completeNewProfileSteps.clickOnNextOrSaveButton();
 		System.out.println("Test is Complete.  Non-Model Profile is saved! " );
@@ -488,6 +596,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingCity();
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
+		Serenity.takeScreenshot();
 		completeNewProfileSteps.clickOnProceedToDashboardButton();
 		//completeNewProfileSteps.clickOnNextOrSaveButton();
 		System.out.println("Test is Complete.  Non-Model Profile is saved! " );
@@ -609,13 +718,13 @@ public class UserProfileMap {
 		System.out.println("Test is Complete.  Profile Alternate Email is saved! " );
 	}
 	
-	@Then("update the international hobbyist profile")
+	@Then("update the international address in the personal information section")
 	public void completeUserInternationalProfile(){
-		completeNewProfileSteps.typeIntoCreateProfileFirstName();
-		completeNewProfileSteps.typeIntoCreateProfileMiddleInitial();
-		completeNewProfileSteps.typeIntoCreateProfileLastName();
-		completeNewProfileSteps.typeIntoCreateProfileNameSuffix();
-		baseUserSteps.waitABit(1000);
+//		completeNewProfileSteps.typeIntoCreateProfileFirstName();
+//		completeNewProfileSteps.typeIntoCreateProfileMiddleInitial();
+//		completeNewProfileSteps.typeIntoCreateProfileLastName();
+//		completeNewProfileSteps.typeIntoCreateProfileNameSuffix();
+//		baseUserSteps.waitABit(1000);
 		completeNewProfileSteps.typeIntoCreateProfilePhone();
 //		completeNewProfileSteps.typeIntoCreateProfileTitle();
 		completeNewProfileSteps.typeIntoCreateProfileAltEmail();
@@ -643,7 +752,8 @@ public class UserProfileMap {
 		completeNewProfileSteps.typeIntoCreateProfileMailingIntZipCode();
 		//Serenity.takeScreenshot();
 		baseUserSteps.waitABit(1000);
-		completeNewProfileSteps.clickOnProceedToCheckoutOrSaveButton();
+//		completeNewProfileSteps.clickOnProceedToCheckoutOrSaveButton();
+		completeNewProfileSteps.clickOnSaveEditButton();
 		System.out.println("International Profile Update Test is Complete.  Profile is saved! " );
 	}
 	
@@ -836,7 +946,7 @@ public class UserProfileMap {
 		completeNewProfileSteps.selectProfileMailingStateDropList();
 		completeNewProfileSteps.typeIntoCreateProfileMailingZipCode();
 		baseUserSteps.waitABit(100);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		completeNewProfileSteps.clickOnSaveProfileButton();
 		System.out.println("Mailing Address has been updated.  Smarty Street validation will now begin! " );
 		baseUserSteps.waitABit(1000);

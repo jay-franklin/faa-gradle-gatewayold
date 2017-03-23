@@ -15,7 +15,9 @@ import net.thucydides.core.annotations.Managed;
 
 features = { "src/test/resources/features/Manage_Users" }, 
 glue = { "faa.cucumber.maps" },
-plugin = {"pretty", "html:target/cucumber-html-report/", "json:reports/json/results.json"}
+plugin = {"pretty", "html:target/cucumber-html-report/"}
+		
+//		, "json:reports/json/results.json"}
 //plugin = {"pretty", "html:reports/html/", "json:reports/json/results.json"}
 //plugin = {"html:target/cucumber-html-report"}
 )

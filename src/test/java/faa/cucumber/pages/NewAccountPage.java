@@ -39,13 +39,23 @@ public class NewAccountPage extends BasePageObject {
 	@FindBy(id = "createAccount") private WebElementFacade newAccountCreateAccount;
 
 	
-	/** New Account */
-	@FindBy(xpath = "//button[@id='createNewAccount' and contains(text(), 'Create Account')]") private WebElementFacade createNewAccountLink;
-
-	/** New Account */
+	/** New Account Link */
+	@FindBy(xpath = "//a[@id='createNewAccount' and contains(text(), 'Create Account')]") private WebElementFacade createNewAccountLink;
+	/** Create Account Submit Button  */
 	@FindBy(xpath = "//button[@id='createAccount' and contains(text(), 'Create Account')]") private WebElementFacade createAccountButton;
+
+	/** clickOnRegisterNonModelButton */
+	@FindBy(xpath = "//button[@id='nonModelAircraftUser' and contains(text(), 'REGISTER')]") private WebElementFacade registerNonModelButton;
+
 	
 	
+	
+	//clickOnRegisterNonModelButton	
+	//Register Non Model Account Button
+	public void clickOnRegisterNonModelButton() {
+		waitABit(2000);
+		registerNonModelButton.click();
+	}
 
 	//New Account Link
 	public void clickOnCreateNewAccountLink() {
@@ -144,7 +154,7 @@ public class NewAccountPage extends BasePageObject {
 				typeIntoPasswordField("Dummy$11");
 				typeIntoConfirmPasswordField("Dummy$11");
 				//Serenity.takeScreenshot();
-				clickOnCreateAccountButton();
+				clickOnCreateNewAccountLink();
 			}
 			
 		}

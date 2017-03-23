@@ -7,9 +7,9 @@ This feature file opens the web browser and logs in as an existing non hobbyist 
 then adds 1 UAS to their shopping cart
 Scenario Outline: Access the FAA UAS Drone Homepage with new account -- 66 Steps
 Given access the welcome page <number>
-When i click on the Login button
+Then click on the Non-Model Aircraft Tab
+Then i click on the I Agree button
 Then log in with random non hobbyist account
-Then click on the Non-Model option
 Then click the MANAGE sUAS INVENTORY button
 Then Add One New UAS
 Then click on the CheckOut Button

@@ -130,7 +130,7 @@ public class CreateNewProfilePage extends BasePageObject {
 	private static final String saveButtonCssSelector = "body#body div div div div div div div div form div div div div button.btn.btn-primary";
 	
 	//Add A Service Tab
-	@FindBy(xpath = "//div[@class='side-link' and contains(text(), 'Add a Service')]") private WebElementFacade addServiceTab;
+	@FindBy(xpath = "//a[@id='addServiceInternal']") private WebElementFacade addServiceTab;
 	//Model Aircraft Tab
 	@FindBy(xpath = "//a[@id='modelAircraftDashboard' and starts-with(text(), 'Model Aircraft')]") private WebElementFacade modelAircraftTab;
 
@@ -185,25 +185,65 @@ public class CreateNewProfilePage extends BasePageObject {
 	
 	public void clickOnModelAircraftButton() {
 		waitABit(1000);
-		modelAircraftButton.click();
+		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
+			waitABit(1000);
+			System.out.println("Loop Count to verify Model Aircraft Tab is clicked... " + i);
+			if (modelAircraftButton.isCurrentlyVisible()){
+				System.out.println("Model Aircraft Tab is Visible. Will now click it.");
+				i = 4;
+				modelAircraftButton.click();//attempt to click the element
+			System.out.println("Model Aircraft Tab has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("Model Aircraft Tab is NOT Visible... Trying again in 3 seconds");
+			waitABit(1000);//wait 3 seconds before trying to click again
+			}
+		}	
+		
 	}
 	
 	public void clickOnNonModelAircraftButton() {
 		waitABit(1000);
-		System.out.println("Click on the Non Model Aircraft [hobbyist] Account Type button ");
-		if (nonModelAircraftTab.isCurrentlyVisible()){
-			nonModelAircraftTab.click();
-		} else  {
-			    clickOnAddServiceTab();	
-			    selectNonModelFromServiceDropdown();
-			   	clickOnSelectButton();
+		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
+			waitABit(1000);
+			System.out.println("Loop Count to verify Non Model Aircraft Tab is clicked... " + i);
+			if (nonModelAircraftTab.isCurrentlyVisible()){
+				System.out.println("Non Model Aircraft Tab is Visible. Will now click it.");
+				i = 4;
+				nonModelAircraftTab.click();//attempt to click the element
+			System.out.println("Non Model Aircraft Tab has been clicked. ");
 			}
-		}
+			else 
+			{
+			System.out.println("Non Model Aircraft Tab is NOT Visible... Trying again in 3 seconds");
+			waitABit(1000);//wait 3 seconds before trying to click again
+			}
+		} 
+//		if (nonModelAircraftTab.isCurrentlyVisible()){
+//		System.out.println("Non Model Aircraft Tab is STILL NOT Visible...Not expecting it to be displayed.  Add Service");
+//			clickOnAddServiceTab();	
+//			selectNonModelFromServiceDropdown();
+//			clickOnSelectButton();
+//		}
+	}		
+		
+//		
+//		
+//		System.out.println("Click on the Non Model Aircraft Account [Non Hobbyist Type button ");
+//		if (nonModelAircraftTab.isCurrentlyVisible()){
+//			nonModelAircraftTab.click();
+//		} else  {
+//			    clickOnAddServiceTab();	
+//			    selectNonModelFromServiceDropdown();
+//			   	clickOnSelectButton();
+//			}
+//		}
 	
 	public void clickOnManageSuasInventoryButton(){
 		waitABit(1000);
 		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
-			waitABit(3000);
+			waitABit(1000);
 			System.out.println("Loop Count to verify MANAGE sUAS INVENTORY button... " + i);
 			if (manageSuasInventoryButton.isCurrentlyVisible()){
 				System.out.println("MANAGE sUAS INVENTORY button is Visible. Will now click it.");
@@ -214,17 +254,16 @@ public class CreateNewProfilePage extends BasePageObject {
 			else 
 			{
 			System.out.println("MANAGE sUAS INVENTORY is NOT Visible... Trying again in 3 seconds");
-			waitABit(3000);//wait 3 seconds before trying to click again
+			waitABit(1000);//wait 3 seconds before trying to click again
 			}
 		}	
 	}
 
 	public void clickOnManageUserAccountsButton(){
 		System.out.println("Click on the Non Model MANAGE USER ACCOUNTS button ");
-		
 		waitABit(1000);
 		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
-			waitABit(3000);
+			waitABit(1000);
 			System.out.println("Loop Count to verify manageUserAccountsButton [MANAGE USER ACCOUNTS] button... " + i);
 			if (manageUserAccountsButton.isCurrentlyVisible()){
 				System.out.println("manageUserAccountsButton [MANAGE USER ACCOUNTS] is Visible. Will now click it.");
@@ -300,15 +339,15 @@ public class CreateNewProfilePage extends BasePageObject {
 			billingInformationPage.typeIntoBillingCity();
 			billingInformationPage.selectBillingState();
 			billingInformationPage.typeIntoBillingZip();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			billingInformationPage.clickOnBillingNextButton();
 			billingInformationPage.clickOnReviewAcknowledgmentButton();
 			billingInformationPage.clickOnReviewPayButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Payment process has completed successfully!!");
 			billingInformationPage.clickOnDoneButton();
 			//assertThat(hobRegistrationCancelation.isCurrentlyVisible()).isTrue();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else {
 			System.out.println("Renew Registration Button is NOT Present..no further action can be taken at this time." );		
 		}
@@ -328,7 +367,7 @@ public class CreateNewProfilePage extends BasePageObject {
 			waitABit(2000);
 			hobConfirmCancelationOkButton.waitUntilVisible();
 			clickOnHobbyistConfirmCancelRegistrationOkButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			waitABit(2000);
 		} else {
 			System.out.println("Cancel Registration Button is NOT Present..no further action can be taken at this time." );		
@@ -351,13 +390,13 @@ public class CreateNewProfilePage extends BasePageObject {
 	public void typeIntoOnHobbyistCancelRegistrationReason() {
 			System.out.println("Cancel Registration Reason" );			
 			hobCancelRegistrationReason.type("Not a good Gateway reason, but a good one is not needed");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 	}	
 
 	//hobCancelRegistrationReasonCheckbox
 	public void clickOnHobbyistCancelRegistrationReasonCheckbox() {
 		hobCancelRegistrationReasonCheckbox.click();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}	
 
 	//hobConfirmCancelationButton
@@ -484,7 +523,7 @@ public class CreateNewProfilePage extends BasePageObject {
 		createProfileLastName.type(DataGenerator.randomLastName());
 		System.out.println(getTypeIntoCreateProfileFirstName());
 		System.out.println("Last Name is " + getTypeIntoCreateProfileLastName());
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 	public String getTypeIntoCreateProfileLastName() {
 		return createProfileLastName.getAttribute("value");
@@ -522,24 +561,24 @@ public class CreateNewProfilePage extends BasePageObject {
 		System.out.println("Camel Case Alternate Email Address " + camelUpdateAltEmail );
 		createProfileAlternateEmail.clear();
 		createProfileAlternateEmail.type(newFaaAcountEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(upperUpdateAltEmail);
 			System.out.println("Upper Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(camelUpdateAltEmail);
 			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type("myfaadrone+300@gmail.com");
 			System.out.println("Email Address has been updated with a valid email that is different than the primary Email address" );
 			System.out.println("Alternate Email Address is myfaadrone+300@gmail.com ");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 	
 	public String getCreateProfileAlternateEmail() {
@@ -553,25 +592,25 @@ public class CreateNewProfilePage extends BasePageObject {
 		System.out.println("Camel Case Alternate Email Address " + camelUpdateAltEmail );
 		createProfileAlternateEmail.clear();
 		createProfileAlternateEmail.type(updateAltEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(upperUpdateAltEmail);
 			System.out.println("Upper Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(camelUpdateAltEmail);
 			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type("mynewfaadrone+AlternateEmail_1@gmail.com");
 			System.out.println("Email Address has been updated with a valid email that is different than the primary Email address" );
 			System.out.println("Alternate Email Address is mynewfaadrone+AlternateEmail_1@gmail.com ");
 
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 //		LogToFile.write(getTitle());
 //		LogToFile.write("GP-3");
 //		LogToFile.write("New Hobbyist User First Time Profile Entry");
@@ -594,26 +633,26 @@ public class CreateNewProfilePage extends BasePageObject {
 		System.out.println("Camel Case Alternate Email Address " + camelUpdateAltEmail );
 		createProfileAlternateEmail.clear();
 		createProfileAlternateEmail.type(updateAltEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			waitABit(1000);
 			createProfileAlternateEmail.type(upperUpdateAltEmail);
 			System.out.println("Upper Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			waitABit(1000);
 			createProfileAlternateEmail.type(camelUpdateAltEmail);
 			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			waitABit(1000);
 			createProfileAlternateEmail.type("myfaadrone+2000@gmail.com");
 			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		System.out.println("Alternate Email Address has been updated.  It must be different than the primary Email address" );
 		
 	}

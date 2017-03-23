@@ -26,6 +26,12 @@ public class NavigationMap {
 	@Steps BaseUserSteps baseUserSteps;
 	@Steps GmailLoginSteps gmailLoginSteps;
 //	@Managed(driver = "chrome") WebDriver driver;
+
+//	@Before //@Before("@ui")
+//    public void openBrowser() {
+//        pages.getDriver().manage().window().maximize();
+//    }
+	
 	
 	String newGmailEmailAccount = "mynewfaadrone+" + DataGenerator.randomIntegerBetween(10,4000) + "@gmail.com";
 
@@ -169,6 +175,8 @@ public class NavigationMap {
 		System.out.println("Verify the Account gmail inbox message Link has been clicked. ");
 		gmailLoginSteps.waitABit(5000);
 		System.out.println("Only to Display the New Account Email address1111!!!!!!");
+		
+		
 	}	
 	
 
@@ -196,6 +204,7 @@ public class NavigationMap {
 	public void given_welcome() {
 		baseUserSteps.navigateToTheFaaHomePage();
 		baseUserSteps.waitABit(100);
+		
 	}
 	@Given("access the welcome page (.*)$")
 //	@Given("i have accessed the welcome page <number>")
@@ -244,6 +253,12 @@ public class NavigationMap {
 	public void iloginWithRandomNonHobbyistAccount(){
 		baseUserSteps.logInWithExistingNonHobbyistRandomAccount();
 	}
+
+	@Then("log in with random account to Add User")
+	public void loginWithRandomAccountToAddUser(){
+		baseUserSteps.loginWithRandomAccountToAddUser();
+	}
+	
 	@Then("log in with random account to change primary email")
 	public void iloginWithRandomAccountChangePrimaryEmail(){
 		baseUserSteps.logInWithExistingRandomAccountChangePrimaryEmail();
@@ -435,15 +450,15 @@ public class NavigationMap {
 		baseUserSteps.waitABit(100);
 	}
 
-	@When("i click on Create New Account button")
-	public void createNewAccount(){
-		baseUserSteps.clickOnCreateAccountButton();
-		System.out.println("Confirmed user clicked on the Create Account button. ");
-	}
+//	@When("i click on Create New Account button")
+//	public void createNewAccount(){
+//		baseUserSteps.clickOnNewAccountCreateButton();
+//		System.out.println("Confirmed user clicked on the Create Account button. ");
+//	}
 
-	@When("i create a new account")
+	@When("i click on Create New Account button")
 	public void createNewHobbyistGatewayAccount(){
-		baseUserSteps.clickOnCreateAccountButton();
+		baseUserSteps.clickOnNewAccountCreateButton();
 		System.out.println("Confirmed user clicked on the Gateway appliction new Account button. ");
 	}
 
@@ -488,12 +503,18 @@ public class NavigationMap {
 		System.out.println("Confirmed New password entered. "+ confirmPassword);
 		baseUserSteps.waitABit(100);
 	}
-	@Then("click the Create Account button")
+	
+	@Then("click on Create Account Button")
 	public void clickOnCreateAccountButton(){
 		baseUserSteps.clickOnCreateAccountButton();
 		System.out.println("Confirmed click on the New Account Button. ");
 	}
-
+	@Then("i click the Register Non Model Button")
+	public void clickOnRegisterNonModelButton(){
+		baseUserSteps.clickOnRegisterNonModelButton();
+		System.out.println("Confirmed click on the click On Register Non Model Button");
+	}
+	
 	
 	@Then("i click on Create New Account link")
 	public void clickOnCreateNewAccountLink(){

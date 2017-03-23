@@ -88,6 +88,13 @@ public class GmailLoginSteps extends ScenarioSteps {
 //		WebDriver driver = new FirefoxDriver();
 //		driver.manage().window().maximize();
 		gmailLoginPage.openAt(Url);
+		//Then you want to search for any new handles that may be present (there should now be 2)
+		for (String winHandle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(winHandle);
+		}
+		for (String winHandle : getDriver().getWindowHandles()) {
+				getDriver().manage().window().maximize();  //  switchTo().window(winHandle);
+		}
 
 		
 	}

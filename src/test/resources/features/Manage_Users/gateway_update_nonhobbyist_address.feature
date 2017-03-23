@@ -1,5 +1,5 @@
 #Author: jay.franklin@csra.com
-@all_faa @add_one_non_hobbyist_uas @gateway_update_nonhobbyist_address @gateway_update_nonhobbyist_address.feature
+@all_faa @gateway_group @gateway_update_nonhobbyist_address @gateway_update_nonhobbyist_address.feature
 Feature: Gateway Add one non hobbyist uas to shopping cart
   User Stories 
   [ UAS-689 ][ UAS-326 ][ UAS-203 ][ UAS-781 ]
@@ -26,4 +26,5 @@ Examples:
 | one |
 | two |
 | three |
-
+| four |
+| five |

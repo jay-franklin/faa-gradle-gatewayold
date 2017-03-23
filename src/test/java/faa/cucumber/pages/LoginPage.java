@@ -16,7 +16,7 @@ public class LoginPage extends BasePageObject {
 	@FindBy(id = "passwordField") private WebElementFacade passwordField;
 	@FindBy(xpath = "//button[@id='loginButton' and @type='submit' and contains(text(), 'Login')]") private WebElementFacade submitButton;
 
-	@FindBy(xpath = "//div[@class='alert alert-danger' and contains(text(),'Invalid username or password.')]") private WebElementFacade invalidUsernamePasswordMessage;
+	@FindBy(xpath = "//div[@class='alert alert-danger']") private WebElementFacade invalidUsernamePasswordMessage;
 	
 	static final String IAgreeButtonCssSelector = "div#systemUseModal div div div button.center-block.btn.btn-primary";
 
@@ -29,13 +29,13 @@ public class LoginPage extends BasePageObject {
 	
 	@FindBy(xpath = "//a[@id='logout' and contains(text(), 'Logout')]") private WebElementFacade logoutButton;
 
-	@FindBy(xpath = "//a[@id='forgotPassword']") private WebElementFacade forgotPassword;
+	@FindBy(xpath = "//a[@id='forgotPassword' and contains(text(), 'Forgot Password')]") private WebElementFacade forgotPassword;
 	@FindBy(xpath = "//a[@id='createAccount']") private WebElementFacade createAccount;
 	@FindBy(xpath = "//a[@id='resendVerification']") private WebElementFacade resendVerificationEmail;
 	
 	@FindBy(id = "email") private WebElementFacade emailTextField;
 	@FindBy(xpath = "//button[@type='submit' and contains(text(), 'Send Email')]") private WebElementFacade sendEmailButton;
-	@FindBy(xpath = "//a[@class='to-login' and contains(text(), 'Forgot Password')]") private WebElementFacade forgotPasswordLink;
+//	@FindBy(xpath = "//a[@id='forgotPassword' and contains(text(), 'Forgot Password')]") private WebElementFacade forgotPasswordLink;
 			
 	//IAgreeButton
 	public void clickOnIAgreeButton() {
@@ -115,7 +115,14 @@ public class LoginPage extends BasePageObject {
 	//loginButton
 	public void ClickOnLoginButton() {
 		loginAccountButton.click();
-
+		//Then you want to search for any new handles that may be present (there should now be 2)
+		for (String winHandle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(winHandle);
+		}
+		System.out.println("Title 3-->" + getTitle());
+		for (String winHandle : getDriver().getWindowHandles()) {
+				getDriver().manage().window().maximize();  //  switchTo().window(winHandle);
+		}
 	}
 	
 	//resendVerificationEmail
@@ -140,10 +147,10 @@ public class LoginPage extends BasePageObject {
 		waitABit(1000);
 		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
 			waitABit(3000);
-			System.out.println("Loop Count to verify Account Registration... " + i);
-			if (forgotPasswordLink.isCurrentlyVisible()){
+			System.out.println("Loop Count to click the Forgot Password Link... " + i);
+			if (forgotPassword.isCurrentlyVisible()){
 				i = 4;
-				forgotPasswordLink.click();//attempt to click the element
+				forgotPassword.click();//attempt to click the element
 			System.out.println("Forgot Password Link has been clicked. ");
 			}
 			else 

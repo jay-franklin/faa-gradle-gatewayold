@@ -8,6 +8,7 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.junit.annotations.Concurrent;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.StrictAssertions.assertThat;
 //import static org.assertj.core.api.StrictAssertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
@@ -25,6 +26,8 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.Random;
 
+import javax.management.modelmbean.ModelMBeanInfoSupport;
+
 import org.apache.commons.lang3.StringUtils;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.Dimension;
@@ -40,7 +43,7 @@ import faa.utils.LogToFileCsv;
 import faa.utils.LogToFileXlsx;
 import faa.utils.Sele1;
 import faa.utils.WriteOpenCSV2;
-
+import faa.models.InviteUser;
 
 /** @author jfranklin */
 public class FaaHomePage extends BasePageObject {
@@ -945,6 +948,21 @@ public class FaaHomePage extends BasePageObject {
 
 	}
 	
+
+	//typeIntoPopulateInviteNewUserProfile
+	public void typeIntoPopulateInviteNewUserProfile(){
+		
+		//		typeIntoinviteFirstNameField();
+//		typeIntoinviteLastNameField();
+//		typeIntoInviteEmailAddressField();
+//		selectFromRoleTypeCode();
+		clickOnSubmitInviteUserButton();
+
+	}
+
+	
+	
+	
 	//GP119
 	public void typeIntoInvitedExistingUserProfile(){
 		typeIntoinviteFirstNameField();
@@ -1486,11 +1504,20 @@ catch (AWTException e)
 		System.out.println("Random First Name-->" + randomFirstName);
 		inviteFirstName.type(randomFirstName);
 	}
+	public void typeIntoModelFirstName(String inputText) {
+		inviteFirstName.type(inputText);
+	}
+
+	
 	public void typeIntoinviteLastNameField() {
 		String randomLastName = DataGenerator.randomLastName();
 		inviteLastName.type(randomLastName);
 		System.out.println("Random Last Name-->" + randomLastName);
 	}
+	public void typeIntoModelLastName(String inputText) {
+		inviteLastName.type(inputText);
+	}
+
 	
 	public void typeIntoInviteEmailAddressField(){
 		//Setting up a session variable
@@ -1500,6 +1527,18 @@ catch (AWTException e)
 		System.out.println("Random Invited Email Address-->" + newInvitedEmailAccount);
 	} 
 
+	public void typeIntoModelEmail(String inputText) {
+		inviteEmail.type(inputText);
+	}
+
+	
+	public void selectFromRoleTypeCode(String inputText) {
+		inviteRoleCode.selectByVisibleText(inputText);
+//		inviteRoleCode.type(inputText);
+	}
+	
+	
+	
 	public void typeIntoInviteExistingEmailAddressField(){
 		//Setting up a session variable
 		String existingInvitedEmailAccount = "mynewfaadrone+Edge2@gmail.com";
@@ -1508,11 +1547,94 @@ catch (AWTException e)
 		System.out.println("Random Invited Email Address-->" + existingInvitedEmailAccount);
 	} 
 
+//	public void selectModeRoleTypeCode(String inviteRoleCode) {
+//		WebElementFacade dropdown =       inviteRoleCode;     // findWebElementByCssSelector(appointmentCategoryDropdownCssSelector);
+//		dropdown.selectByValue(inviteRoleCode);
+//		click(dropdown);
+//	}
+
+	public void selectARoleTypeCodeRandomly() {
+
+//		//Drop Down List Physical Country
+////		public void selectProfilePhysicalCountryDropDown(String country1) {
+//			waitABit(1000);
+//			if (inviteRoleCode.isCurrentlyVisible()){
+//			Select dropDownList = new Select(inviteRoleCode);
+//			dropDownList.selectByVisibleText(inviteRoleCode.trim());
+//			createProfilePhysicalCountry.selectByVisibleText(inviteRoleCode);
+//			System.out.println("Selected Physical Country from drop down list is..." + inviteRoleCode + "***" );
+//			} else {
+//				System.out.println("User has Inventory Manager Role.  This information cannot be updated...");
+//			}
+//
+//		}	
+//
+		List<String> categoryOptions = inviteRoleCode.getSelectOptions();
+		inviteRoleCode.selectByVisibleText(categoryOptions.get(DataGenerator.randomIntegerBetween(0,categoryOptions.size() - 1)));
+		System.out.println("Random Invited Role Code--> " + inviteRoleCode);
+		System.out.println("Random Invited Role Code categoryOptions--> " + categoryOptions);
+		
+//		System.out.println("Randomly selected UAS Type Size is " + uasTypeDropdown.getSelectOptions().size());
+//		String randomUasType = DataGenerator.randomUasType();
+//		System.out.println("Randomly selected UAS Type from new text file is " + randomUasType);
+//		uasTypeDropdown.selectByVisibleText(randomUasType);
+//		System.out.println("Randomly selected UAS Type is " + getARandomUasType());
+//		assertThat(uasTypeDropdownTitle.isCurrentlyVisible()).isTrue();
+
+		
+//    	Select dropDownList = new Select(inviteRoleCode);
+//		dropDownList.selectByVisibleText(randomWord);
+
+		
+	}
+
+//	public String selectModelARoleTypeCodeRandomly(String string) {
+	public void selectModelRandomRoleTypeCode() {
+
+//		//Drop Down List Physical Country
+////		public void selectProfilePhysicalCountryDropDown(String country1) {
+//			waitABit(1000);
+//			if (inviteRoleCode.isCurrentlyVisible()){
+//			Select dropDownList = new Select(inviteRoleCode);
+//			dropDownList.selectByVisibleText(inviteRoleCode.trim());
+//			createProfilePhysicalCountry.selectByVisibleText(inviteRoleCode);
+//			System.out.println("Selected Physical Country from drop down list is..." + inviteRoleCode + "***" );
+//			} else {
+//				System.out.println("User has Inventory Manager Role.  This information cannot be updated...");
+//			}
+//
+//		}	
+//
+		List<String> categoryOptions = inviteRoleCode.getSelectOptions();
+		inviteRoleCode.selectByVisibleText(categoryOptions.get(DataGenerator.randomIntegerBetween(0,categoryOptions.size() - 1)));
+		System.out.println("Random Invited Role Code--> " + inviteRoleCode);
+		System.out.println("Random Invited Role Code categoryOptions--> " + categoryOptions);
+		Select dropDownList = new Select(inviteRoleCode);
+//		dropDownList.selectByVisibleText(inviteRoleCode);
+//		return null;
+		
+//		System.out.println("Randomly selected UAS Type Size is " + uasTypeDropdown.getSelectOptions().size());
+//		String randomUasType = DataGenerator.randomUasType();
+//		System.out.println("Randomly selected UAS Type from new text file is " + randomUasType);
+//		uasTypeDropdown.selectByVisibleText(randomUasType);
+//		System.out.println("Randomly selected UAS Type is " + getARandomUasType());
+//		assertThat(uasTypeDropdownTitle.isCurrentlyVisible()).isTrue();
+
+		
+//    	Select dropDownList = new Select(inviteRoleCode);
+//		dropDownList.selectByVisibleText(randomWord);
+
+		
+	}
+
 	
 	
-	
-	
-	
+//	public void selectModeRoleTypeCode(String inviteRoleCodeString) {
+//		Select dropDownList = new Select(inviteRoleCodeString);
+//		dropDownList.selectByVisibleText(randomWord);
+//		System.out.println("Selected from Role Type Drop Down List-->" + randomWord);
+//		inviteRoleCode.selectByValue(inviteRoleCodeString);
+//	}
 	
 	public void  selectFromRoleTypeCode() {
 		//String returnValue = "null";
@@ -1529,9 +1651,9 @@ catch (AWTException e)
 		        //since the indexes are represented from 0 to length - 1
 		        int max = linesInFile.size() - 1;
 		        int min = 0;
-		        System.out.println("Random min-->" + max);
-		        System.out.println("Random max-->" + min);
-		        System.out.println("Random linesInFile.size()-->" + linesInFile.size());
+		        System.out.println("Role Code Random min-->" + max);
+		        System.out.println("Role Code Random max-->" + min);
+		        System.out.println("Role Code  Random linesInFile.size()-->" + linesInFile.size());
 
 		        //You can simplify this formula later, I'm just putting the whole thing
 		        int randomIndexForWord = randomUtil.nextInt((max - min + 1)) + min;
@@ -1561,9 +1683,13 @@ catch (AWTException e)
 			roleType = "Organization Administrator";
 			System.out.println("New Role Type is-->" + roleType);
 			}
+			inviteRoleCode.click();
 			Select dropDownList = new Select(inviteRoleCode);
 			dropDownList.selectByVisibleText(roleType);
 			System.out.println("Selected from Role Type Drop Down List-->" + roleType);
+			//
+//			Select selectByVisibleText = new Select (inviteRoleCode);
+//			selectByVisibleText.selectByVisibleText(roleType);
 		}
 
 	

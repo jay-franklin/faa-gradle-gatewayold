@@ -44,7 +44,7 @@ public class ChangePrimaryEmailPage {
 		System.out.println("Verify New Primary Email Address is--->" + newPrimaryEmail2);
 		newPrimaryEmailTextBox.clear();
 		newPrimaryEmailTextBox.typeAndTab(newPrimaryEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 
 	public void typeIntoConfirmNewPrimaryEmailField() {
@@ -55,7 +55,7 @@ public class ChangePrimaryEmailPage {
 		System.out.println("Verify Confirm New Primary Email Address is--->" + confirmNewPrimaryEmail);
 		ConfirmNewPrimaryEmailTextBox.clear();
 		ConfirmNewPrimaryEmailTextBox.typeAndTab(confirmNewPrimaryEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 	
 	public void typeIntoConfirmNewEmailPasswordField() {
@@ -66,7 +66,7 @@ public class ChangePrimaryEmailPage {
 		System.out.println("Verify New Primary Email Address Password is--->" + newPrimaryEmailPassword);
 		newConfirmNewEmailPasswordTextBox.clear();
 		newConfirmNewEmailPasswordTextBox.typeAndTab(newPrimaryEmailPassword);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 
 	
@@ -77,13 +77,13 @@ public class ChangePrimaryEmailPage {
 	public void clickOnIsConfirmedEmailCheckbox() {
 		isConfirmedEmailCheckBox.click();
 		System.out.println("The New Primary Email Address Is Confirmed Checkbox is selected");
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}	
 
 	public void clickOnSubmitButton() {
 		submitButton.click();
 		System.out.println("The New Primary Email Address Submit Button is Clicked");
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}	
 	
 	
@@ -99,7 +99,7 @@ public class ChangePrimaryEmailPage {
 //		//String newEmail = "mynewfaadrone+nhNewEmail" + DataGenerator.randomIntegerBetween(1,10000) + "@gmail.com";
 //		System.out.println("New Primary Email Address is --->" + newEmail);
 //		ConfirmNewPrimaryEmailTextBox.typeAndTab(newEmail);
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //	}
 //
 //	
@@ -116,13 +116,13 @@ public class ChangePrimaryEmailPage {
 //	public void typeIntoOnHobbyistCancelRegistrationReason() {
 //			System.out.println("Cancel Registration Reason" );			
 //			hobCancelRegistrationReason.type("Not a good reason, but a good one is not needed");
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //	}	
 //
 //	//hobCancelRegistrationReasonCheckbox
 //	public void clickOnHobbyistCancelRegistrationReasonCheckbox() {
 //		hobCancelRegistrationReasonCheckbox.click();
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //	}	
 //
 //	public void typeIntoCreateProfileAlternateEmail() {
@@ -136,24 +136,24 @@ public class ChangePrimaryEmailPage {
 //		System.out.println("Camel Case Alternate Email Address " + camelUpdateAltEmail );
 //		createProfileAlternateEmail.clear();
 //		createProfileAlternateEmail.typeAndTab(newFaaAcountEmail);
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //		if (altEmailErrorMessage.isCurrentlyVisible()) {
 //			createProfileAlternateEmail.typeAndTab(upperUpdateAltEmail);
 //			System.out.println("Upper Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //		}
 //		if (altEmailErrorMessage.isCurrentlyVisible()) {
 //			createProfileAlternateEmail.typeAndTab(camelUpdateAltEmail);
 //			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //		}
 //		if (altEmailErrorMessage.isCurrentlyVisible()) {
 //			createProfileAlternateEmail.typeAndTab("myfaadrone+300@gmail.com");
 //			System.out.println("Email Address has been updated with a valid email that is different than the primary Email address" );
 //			System.out.println("Alternate Email Address is myfaadrone+300@gmail.com ");
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //		}
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //	}
 //	
 }

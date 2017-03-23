@@ -1,5 +1,5 @@
 SLF4J: Class path contains multiple SLF4J bindings.
-SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.24/d9841ffd9d794ab26446df2c46a2ab2b8d2a183e/slf4j-simple-1.7.24.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.12/42db62298b899818ff17352cbc00050e940bbfb0/slf4j-simple-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-jdk14/1.5.6/cc383fbd07dd1826bbcba1b907bbdc0b5be627f1/slf4j-jdk14-1.5.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/C:/Users/jfrankl6/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/1.5.3/36a3c886235cddd05e55a979cef549196740231a/slf4j-nop-1.5.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.

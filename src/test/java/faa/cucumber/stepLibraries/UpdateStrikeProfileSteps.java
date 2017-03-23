@@ -210,7 +210,7 @@ public class UpdateStrikeProfileSteps {
 		System.out.println("Strike Physical Zip Name from array is: " + profileAddress[5]);
         System.out.println("New Zip is " + newZip);
         updateStrikeProfilePage.typeIntoCreateProfilePhysicalZip(newZip);
-        ////Serenity.takeScreenshot(); 
+        //Serenity.takeScreenshot(); 
 	}
 	
 	@Step
@@ -272,7 +272,7 @@ public class UpdateStrikeProfileSteps {
 		System.out.println("On Verify new mailing State is--->  " + newMailingState);
 		if (mailingAddress[0].equals("United States")){
 			updateStrikeProfilePage.selectFromMailingStateNameDropdownList(newMailingState);
-			////Serenity.takeScreenshot(); 
+			//Serenity.takeScreenshot(); 
 			System.out.println("Strike Selected new mailing State is--->  " + newMailingState);
 		} else {
 				if (newMailingState == null ||newMailingState.equals(null)||newMailingState.equals(""))		
@@ -280,7 +280,7 @@ public class UpdateStrikeProfileSteps {
 				System.out.println("The New Mailing State value is NULL ---> " + newMailingState  + "*****So Do NOT Add a State Value for this address!*****");
 			} else { 
 				updateStrikeProfilePage.typeIntoMailingStateNameField(newMailingState);
-				////Serenity.takeScreenshot(); 
+				//Serenity.takeScreenshot(); 
 				System.out.println("Strike Mailing Country is not United States, so here is the new State TEXT value:***" + mailingAddress[0] + "***");
 				System.out.println("Strike Check to see what Mailing Country is TEXT value:***" + newMailingState + "***");
 				}
@@ -291,7 +291,7 @@ public class UpdateStrikeProfileSteps {
 		Serenity.setSessionVariable("mailingZip1").to(mailingAddress[5]);
 		String newMailingZip = Serenity.sessionVariableCalled("mailingZip1").toString();
 		updateStrikeProfilePage.typeIntoCreateProfileMailingZip(newMailingZip);
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("Strike Mailing Zip***" + newMailingZip + "***");
 	}
 ////////Begin of Int Address
@@ -450,7 +450,7 @@ public class UpdateStrikeProfileSteps {
 	//validatePhysicalAndMailingAddress
 	@Step
 	public void validatePhysicalAndMailingAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validatePhysicalAndMailingAddress();
 		////Serenity.takeScreenshot();
 		System.out.println("End of Smarty Street Physical and Mailing Address validation Test!!");
@@ -459,23 +459,23 @@ public class UpdateStrikeProfileSteps {
 	
 	@Step
 	public void validatePhysicalAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validatePhysicalAddress();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Physical Address validation Test!!");
 	}
 	
 	@Step
 	public void validateMailingAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validateMailingAddress();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Mailing Address validation Test!!");
 	}
 	//////////
 	@Step
 	public void validateStrikePhysicalAndMailingAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validateAllStrikeAddreses();
 		////Serenity.takeScreenshot();
 		System.out.println("End of Smarty Street Strike Physical and Mailing Address validation Test!!");
@@ -484,17 +484,17 @@ public class UpdateStrikeProfileSteps {
 	
 	@Step
 	public void validateStrikePhysicalAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validateAllStrikeAddreses();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Physical Address validation Test!!");
 	}
 	
 	@Step
 	public void validateStrikeMailingAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validateAllStrikeAddreses();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Mailing Address validation Test!!");
 	}
 	
@@ -521,9 +521,9 @@ public class UpdateStrikeProfileSteps {
 		billingInformationPage.clickOnBillingNextButton();
 		billingInformationPage.clickOnReviewAcknowledgmentButton();
 		billingInformationPage.clickOnReviewPayButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		//billingInformationPage.clickOnViewInventoryButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("Payment process has completed successfully!!");
 		billingInformationPage.clickOnDoneButton();
 	}
@@ -549,9 +549,9 @@ public class UpdateStrikeProfileSteps {
 		billingInformationPage.clickOnBillingNextButton();
 		billingInformationPage.clickOnReviewAcknowledgmentButton();
 		billingInformationPage.clickOnReviewPayButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		//billingInformationPage.clickOnViewInventoryButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("Payment process has completed successfully!!");
 		billingInformationPage.clickOnDoneButton();
 	}

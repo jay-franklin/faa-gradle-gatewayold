@@ -1,6 +1,6 @@
 #Author: jay.franklin@csra.com
 #Feature: invite_new_user.feature
-@all_faa @jay_group2 @temp @invite_new_user @invite_new_user2.feature
+@all_faa @gateway_group @temp @invite_new_user @invite_new_user2.feature
 Feature: Invite a New User
   User Stories [ UAS-20 ][ UAS-93 ][ 815 ][ 816 ][ 823 ][ 824 ][ 826 ][ 827 ][ 831 ][ 856 ]
   This feature Invites a New Uer

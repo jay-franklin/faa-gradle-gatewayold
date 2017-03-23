@@ -13,7 +13,7 @@ Feature: new_non_hobbyist.feature
     Then i enter a new non hobbyist account email address
     And i enter a new account password 'Dummy$11'
     And i confirm a new account passord 'Dummy$11'
-    And i click the create account button
+    And i i click on Create New Account link
     Then i verify the account is created
 
   Scenario: Access the gmail login page

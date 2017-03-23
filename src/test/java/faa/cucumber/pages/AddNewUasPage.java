@@ -337,6 +337,8 @@ public class AddNewUasPage extends BasePageObject {
 			
 	}	
 	
+
+	
 	
 	
 //	public void writeToCsc() {
@@ -921,16 +923,6 @@ public class AddNewUasPage extends BasePageObject {
 		System.out.println("Add Five UAS ");
 		System.out.println("Add Button is here ");
 		waitABit(2000);
-		// checkTheAcknowledgeBox();
-		// clickOnAcknowledgeNextButton();
-
-		// if (maxSizeOf50InCartLink.isCurrentlyVisible() |
-		// clickOn50DoneButton.isCurrentlyVisible()){
-		// System.out.println("Max of 50 UASs have been added to shopping cart.
-		// Click the Done Button and Continue to payment process.");
-		// clickOn50DoneButton();
-		// //x = 50;
-		// }
 		addUasToCartButton.click();
 		if (cartLimitOkButton.isCurrentlyVisible()) {
 			System.out.println(
@@ -1159,6 +1151,56 @@ public class AddNewUasPage extends BasePageObject {
 	}
 	/// End of this that works////
 
+	
+	public void clickToAddTenUasDoNotPay() {
+		//// Works/////
+		System.out.println("Add Ten UAS ");
+		System.out.println("Add Button is here ");
+		waitABit(2000);
+		addUasToCartButton.click();
+		if (cartLimitOkButton.isCurrentlyVisible()) {
+			System.out.println(
+					"Secondry OK Button is clicked, max shopping cart size of 50 has been added.  Complete payment process now");
+			clickOnCartLimitOkButton();
+			clickOnCheckOutButton();
+		} else {
+			System.out.println("Add UAS Button is clicked ");
+			for (int x = 1; x < 11; x++) { // Beginning of FOR LOOP!
+				System.out.println("BEGINNING of For Loop " + x + " to Add Ten New UAS");
+				waitABit(2000);
+
+				if (clickOnAddSubmitButton.isCurrentlyVisible()) {
+					System.out.println("clickOnAddSubmitButton is visible, Now Select a random UAS Type!!! ");
+					selectARandomUasType();
+					System.out.println("Random UAS Type has been selected");
+					typeIntoNicknameField();
+					typeIntoManufacturerNameField();
+					typeIntoModelNumberField();
+					//Serenity.takeScreenshot();
+					typeIntoSerialNumberField();
+					System.out.println("UAS has been added.  Now click the Add Submit Button to save");
+					clickAddSubmitButton();
+					if (clickOn50DoneButton.isCurrentlyVisible()) {
+						x = 5;
+						clickOn50DoneButton();
+					}
+					//Serenity.takeScreenshot();
+					waitABit(1000);
+					System.out.println("Count of New UAS's Added is " + x);
+				}
+				System.out.println("END of For Loop " + x + " to Add Ten New UAS");
+			}
+			System.out.println("END of For Loop to Add Ten New UAS.  Now Begin payment process.");
+			clickOnDoneButton();
+			System.out.println("Else Done Button has been clicked ");
+			System.out.println("***END OF TEST, PAYMENT IS NOT PART OF THIS TEST**** ");
+			waitABit(2000);
+		}
+	}
+	
+	
+	
+	
 	public void clickToAddUasButton() {
 		System.out.println("Add UAS Button is clicked");
 		addUasToCartButton.click();
@@ -1170,14 +1212,42 @@ public class AddNewUasPage extends BasePageObject {
 	}
 
 	public void checkTheAcknowledgeBox() {
-		System.out.println("Click the Acknowledge box is verified");
-		checkTheAcknowledgeBox.click();
+		waitABit(1000);
+		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
+			waitABit(3000);
+			System.out.println("Loop Count to verify checkTheAcknowledgeBox is visible... " + i);
+			if (checkTheAcknowledgeBox.isCurrentlyVisible()){
+				System.out.println("checkTheAcknowledgeBox is Visible. Will now click it.");
+				i = 4;
+				checkTheAcknowledgeBox.click();//attempt to click the element
+			System.out.println("checkTheAcknowledgeBox has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("checkTheAcknowledgeBox is NOT Visible... Trying again in 3 seconds");
+			waitABit(3000);//wait 3 seconds before trying to click again
+			}
+		}	
 	}
+		
 
 	public void clickOnAcknowledgeNextButton() {
-		System.out.println("Click the checkOutNextButton button is verified");
-		checkAcknowledgeNextButton.waitUntilClickable();
-		checkAcknowledgeNextButton.click();
+		waitABit(1000);
+		for(int i = 0 ; i < 5;i++){ //attempt to click the element 5 times
+			waitABit(2000);
+			System.out.println("Loop Count to verify checkAcknowledgeNextButton is visible... " + i);
+			if (checkAcknowledgeNextButton.isCurrentlyVisible()){
+				System.out.println("checkAcknowledgeNextButton is Visible. Will now click it.");
+				i = 4;
+				checkAcknowledgeNextButton.click();//attempt to click the element
+			System.out.println("checkAcknowledgeNextButton has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("checkAcknowledgeNextButton is NOT Visible... Trying again in 3 seconds");
+			waitABit(2000);//wait 2 seconds before trying to click again
+			}
+		}	
 	}
 
 	public void selectARandomUasType() {
@@ -1187,7 +1257,7 @@ public class AddNewUasPage extends BasePageObject {
 		System.out.println("Randomly selected UAS Type from new text file is " + randomUasType);
 		uasTypeDropdown.selectByVisibleText(randomUasType);
 		System.out.println("Randomly selected UAS Type is " + getARandomUasType());
-		assertThat(uasTypeDropdownTitle.isCurrentlyVisible()).isTrue();
+		//assertThat(uasTypeDropdownTitle.isCurrentlyVisible()).isTrue();
 
 }
 

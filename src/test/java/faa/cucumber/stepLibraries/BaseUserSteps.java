@@ -58,6 +58,15 @@ public class BaseUserSteps extends ScenarioSteps {
 		loadSerenityProperties();
 		String Url = getfaaUrl();
 		faaHomePage.openAt(Url);
+		//Then you want to search for any new handles that may be present (there should now be 2)
+		for (String winHandle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(winHandle);
+		}
+//		System.out.println("Title 3-->" + getTitle());
+		for (String winHandle : getDriver().getWindowHandles()) {
+				getDriver().manage().window().maximize();  //  switchTo().window(winHandle);
+		}
+		//faaHomePage.openAt("https://public-gateway.csra-dronezone.com/");
 	}
 
 	private String getfaaUrl() {
@@ -360,7 +369,60 @@ public class BaseUserSteps extends ScenarioSteps {
 		loginPage.clickOnSubmitButton();
 		waitABit(1000);
 	} 
+	
+	@Step
+	public void loginWithRandomAccountToAddUser(){
+		System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
+		String environment = serenityProperties.getProperty("app.base.host");
+		if (environment.equals("public-gateway.csra-dronezone.com")){
+			System.out.println("Environment in integration--->" + environment);
+			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginIntegration();
+			String randomLogin = DataGenerator.getActiveAccountToAddUserFromIntegrationDB();
+			System.out.println("Logging in with an existing random account in Integration--->" + randomLogin);
+			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
+			loginPage.typeIntoLoginField(randomLogin);
+			loginPage.typeIntoPasswordField("Dummy$11");
+			System.out.println("Logged in with an existing random account in Integration--->" + randomLogin);			                           
+		} else if (environment.equals("public-gateway.test.csra-dronezone.com")){
+			System.out.println("Environment in Test--->" + environment);
+			String randomLogin = DataGenerator.getActiveAccountToAddUserFromTestDB();
+			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginTest();
+			System.out.println("Logging in with an existing random account in Test--->" + randomLogin);
+			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
+			loginPage.typeIntoLoginField(randomLogin);
+			loginPage.typeIntoPasswordField("Dummy$11");
+			System.out.println("Logged in with an existing random account in Test--->" + randomLogin);
+		} else if (environment.equals("registermyuas-stage.csra-dronezone.com")){
+			System.out.println("Environment in Stage--->" + environment);
+			String randomLogin = DataGenerator.getActiveAccountToAddUserFromStageDB();
+			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginTest();
+			System.out.println("Logging in with an existing random account in Stage--->" + randomLogin);
+			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
+			loginPage.typeIntoLoginField(randomLogin);
+			loginPage.typeIntoPasswordField("Dummy$11");
+			System.out.println("Logged in with an existing random account in Stage--->" + randomLogin);
+		} 
+		System.out.println("Click the Submit Button");
+		//Serenity.takeScreenshot();
+		loginPage.clickOnSubmitButton();
+		waitABit(1000);
+	} 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@Step
 	public void logInWithExistingGatewayNonHobbyistRandomAccount(){
@@ -449,7 +511,7 @@ public class BaseUserSteps extends ScenarioSteps {
 	public void logInWithExistingRandomAccountChangePrimaryEmail(){
 		System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
 		String environment = serenityProperties.getProperty("app.base.host");
-		if (environment.equals("registermyuas-integration.csra-dronezone.com")){
+		if (environment.equals("public-gateway.csra-dronezone.com")){
 			System.out.println("Environment in integration--->" + environment);
 			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginIntegration();
 			String randomLogin = DataGenerator.getActiveNonHobbyistCpeUserFromIntegrationDB();
@@ -458,7 +520,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			loginPage.typeIntoLoginField(randomLogin);
 			loginPage.typeIntoPasswordField("Dummy$11");
 			System.out.println("Logged in with an existing random account in Integration--->" + randomLogin);			                           
-		} else if (environment.equals("registermyuas-test.csra-dronezone.com")){
+		} else if (environment.equals("public-gateway.test.csra-dronezone.com")){
 			System.out.println("Environment in Test--->" + environment);
 			String randomLogin = DataGenerator.getActiveNonHobbyistCpeUserFromTestDB();
 			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginTest();
@@ -467,7 +529,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			loginPage.typeIntoLoginField(randomLogin);
 			loginPage.typeIntoPasswordField("Dummy$11");
 			System.out.println("Logged in with an existing random account in Test--->" + randomLogin);
-		} else if (environment.equals("registermyuas-stage.csra-dronezone.com")){
+		} else if (environment.equals("public-gateway.stage.csra-dronezone.com")){
 			System.out.println("Environment in Stage--->" + environment);
 			String randomLogin = DataGenerator.getActiveNonHobbyistCpeUserFromStageDB();
 			//String randomLogin = DataGenerator.getRandomNonHobbyistEmailLoginTest();
@@ -478,7 +540,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			System.out.println("Logged in with an existing random account in Stage--->" + randomLogin);
 		} 
 		System.out.println("Click the Submit Button");
-		//Serenity.takeScreenshot();
+		Serenity.takeScreenshot();
 		loginPage.clickOnSubmitButton();
 		waitABit(1000);
 	} 
@@ -487,7 +549,7 @@ public class BaseUserSteps extends ScenarioSteps {
 	public void logInWithExistingHobbyistRandomAccount(){
 		System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
 		String environment = serenityProperties.getProperty("app.base.host");
-		if (environment.equals("registermyuas-integration.csra-dronezone.com")){
+		if (environment.equals("public-gateway.csra-dronezone.com")){
 			//randomHobbyistEmailLoginIntegration
 			//String randomLogin = DataGenerator.getRandomHobbyistEmailLoginIntegration();
 			String randomLogin = DataGenerator.getActiveHobbyistUserFromDB();
@@ -497,7 +559,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			//Serenity.takeScreenshot();
 			loginPage.clickOnSubmitButton();
 			System.out.println("Logged in with an existing random account in Integration--->" + randomLogin);
-		} else if (environment.equals("registermyuas-test.csra-dronezone.com")){
+		} else if (environment.equals("public-gateway.test.csra-dronezone.com")){
 			String randomLogin = DataGenerator.getRandomHobbyistEmailLoginTest();
 			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
 			loginPage.typeIntoLoginField(randomLogin);
@@ -520,7 +582,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
 			loginPage.typeIntoLoginField(randomLogin);
 			loginPage.typeIntoPasswordField("Dummy$11");
-//			//Serenity.takeScreenshot();
+			Serenity.takeScreenshot();
 			loginPage.clickOnSubmitButton();
 			System.out.println("Gateway Logged in with an existing random Hobbyist account in Integration--->" + randomLogin);
 		} else if (environment.equals("public-gateway.test.csra-dronezone.com")){
@@ -528,7 +590,7 @@ public class BaseUserSteps extends ScenarioSteps {
 			Serenity.setSessionVariable("newFaaAcountEmail").to(randomLogin);
 			loginPage.typeIntoLoginField(randomLogin);
 			loginPage.typeIntoPasswordField("Dummy$11");
-//			//Serenity.takeScreenshot();
+			Serenity.takeScreenshot();
 			loginPage.clickOnSubmitButton();
 			System.out.println("Gateway Logged in with an existing random Hobbyist account in Test--->" + randomLogin);
 		} 
@@ -582,7 +644,14 @@ public class BaseUserSteps extends ScenarioSteps {
 		faaHomePage.validateExistingNonHobbyistAccount();	
 	}
 	
+
 	
+	@Step
+	public void clickOnRegisterNonModelButton(){
+		newAccountPage.clickOnRegisterNonModelButton();
+		waitABit(2000);
+	}
+
 	
 	@Step
 	public void clickOnCreateAccountButton(){
@@ -679,7 +748,7 @@ public class BaseUserSteps extends ScenarioSteps {
 	}
 	@Step
 	public void clickOnNewAccountCreateButton(){
-		newAccountPage.clickOnCreateAccountButton();
+		newAccountPage.clickOnCreateNewAccountLink();
 	}
 	@Step
 	public void verifyAccountCreation(){

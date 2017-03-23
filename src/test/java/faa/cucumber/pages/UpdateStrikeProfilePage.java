@@ -244,25 +244,25 @@ public class UpdateStrikeProfilePage extends BasePageObject {
 		System.out.println("Camel Case Alternate Email Address " + camelUpdateAltEmail );
 		createProfileAlternateEmail.clear();
 		createProfileAlternateEmail.type(updateAltEmail);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(upperUpdateAltEmail);
 			System.out.println("Upper Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type(camelUpdateAltEmail);
 			System.out.println("Camel Case Alternate Email Address has been updated.  It must be different than the primary Email address" );
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 		if (altEmailErrorMessage.isCurrentlyVisible()) {
 			createProfileAlternateEmail.type("myfaadrone+300@gmail.com");
 			System.out.println("Email Address has been updated with a valid email that is different than the primary Email address" );
 			System.out.println("Alternate Email Address is myfaadrone+300@gmail.com ");
 
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 }
 
 	public String getUpdateProfileAlternateEmail() {

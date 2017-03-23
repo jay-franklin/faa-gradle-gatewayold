@@ -60,6 +60,13 @@ public class AddNewUasSteps {
 	public void clickToAddFiveUAS(){
 		addNewUasPage.clickToAddFiveUAS();
 	}
+
+	//clickToAddTenUasDoNotPay
+	@Step
+	public void clickToAddTenUasDoNotPay(){
+		addNewUasPage.clickToAddTenUasDoNotPay();
+	}
+	
 	
 	@Step 
 	public void selectARandomUasType(){

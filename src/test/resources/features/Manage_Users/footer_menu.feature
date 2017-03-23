@@ -1,6 +1,6 @@
 #Author: jay.franklin@csra.com
 
-@all_faa  @jay_group2 @footer 
+@all_faa  @gateway_group @footer 
 Feature: Footer Menu link verification
 User Stories [UAS-1][UAS-91][ UAS-2 ][ UAS-315 ][ UAS-128 ][ UAS-149 ][ UAS-335 ]
 This feature file verifies all footer menu options are accessed successfully

@@ -20,5 +20,5 @@ When i click on the new account button
 Then i enter a new hobbyist account email address
 Then i enter a new account password 'MyfaaDummy$11'
 Then i confirm a new account passord 'MyfaaDummy$11'
-Then i click the create account button
+Then i i click on Create New Account link
 Then i verify the account is created

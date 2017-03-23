@@ -80,7 +80,10 @@ public class GmailLoginPage extends BasePageObject {
 
 	@FindBy(css = "a[href*='https://registermyuas-integration.csra-dronezone.com/verify?sptoken']") WebElementFacade gmailClickToVerifyAccount;
 	
-	@FindBy(css = "a[href*='https://registermyuas-integration.csra-dronezone.com/change?sptoken']") WebElementFacade gmailClickToResetPassword;
+	//@FindBy(css = "a[href*='https://registermyuas-integration.csra-dronezone.com/change?sptoken']") WebElementFacade gmailClickToResetPassword;
+	//@FindBy(css = "a[href*='https://registermyuas-integration.csra-dronezone.com/change?sptoken']") WebElementFacade gmailClickToResetPassword;
+	@FindBy(xpath = "//a[starts-with(@href,'https://public-gateway.csra-dronezone.com')]") WebElementFacade gmailClickToResetPassword;
+	
 	@FindBy(xpath = "//div[@class='aRv' and contains(text(),'Your Primary tab is empty.')]") private WebElementFacade gmailAccountInboxIsEmpty;
 	
 	//Gmail Account to Sign Out button

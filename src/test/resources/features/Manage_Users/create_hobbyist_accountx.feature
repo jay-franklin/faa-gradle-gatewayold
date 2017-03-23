@@ -1,6 +1,6 @@
 #Author: jay.franklin@csra.com
 
-@all_faa @jay_group3 @create_new_account  @create_hobbyist_accountx @create_hobbyist_accountx.feature
+@all_faa @gateway_group @create_new_account  @create_hobbyist_accountx @create_hobbyist_accountx.feature
 
 Feature: Create new hobbyist account
 [UAS-1][UAS-2][UAS-3][UAS-4][UAS-8][UAS-93][UAS-9][UAS-11][UAS-15][UAS-16]
@@ -22,7 +22,7 @@ Then i click on Create New Account link
 Then i enter a new hobbyist account email address
 Then i enter a new account password 'Dummy$11'
 Then i confirm a new account passord 'Dummy$11'
-Then click the Create Account button
+Then click on Create Account Button
 Then i verify the account is created
 
 Given i have accessed the gmail login page
@@ -44,4 +44,4 @@ Then i complete payment for the hobbyist drone
 Examples:
 | number |
 | one |
-#| two |
+| two |

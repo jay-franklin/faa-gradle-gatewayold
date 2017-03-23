@@ -357,26 +357,6 @@ public class DataGenerator {
 		  return returnValue;
 	}
 
-//	/** @return random emailLogin from file randomEmailLoginTest.txt
-//	 * @throws IOException */
-//	public static String randomEmailLoginTest() {
-//		Random rand = new Random();
-//		String returnValue = "";
-//		try {
-//			RandomAccessFile raf = new RandomAccessFile(
-//					System.getProperty("user.dir") + "/src/test/java/faa/utils/randomEmailLoginTest.txt", "r");
-//			final long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return returnValue;
-//	}
-
 	public static String randomEmailLoginStage() {
 		String returnValue = "null";
 		  try {
@@ -409,28 +389,6 @@ public class DataGenerator {
 		  return returnValue;
 	}
 	
-	
-	
-//	/** @return random emailLogin from file randomEmailLoginStage.txt
-//	 * @throws IOException */
-//	public static String randomEmailLoginStage() {
-//		Random rand = new Random();
-//		String returnValue = "";
-//		try {
-//			RandomAccessFile raf = new RandomAccessFile(
-//					System.getProperty("user.dir") + "/src/test/java/faa/utils/randomEmailLoginStage.txt", "r");
-//			final long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return returnValue;
-//	}
-//	
 	/** @return random Street Address formatted string. Format: 123 Fake St.
 	 * @throws IOException */
 	public static String randomStreetAddress() {
@@ -489,25 +447,7 @@ public class DataGenerator {
 		  return returnValue;
 	}
 	
-//	/** @return random first name from file
-//	 * @throws IOException */
-//	public static String randomFirstName() {
-//		Random rand = new Random();
-//		String returnValue = "";
-//		try {
-//			RandomAccessFile raf = new RandomAccessFile(
-//					System.getProperty("user.dir") + "/src/test/java/faa/utils/FirstNames.txt", "r");
-//			final long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return returnValue.toUpperCase();
-//	}
+
 
 	/** @return random middle name (same as first name)
 	 * @throws IOException */
@@ -548,27 +488,6 @@ public class DataGenerator {
 	}
 	
 
-//	/** @return random last name form file
-//	 * @throws IOException */
-//	public static String randomLastName() {
-//		Random rand = new Random();
-//		String returnValue = "null";
-//		RandomAccessFile raf;
-//		try {
-//			raf = new RandomAccessFile(System.getProperty("user.dir") + "/src/test/java/faa/utils/LastNames.txt",
-//					"r");
-//			final long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return returnValue.toUpperCase();
-//	}
 
 	
 	public static String randomSuffixName() {
@@ -602,62 +521,7 @@ public class DataGenerator {
 		    }
 		  return returnValue;
 	}
-	
-//	/** @return random suffix name from file
-//	 * @throws IOException */
-//	public static String randomSuffixName() {
-//		Random rand = new Random();
-//		String returnValue = "null";
-//		RandomAccessFile raf;
-//		try {
-//			raf = new RandomAccessFile(System.getProperty("user.dir") + "/src/test/java/faa/utils/suffix.txt",
-//					"r");
-//			long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			if (randomLocation == 0){
-//				randomLocation = randomLocation + 1;
-//				System.out.println("New Random Location Line Number -->"+ randomLocation); 
-//			}
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return returnValue.toUpperCase();
-//	}
-//	
-	
-	
-	
-	
-//	/** @return random title from file 
-//	 * @throws IOException */
-//	public static String randomTitle2() {
-//		Random rand = new Random();
-//		String returnValue = "null";
-//		RandomAccessFile raf;
-//		try {
-//			raf = new RandomAccessFile(System.getProperty("user.dir") + "/src/test/java/faa/utils/titles.txt",
-//					"r");
-//			long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			if (randomLocation == 0){
-//				randomLocation = randomLocation + 1;
-//				System.out.println("New Random Location Line Number -->"+ randomLocation); 
-//			}
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return returnValue.toUpperCase();
-//	}
+
 	
 	/** @return random title from file 
 	 * @throws IOException */
@@ -757,32 +621,7 @@ public class DataGenerator {
 		  return returnValue;
 	}
 	
-//	/** @return random firm name or Organization from file 
-//	 * @throws IOException */
-//	public static String randomOrganizationName() {
-//		Random rand = new Random();
-//		String returnValue = "null";
-//		RandomAccessFile raf;
-//		try {
-//			raf = new RandomAccessFile(System.getProperty("user.dir") + "/src/test/java/faa/utils/organizations.txt",
-//					"r");
-//			long randomLocation = (long) rand.nextInt((((int) (raf.length()) - 20) - 0) + 1) + 0;
-//			if (randomLocation == 0){
-//				randomLocation = randomLocation + 1;
-//				System.out.println("New Random Location Line Number -->"+ randomLocation); 
-//			}
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return returnValue.toUpperCase();
-//	}
-//	
+
 	public static String randomCompanyName() {
 		String returnValue = "null";
 		  try {
@@ -905,40 +744,7 @@ public class DataGenerator {
 		return address;
 	}
 	
-//	//Original
-//	/**
-//	 * @return random City State Zip combination. Array format: String[] =
-//	 *         {"city", "state", "zip"}
-//	 * @throws IOException
-//	 */
-//	public static String[] randomAddress() {
-//		Random rand = new Random();
-//		String returnValue = "";
-//
-//		RandomAccessFile raf;
-//		try {
-//			raf = new RandomAccessFile(System.getProperty("user.dir")
-//					+ "/src/test/java/faa/utils/addressListus.txt", "r");
-//			final long randomLocation = (long) rand.nextInt((((int) (raf
-//					.length()) - 20) - 0) + 1) + 0;
-//			raf.seek(randomLocation);
-//			raf.readLine();
-//			returnValue = raf.readLine().trim();
-//			raf.close();
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//		String[] randonAddressUs = returnValue.split(",");
-//		return randonAddressUs;
-//	}
-//
-//	
-//	
+
 	/**
 	 * @return random Country, Address1, Address2, City, State, Zipcode combination. Array format: String[] =
 	 *         {"Country", "Address1", "Address2", "city", "state", "zip"}
@@ -1112,9 +918,9 @@ public class DataGenerator {
 		        //since the indexes are represented from 0 to length - 1
 		        int max = linesInFile.size() - 1;
 		        int min = 0;
-		        System.out.println("Random max-->" + max);
-		        System.out.println("Random min-->" + min);
-		        System.out.println("Random linesInFile.size()-->" + linesInFile.size());
+		        System.out.println("Role Type Code Random max-->" + max);
+		        System.out.println("Role Type Code Random min-->" + min);
+		        System.out.println("Role Type Code Random linesInFile.size()-->" + linesInFile.size());
 
 		        //You can simplify this formula later, I'm just putting the whole thing
 		        int randomIndexForWord = randomUtil.nextInt((max - min + 1)) + min;
@@ -1291,6 +1097,75 @@ public class DataGenerator {
 		databaseConnection.closeConnection();
 		return result;
 	}
+
+	
+	
+	//##Add Users ## Query
+	public static String getActiveAccountToAddUserFromIntegrationDB() {
+		DatabaseConnection databaseConnection = new DatabaseConnection("integration");
+		databaseConnection.executeStatement("select ci.email_address from party_enrollment pe " +
+	"inner join party_enrollment_account pea on pe.party_enroll_acct_id = pea.party_enroll_acct_id " +
+	"inner join contact_info ci on ci.contact_info_id = pe.contact_info_id " +
+	"inner join person_info pi on pi.person_info_id = pea.person_info_id " +
+	"inner join organization_info oi on oi.party_enroll_id = pe.party_enroll_id " +
+	"inner join organization_address oa on oa.org_info_id = oi.org_info_id " +
+	"inner join address a on a.address_id = oa.address_id " +
+	"where pe.changed_by_username like 'my%faadrone%' " +
+	"and pe.party_enroll_type_cd in  ('ORGANIZATION')  " +
+	"and pe.party_enroll_status_cd = 'ACTIVE' order by pi.changed_on_dttm asc " );
+		ArrayList<String> firstRow = new ArrayList<String>();
+		firstRow = databaseConnection.getNextRowArray();
+		String result = firstRow.get(0);
+		System.out.println("Logging in as Active Account to Add User to Integration Database --> " + result);
+		databaseConnection.closeConnection();
+		return result;
+	}
+
+	//##Add Users ## Query
+	public static String getActiveAccountToAddUserFromTestDB() {
+		DatabaseConnection databaseConnection = new DatabaseConnection("Test");
+		databaseConnection.executeStatement("select ci.email_address from party_enrollment pe " +
+	"inner join party_enrollment_account pea on pe.party_enroll_acct_id = pea.party_enroll_acct_id " +
+	"inner join contact_info ci on ci.contact_info_id = pe.contact_info_id " +
+	"inner join person_info pi on pi.person_info_id = pea.person_info_id " +
+	"inner join organization_info oi on oi.party_enroll_id = pe.party_enroll_id " +
+	"inner join organization_address oa on oa.org_info_id = oi.org_info_id " +
+	"inner join address a on a.address_id = oa.address_id " +
+	"where pe.changed_by_username like 'my%faadrone%' " +
+	"and pe.party_enroll_type_cd in  ('ORGANIZATION')  " +
+	"and pe.party_enroll_status_cd = 'ACTIVE' order by pi.changed_on_dttm asc " );
+		ArrayList<String> firstRow = new ArrayList<String>();
+		firstRow = databaseConnection.getNextRowArray();
+		String result = firstRow.get(0);
+		System.out.println("Logging in as Active Account to Add User to Test Database --> " + result);
+		databaseConnection.closeConnection();
+		return result;
+	}
+
+	
+	//##Add Users ## Query
+	public static String getActiveAccountToAddUserFromStageDB() {
+		DatabaseConnection databaseConnection = new DatabaseConnection("Stage");
+		databaseConnection.executeStatement("select ci.email_address from party_enrollment pe " +
+	"inner join party_enrollment_account pea on pe.party_enroll_acct_id = pea.party_enroll_acct_id " +
+	"inner join contact_info ci on ci.contact_info_id = pe.contact_info_id " +
+	"inner join person_info pi on pi.person_info_id = pea.person_info_id " +
+	"inner join organization_info oi on oi.party_enroll_id = pe.party_enroll_id " +
+	"inner join organization_address oa on oa.org_info_id = oi.org_info_id " +
+	"inner join address a on a.address_id = oa.address_id " +
+	"where pe.changed_by_username like 'my%faadrone%' " +
+	"and pe.party_enroll_type_cd in  ('ORGANIZATION')  " +
+	"and pe.party_enroll_status_cd = 'ACTIVE' order by pi.changed_on_dttm asc " );
+		ArrayList<String> firstRow = new ArrayList<String>();
+		firstRow = databaseConnection.getNextRowArray();
+		String result = firstRow.get(0);
+		System.out.println("Logging in as Active Account to Add User to Stage Database --> " + result);
+		databaseConnection.closeConnection();
+		return result;
+	}
+
+	
+	
 	
 	public static String getActiveUserWithExpiredInvitesFromIntegrationDB() {
 		DatabaseConnection databaseConnection = new DatabaseConnection("integration");
@@ -1318,16 +1193,25 @@ public class DataGenerator {
 		//System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
 		DatabaseConnection databaseConnection = new DatabaseConnection("integration");
 		System.out.println("databaseConnection " + databaseConnection );
-		databaseConnection.executeStatement("select pea.username from party_enrollment pe " +
-		"inner join party_enrollment_account pea on pe.party_enroll_acct_id = pea.party_enroll_acct_id " +
-		"inner join contact_info ci on ci.contact_info_id = pe.contact_info_id " +
-		"inner join person_info pi on pi.person_info_id = pea.person_info_id " +
-		"inner join person_address pa on pa.person_info_id = pea.person_info_id " + 
-		"inner join address a on a.address_id = pa.address_id " +
-		"where pe.changed_by_username like 'my%faadrone%' " +
-		"and pe.party_enroll_type_cd in  ('ORGANIZATION') " +
-		"and pe.party_enroll_status_cd = 'ACTIVE' " +
-		"order by pi.changed_on_dttm asc limit 1 ");
+		databaseConnection.executeStatement("select pea.username from party_enrollment pe " + 
+		"join contact_info ci using (contact_info_id) " +
+		"join party_enrollment_account pea using (party_enroll_acct_id) " +
+		"join person_info pi using (person_info_id) " +
+		"join organization_info oi using (party_enroll_id) " +
+		"join organization_address oa using (org_info_id) " +
+		"where pea.changed_by_username like 'my%faadrone%' " +
+		"order by pea.changed_on_dttm asc limit 1 ");
+//	
+//		databaseConnection.executeStatement("select pea.username from party_enrollment pe " +
+//		"inner join party_enrollment_account pea on pe.party_enroll_acct_id = pea.party_enroll_acct_id " +
+//		"inner join contact_info ci on ci.contact_info_id = pe.contact_info_id " +
+//		"inner join person_info pi on pi.person_info_id = pea.person_info_id " +
+//		"inner join person_address pa on pa.person_info_id = pea.person_info_id " + 
+//		"inner join address a on a.address_id = pa.address_id " +
+//		"where pe.changed_by_username like 'my%faadrone%' " +
+//		"and pe.party_enroll_type_cd in  ('ORGANIZATION') " +
+//		"and pe.party_enroll_status_cd = 'ACTIVE' " +
+//		"order by pi.changed_on_dttm asc limit 1 ");
 		ArrayList<String> firstRow = new ArrayList<String>();
 		firstRow = databaseConnection.getNextRowArray();
 		String result = firstRow.get(0);
@@ -1340,13 +1224,20 @@ public class DataGenerator {
 		DatabaseConnection databaseConnection = new DatabaseConnection("integration");
 		System.out.println("databaseConnection " + databaseConnection );
 		System.out.println("###For Change Primary Password TEST --->Active Non Hobbyist User for automated tests####");
-		databaseConnection.executeStatement("select pea.username from party_enrollment pe"
-				+ "join party_enrollment_account pea using (party_enroll_acct_id)"
-				+ "join person_info pi using (person_info_id)"
-				+ "where pe.party_enroll_status_cd = 'ACTIVE' "
-				+ "and pe.changed_by_username like 'my%faadrone%' "
-				+ "and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION')"
-				+ "order by pea.changed_on_dttm asc limit 1");
+		databaseConnection.executeStatement("select pea.username from party_enrollment pe " +
+		"join party_enrollment_account pea using (party_enroll_acct_id) " +
+		"join person_info pi using (person_info_id) " +
+		"where pe.changed_by_username like 'my%faadrone%' " + 
+		"and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION') " +
+		"and pe.party_enroll_status_cd = 'ACTIVE' " +
+		"order by pea.changed_on_dttm asc limit 1 ");
+//		databaseConnection.executeStatement("select pea.username from party_enrollment pe"
+//				+ "join party_enrollment_account pea using (party_enroll_acct_id)"
+//				+ "join person_info pi using (person_info_id)"
+//				+ "where pe.party_enroll_status_cd = 'ACTIVE' "
+//				+ "and pe.changed_by_username like 'my%faadrone%' "
+//				+ "and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION')"
+//				+ "order by pea.changed_on_dttm asc limit 1");
 		ArrayList<String> firstRow = new ArrayList<String>();
 		firstRow = databaseConnection.getNextRowArray();
 		String result = firstRow.get(0);
@@ -1359,13 +1250,13 @@ public class DataGenerator {
 		//System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
 		DatabaseConnection databaseConnection = new DatabaseConnection("test");
 		System.out.println("databaseConnection " + databaseConnection );
-		databaseConnection.executeStatement("select pea.username from party_enrollment pe"
-				+ "join party_enrollment_account pea using (party_enroll_acct_id)"
-				+ "join person_info pi using (person_info_id)"
-				+ "where pe.party_enroll_status_cd = 'ACTIVE' "
-				+ "and pe.changed_by_username like 'my%faadrone%' "
-				+ "and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION')"
-				+ "order by pea.changed_on_dttm asc limit 1");
+		databaseConnection.executeStatement("select pea.username from party_enrollment pe " +
+		"join party_enrollment_account pea using (party_enroll_acct_id) " +
+		"join person_info pi using (person_info_id) " +
+		"where pe.changed_by_username like 'my%faadrone%' " + 
+		"and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION') " +
+		"and pe.party_enroll_status_cd = 'ACTIVE' " +
+		"order by pea.changed_on_dttm asc limit 1 ");
 		ArrayList<String> firstRow = new ArrayList<String>();
 		firstRow = databaseConnection.getNextRowArray();
 		String result = firstRow.get(0);
@@ -1378,13 +1269,13 @@ public class DataGenerator {
 		//System.out.println("app.base.host is " + serenityProperties.getProperty("app.base.host"));
 			DatabaseConnection databaseConnection = new DatabaseConnection("stage");
 			System.out.println("databaseConnection " + databaseConnection );
-			databaseConnection.executeStatement("select pea.username from party_enrollment pe"
-					+ "join party_enrollment_account pea using (party_enroll_acct_id)"
-					+ "join person_info pi using (person_info_id)"
-					+ "where pe.party_enroll_status_cd = 'ACTIVE' "
-					+ "and pe.changed_by_username like 'my%faadrone%' "
-					+ "and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION')"
-					+ "order by pea.changed_on_dttm asc limit 1");
+			databaseConnection.executeStatement("select pea.username from party_enrollment pe " +
+					"join party_enrollment_account pea using (party_enroll_acct_id) " +
+					"join person_info pi using (person_info_id) " +
+					"where pe.changed_by_username like 'my%faadrone%' " + 
+					"and pe.party_enroll_type_cd in ('INDIVIDUAL','ORGANIZATION') " +
+					"and pe.party_enroll_status_cd = 'ACTIVE' " +
+					"order by pea.changed_on_dttm asc limit 1 ");
 			ArrayList<String> firstRow = new ArrayList<String>();
 			firstRow = databaseConnection.getNextRowArray();
 			String result = firstRow.get(0);

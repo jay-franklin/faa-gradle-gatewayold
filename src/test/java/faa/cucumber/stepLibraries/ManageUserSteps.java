@@ -53,6 +53,12 @@ public class ManageUserSteps extends ScenarioSteps {
 	
 	
 	@Step
+	public void verifyProfileUpdatedSuccessMessage(){
+		editUserPage.verifyProfileUpdatedSuccessMessage();
+	}
+
+	
+	@Step
 	public void clickOnEditProfileButton(){
 		faaHomePage.clickOnEditProfileButton();
 	}

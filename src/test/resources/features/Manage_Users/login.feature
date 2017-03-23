@@ -9,7 +9,8 @@ This feature file logs in as an Admin to access the Manage Access Tool Page
 Scenario: Gateway App Validate the Login Access Tool -- 12 Steps
 
 Given i have accessed the welcome page
+When click on the Non-Model Aircraft Tab
 When i click on the Login button
 Then i click on the I Agree button
-Then log in with random gateway hobbyist account
+Then log in with random gateway non hobbyist account
 Then i click the logout button    

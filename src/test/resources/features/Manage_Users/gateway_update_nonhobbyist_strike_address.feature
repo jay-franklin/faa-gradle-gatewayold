@@ -1,11 +1,11 @@
 #Author: jay.franklin@csra.com
-@all_faa @add_one_non_hobbyist_uas @gateway_update_nonhobbyist_strike_address @gateway_update_nonhobbyist_address.feature
+@all_faa @gateway_group @gateway_update_nonhobbyist_strike_address @gateway_update_nonhobbyist_address.feature
 Feature: Update non hobbyist strike addess 
   User Stories 
   [ UAS-689 ][ UAS-326 ][ UAS-203 ][ UAS-781 ]
 This feature file opens the web browser and logs in as an existing non hobbyist user
 updates the profile with Strike Address validation
-Scenario Outline: Update Non Hobbyist profile strike address validation -- 69 Steps
+Scenario Outline: Update Non Hobbyist profile strike address validation -- 345 Steps
 Given access the welcome page <number>
 When i click on the Login button
 Then i click on the I Agree button
@@ -24,6 +24,7 @@ Then i click the logout button
 Examples:
 | number |
 | one |
-#| two |
-#| three |
-
+| two |
+| three |
+| four |
+| five |

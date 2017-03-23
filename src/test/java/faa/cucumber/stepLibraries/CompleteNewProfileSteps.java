@@ -4,7 +4,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.ui.Select;
 import cucumber.api.java.en.Then;
 import faa.cucumber.pages.AddNewUasPage;
 import faa.cucumber.pages.AddressValidationPage;
@@ -12,6 +12,8 @@ import faa.cucumber.pages.BillingInformationPage;
 import faa.cucumber.pages.CreateNewProfilePage;
 import faa.cucumber.pages.FaaHomePage;
 import faa.cucumber.pages.RandomValuesPage;
+import faa.models.Appointment;
+import faa.models.InviteUser;
 //import faa.cucumber.pages.NewAccountPage;
 import faa.utils.DataGenerator;
 import faa.utils.LogToFile;
@@ -108,6 +110,33 @@ public class CompleteNewProfileSteps {
 	public void typeIntoInvitedNewUserProfile(){
 		faaHomePage.typeIntoInvitedNewUserProfile();
 	}
+	
+	//Populate with InviteUser Model 
+	@Step
+	public void typeIntoPopulateInviteNewUserProfile(){
+		faaHomePage.typeIntoPopulateInviteNewUserProfile();
+
+	}
+	
+	@Step
+	public void fillOutNewInviteUserFormWithModel(InviteUser inviteUserModel) {
+		faaHomePage.typeIntoModelFirstName(inviteUserModel.getInviteFirstName());
+		faaHomePage.typeIntoModelLastName(inviteUserModel.getInviteLastName());
+		faaHomePage.typeIntoModelEmail(inviteUserModel.getInviteEmailAddress());
+		//-----------Works ------
+//		faaHomePage.selectFromRoleTypeCodeWorks();
+//		faaHomePage.selectARoleTypeCodeRandomly();  
+//		faaHomePage.selectFromRoleTypeCode();
+//		faaHomePage.selectModelARoleTypeCodeRandomly(inviteUserModel.getInviteRoleTypeCode());
+		//selectModelRandomRoleTypeCode
+//		faaHomePage.selectModelRandomRoleTypeCode();
+		faaHomePage.selectFromRoleTypeCodeWorks();
+		System.out.println("selectModelARoleTypeCodeRandomly... " + inviteUserModel.getInviteRoleTypeCode());
+		faaHomePage.clickOnSubmitInviteUserButton();
+	}
+
+
+	
 	
 	@Step
 	public void typeIntoInvitedExistingUserProfile(){
@@ -240,7 +269,7 @@ public class CompleteNewProfileSteps {
 	@Step
 	public void typeIntoCreateProfilePhoneExt(){
 		createNewProfilePage.typeIntoCreateProfilePhoneExt();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 //		System.out.println("Profile Phone Number Extension is: " + createNewProfilePage.getCreateProfilePhoneExt());
 
 		
@@ -253,7 +282,7 @@ public class CompleteNewProfileSteps {
 	@Step
 	public void typeIntoCreateProfileDba(){
 		createNewProfilePage.typeIntoCreateProfileDba();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 
 	@Step
@@ -270,7 +299,7 @@ public class CompleteNewProfileSteps {
 		System.out.println("On Verify new Country1 is--->" + newCountry1 + "***");
 		createNewProfilePage.selectProfilePhysicalCountryDropDown(newCountry1);
 		System.out.println("Physical Country Name is: " + newCountry1); 
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 	}
 	@Step
 	public void typeIntoCreateProfilePhysicalAddress1(){
@@ -294,7 +323,7 @@ public class CompleteNewProfileSteps {
 		String newCity = Serenity.sessionVariableCalled("city1").toString();
 		System.out.println("On Verify new City is--->  " + newCity);
 		createNewProfilePage.typeIntoCreateProfilePhysicalCity(newCity);
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 	}
 	@Step
 	public void selectProfilePhysicalStateDropList(){
@@ -314,7 +343,7 @@ public class CompleteNewProfileSteps {
 				createNewProfilePage.typeIntoCreateProfilePhysicalStateNameField(newState.trim());
 				System.out.println("Physical Country is not United States, so here is the Country TEXT value: " + profileAddress[0]);
 			}
-		}	////Serenity.takeScreenshot(); 
+		}	//Serenity.takeScreenshot(); 
 	}
 	@Step
 	public void typeIntoCreateProfileZipCode(){
@@ -331,7 +360,7 @@ public class CompleteNewProfileSteps {
 		//createNewProfilePage.typeIntoCreateProfilePhysicalZip(newZip);	
 		System.out.println("Physical Zip is N/A and POSTAL CODE NOT APPLICABLE Checkbox is checked");
 		}
-	}	////Serenity.takeScreenshot(); 
+	}	//Serenity.takeScreenshot(); 
 }
 	
 	@Step
@@ -359,7 +388,7 @@ public class CompleteNewProfileSteps {
 		//Serenity.setSessionVariable("United States").to(country);
 		createNewProfilePage.selectProfileMailingCountryDropDown(newMailingCountry);
 		System.out.println("Mailing Country Name is: " + newMailingCountry);
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 
 	}
 	@Step
@@ -385,7 +414,7 @@ public class CompleteNewProfileSteps {
 		System.out.println("On Verify new mailing City is--->  " + newMailingCity);
 		createNewProfilePage.typeIntoCreateProfileMailingCity(newMailingCity);
 		System.out.println("Mailing City is: " + newMailingCity);
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 	}
 	
 //	@Step
@@ -395,7 +424,7 @@ public class CompleteNewProfileSteps {
 //		System.out.println("On Verify new mailing State is--->  " + newMailingState);
 //		if (mailingAddress[0].equals("United States")||mailingAddress[0].equals("Virgin Islands, U.S." ) || mailingAddress[0].equals("Guam") || mailingAddress[0].equals("Puerto Rico") ){
 //			createNewProfilePage.selectFromMailingStateNameDropdownList(newMailingState);
-//			//////Serenity.takeScreenshot(); 
+//			////Serenity.takeScreenshot(); 
 //			System.out.println("Selected new mailing State is--->  " + newMailingState);
 //		} else {
 //			if (newMailingState == null ||newMailingState.equals(null)||newMailingState.equals(""))
@@ -403,7 +432,7 @@ public class CompleteNewProfileSteps {
 //				System.out.println("The New Mailing State value is NULL ---> " + newMailingState  + "*****So Do NOT Add a State Value for this address!*****");
 //			} else { 
 //				createNewProfilePage.typeIntoMailingStateNameField(newMailingState.trim());
-//				////Serenity.takeScreenshot(); 
+//				//Serenity.takeScreenshot(); 
 //				System.out.println("Mailing Country is not United States, so here is the new State TEXT value:***" + mailingAddress[0] + "***");
 //				System.out.println("Check to see what Mailing Country is TEXT value:***" + newMailingState + "***");
 //				}
@@ -418,7 +447,7 @@ public class CompleteNewProfileSteps {
 //		if (mailingAddress[0].equals("United States")||mailingAddress[0].equals("Virgin Islands, U.S." ) || mailingAddress[0].equals("Guam") || mailingAddress[0].equals("Puerto Rico") ){
 		if (mailingAddress[0].equals("United States")){
 		createNewProfilePage.selectFromMailingStateNameDropdownList(newMailingState);
-			////Serenity.takeScreenshot(); 
+			//Serenity.takeScreenshot(); 
 		System.out.println("Selected new mailing State is--->  " + newMailingState);
 		} else {
 			if (newMailingState == null ||newMailingState.equals(null)||newMailingState.equals(""))
@@ -426,7 +455,7 @@ public class CompleteNewProfileSteps {
 				System.out.println("The New Mailing State value is NULL ---> " + newMailingState  + "*****So Do NOT Add a State Value for this address!*****");
 			} else { 
 				createNewProfilePage.typeIntoMailingStateNameField(newMailingState.trim());
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Mailing Country is not United States, so here is the new State TEXT value:***" + mailingAddress[0] + "***");
 				System.out.println("Check to see what Mailing Country is TEXT value:***" + newMailingState + "***");
 				}
@@ -441,7 +470,7 @@ public class CompleteNewProfileSteps {
 ////		if (mailingAddress[0].equals("United States")||mailingAddress[0].equals("Virgin Islands, U.S." ) || mailingAddress[0].equals("Guam") || mailingAddress[0].equals("Puerto Rico") ){
 //		System.out.println("Mailing Country is:-->" + mailingAddress[0] + " Physical Zip is:-->" + mailingAddress[5]);
 //		createNewProfilePage.typeIntoCreateProfileMailingZip(newMailingZip);
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //	}
 //}
 
@@ -454,13 +483,13 @@ public class CompleteNewProfileSteps {
         System.out.println("Mailing New Zip is " + newMailingZip);
 		if (mailingAddress[0].equals("United States")||mailingAddress[0].equals("Virgin Islands, U.S." ) || mailingAddress[0].equals("Guam") || mailingAddress[0].equals("Puerto Rico") ){
 		createNewProfilePage.typeIntoCreateProfileMailingZip(newMailingZip);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		} else {
 		if (mailingAddress[5].equals("N/A")){
 		createNewProfilePage.checkThatMailingZipPostalNotApplicableCheckboxIsChecked();
 		//createNewProfilePage.typeIntoCreateProfilePhysicalZip(newZip);	
 		System.out.println("Mailing Zip is N/A and POSTAL CODE NOT APPLICABLE Checkbox is checked");
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 
 		}
 	}	
@@ -682,30 +711,35 @@ public class CompleteNewProfileSteps {
 		
 	}
 	
+	@Step
+	public void clickOnSaveEditButton(){
+		createNewProfilePage.clickOnSaveEditButton();
+	}
+	
 
 	//validatePhysicalAndMailingAddress
 	@Step
 	public void validatePhysicalAndMailingAddress(){
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		addressValidationPage.validatePhysicalAndMailingAddress();
-		//Serenity.takeScreenshot();
+		Serenity.takeScreenshot();
 		System.out.println("End of Smarty Street Physical and Mailing Address validation Test!!");
 	}
 
 	
 	@Step
 	public void validatePhysicalAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validatePhysicalAddress();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Physical Address validation Test!!");
 	}
 	
 	@Step
 	public void validateMailingAddress(){
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		addressValidationPage.validateMailingAddress();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("End of Smarty Street Mailing Address validation Test!!");
 	}
 	
@@ -734,13 +768,13 @@ public class CompleteNewProfileSteps {
 		billingInformationPage.typeIntoBillingCity();
 		billingInformationPage.selectBillingState();
 		billingInformationPage.typeIntoBillingZip();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		billingInformationPage.clickOnBillingNextButton();
 		billingInformationPage.clickOnReviewAcknowledgmentButton();
 		billingInformationPage.clickOnReviewPayButton();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		//billingInformationPage.clickOnViewInventoryButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("Payment process has completed successfully!!");
 		billingInformationPage.clickOnDoneButton();
 	}
@@ -763,13 +797,13 @@ public class CompleteNewProfileSteps {
 		billingInformationPage.typeIntoBillingCity();
 		billingInformationPage.selectBillingState();
 		billingInformationPage.typeIntoBillingZip();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		billingInformationPage.clickOnBillingNextButton();
 		billingInformationPage.clickOnReviewAcknowledgmentButton();
 		billingInformationPage.clickOnReviewPayButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		//billingInformationPage.clickOnViewInventoryButton();
-		////Serenity.takeScreenshot(); 
+		//Serenity.takeScreenshot(); 
 		System.out.println("Payment process has completed successfully!!");
 		billingInformationPage.clickOnDoneButton();
 		
@@ -787,7 +821,7 @@ public class CompleteNewProfileSteps {
 	public void selectInvitedUsersDropList(String invitedUser){
 		System.out.println("Manage User page Filter by --->" + invitedUser  + "*****");
 		faaHomePage.selectInvitedUsersDropList(invitedUser);  
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 	}
 	
 	

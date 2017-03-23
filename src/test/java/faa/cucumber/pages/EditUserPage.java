@@ -5,6 +5,7 @@ package faa.cucumber.pages;
 
 //import static org.assertj.core.api.StrictAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import java.util.Iterator;
 import java.util.List;
@@ -37,62 +38,51 @@ public class EditUserPage extends BasePageObject {
 	@FindBy(id = "middleInitial") public WebElementFacade middleInitialField;
 	@FindBy(id = "formLastName") public WebElementFacade formLastNameField;
 	@FindBy(id = "nameSuffix") public WebElementFacade nameSuffixField;
-
 	/** After Updating the profile page, this success message is displayed at the top of the page **/
 	@FindBy(xpath="//p[@class='text-center' and contains(text(), 'Your profile has been successfully updated.')]") private WebElementFacade messageUpdateProfileSuccess;
 	@FindBy(id = "searchBtn") public WebElementFacade searchButton;
-
-	
 	
 	// Change Primary Email address
 	@FindBy(id = "orgChangePrimaryEmailBtnRegistered") public WebElementFacade changeNonHobbyistPrimaryEmail;
 
-	@FindBy(id = "newPrimaryEmail") public WebElementFacade changeNewEmail;
-	@FindBy(id = "confirmNewPrimaryEmail") public WebElementFacade changeConfirmNewEmail;
-	@FindBy(id = "newConfirmEmailPassword") public WebElementFacade changePassword;
-	@FindBy(id = "isConfirmEmail") public WebElementFacade changeCheckboxToConfirm;
-	@FindBy(id = "submitPrimaryEmailChange") public WebElementFacade changeSubmitButton;
-	@FindBy(id = "verificationCode") public WebElementFacade changeVerificationCode;
-	@FindBy(id = "submitVerificationCode") public WebElementFacade changeSubmitVerificationCode;
+	@FindBy(id = "newEmail") public WebElementFacade changeNewEmail;
+	@FindBy(id = "confirmEmail") public WebElementFacade changeConfirmNewEmail;
+	@FindBy(id = "password") public WebElementFacade changePassword;
+	@FindBy(id = "confirmEmailChange") public WebElementFacade changeCheckboxToConfirm;
+
 	
+	//@FindBy(id = "save") public WebElementFacade changeSubmitButton;
+	@FindBy(xpath="//button[@id='savePrimaryEmail' and contains(text(), 'Save')] ") private WebElementFacade changeSubmitButton;
+	//@FindBy(id = "verificationCode") public WebElementFacade changeVerificationCode;
+	@FindBy(xpath="//input[@id='verficationCode']") private WebElementFacade changeVerificationCode;
+
+	
+	//@FindBy(id = "submitVerificationCode") public WebElementFacade changeSubmitVerificationCode;
+	@FindBy(xpath="//a[@id='submitVerificationCode']") private WebElementFacade changeSubmitVerificationCode;
 	
 	@FindBy(xpath="//a[@id='editGeneralAccountInformation']") private WebElementFacade editGeneralAccountInformation;
 	@FindBy(xpath="//a[@id='editPrimaryEmail']") private WebElementFacade editPrimaryEmail;
 	@FindBy(xpath="//a[@id='editPersonalInformation']") private WebElementFacade editPersonalInformation;
 	@FindBy(xpath="//a[@id='editOrganizationInformation']") private WebElementFacade editOrganizationInformation;
 
-//	@FindBy(id = "phone") private WebElementFacade editProfilePhone;
-//	@FindBy(id = "phoneExt") private WebElementFacade editProfilePhoneExt;
-//	@FindBy(id = "physicalAddress_country") private WebElementFacade editProfilePhysicalCountry;
-//	@FindBy(id = "physicalAddress_addressLine1") private WebElementFacade editProfilePhysicalAddress1;
-//	@FindBy(id = "physicalAddress_addressLine2") private WebElementFacade editProfilePhysicalAddress2;
-//	@FindBy(id = "physicalAddress_city") private WebElementFacade editProfilePhysicalCity;
-//	@FindBy(id = "physicalAddress_stateProvinceRegion") private WebElementFacade editProfilePhysicalState;
-//	@FindBy(id = "physicalAddress_zipPostal") private WebElementFacade editProfilePhysicalZip;
-//
-//	
-//	@FindBy(id = "mailingSameAsPhysical") private WebElementFacade editProfileaddressIsSame;
-//	@FindBy(id = "mailingAddress_country") private WebElementFacade editProfileMailingCountry;
-//	@FindBy(id = "mailingAddress_addressLine1") private WebElementFacade editProfileMailingAddress1;
-//	@FindBy(id = "mailingAddress_addressLine2") private WebElementFacade editProfileMailingAddress2;
-//	@FindBy(id = "mailingAddress_city") private WebElementFacade editProfileMailingCity;
-//	@FindBy(id = "mailingAddress_stateProvinceRegion") private WebElementFacade editProfileMailingState;
-//	@FindBy(id = "mailingAddress_zipPostal") private WebElementFacade editProfileMailingZip;
-//
-//	
-	
-	
 	/* Verification code in the email for changing primary email address */
 	@FindBy(xpath="/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div[4]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[7]/div/div[1]/p[1]") public WebElementFacade changePrimaryEmailVerificationCode;		
 	
 	@FindBy(id = "myModalLabel") public WebElementFacade enterVerificationCodeModal;
 	
 	/**Done button to be clicked to complete the payment process...  button[@class='btn btn-primary center-block' and contains(text(), 'Done')] **/
-	@FindBy(xpath="//div[@class='text-center ng-binding' and contains(text(), 'Your Primary Email has successfully been changed')]") private WebElementFacade messagePrimaryEmailChangeSuccess;
+	@FindBy(xpath="//p[@class='text-center' and contains(text(), 'Your primary email has been successfully updated')]") private WebElementFacade messagePrimaryEmailChangeSuccess;
 
 	
 	public void clickOnEditGeneralAccountInformation() {
+		Serenity.takeScreenshot();
 		editGeneralAccountInformation.click();
+	}
+	
+	public void verifyProfileUpdatedSuccessMessage() {
+		waitABit(1000);
+		assertThat(messageUpdateProfileSuccess.isCurrentlyVisible()).isTrue();
+		
 	}
 
 	public void editNonHobbyistAccountDetails() {
@@ -100,6 +90,7 @@ public class EditUserPage extends BasePageObject {
 		middleInitialField.typeAndEnter(DataGenerator.randomAlphabetic(1));
 		formLastNameField.typeAndEnter(DataGenerator.randomLastName());
 		nameSuffixField.typeAndEnter(DataGenerator.randomSuffixName());
+		Serenity.takeScreenshot();
 		clickSaveButton();
 		if(messageUpdateProfileSuccess.isCurrentlyVisible()) {
 			System.out.println("Profile has been updated successfully");
@@ -111,100 +102,61 @@ public class EditUserPage extends BasePageObject {
 	
 	//clickOnEditPrimaryEmailAddressButton
 	public void clickOnEditPrimaryEmailAddressButton() {
-		if(editPrimaryEmail.isCurrentlyVisible()) {
-			System.out.println("Edit Primary Email Address link is visible");
+		for(int i = 0 ; i < 20;i++){ //attempt to click the element 5 times
+			waitABit(2000);
+			System.out.println("Loop Count to wait for Primary Email Address link to be displayed... " + i);
+			if (editPrimaryEmail.isCurrentlyVisible()){
+			i=19;
 			editPrimaryEmail.click();
-		} else {
-			System.out.println("Error occured. Personal Information is not available for this Profile");
+			System.out.println("Primary Email Address link has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("could not click element.. Trying again in 5 seconds");
+			waitABit(2000);//wait 3 seconds before trying to click again
 			}
 		}
-	
-
+	}	
 	
 	public void clickOnEditNonHobbyistPersonalInformation() {
-		if(editPersonalInformation.isCurrentlyVisible()) {
-			System.out.println("Edit Personal Information is visible");
+		for(int i = 0 ; i < 20;i++){ //attempt to click the element 5 times
+			waitABit(2000);
+			System.out.println("Loop Count to wait for Edit Personal Information link to be displayed... " + i);
+			if (editPersonalInformation.isCurrentlyVisible()){
+			i=19;
+			Serenity.takeScreenshot();
 			editPersonalInformation.click();
-		} else {
-			System.out.println("Error occured. Personal Information is not available for this Profile");
+			System.out.println("Edit Personal Information link has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("could not click element.. Trying again in 5 seconds");
+			waitABit(2000);//wait 3 seconds before trying to click again
 			}
 		}
+	}	
+		
+		
 
 	public void clickOnEditNonHobbyistOrganizationInformation() {
-		if(editOrganizationInformation.isCurrentlyVisible()) {
-			System.out.println("Edit Organization Information is visible");
+		for(int i = 0 ; i < 20;i++){ //attempt to click the element 5 times
+			waitABit(2000);
+			System.out.println("Loop Count to wait for Edit Organization Information link to be displayed... " + i);
+			if (editOrganizationInformation.isCurrentlyVisible()){
+			Serenity.takeScreenshot();
+			i=19;
 			editOrganizationInformation.click();
-		} else {
-			System.out.println("Error occured. Organization Information is not available for this Profile");
+			System.out.println("Edit Organization Information link has been clicked. ");
+			}
+			else 
+			{
+			System.out.println("could not click element.. Trying again in 5 seconds");
+			waitABit(2000);//wait 3 seconds before trying to click again
 			}
 		}
-	
-	
-	
-//	public void editNonHobbyistPersonalInformation() {
-//		editProfilePhone.typeAndEnter(DataGenerator.randomNumber(10));
-//		
-//editProfileAlternateEmail
-//editProfilePhysicalCountry
-//editProfilePhysicalAddress1
-//editProfilePhysicalAddress2
-//editProfilePhysicalCity
-//editProfilePhysicalState
-//editProfilePhysicalZip
-//
-//editProfileaddressIsSame
-//editProfileMailingCountry
-//editProfileMailingAddress1
-//editProfileMailingAddress2
-//editProfileMailingCity
-//editProfileMailingState
-//editProfileMailingZip
-		
-//		createNewProfilePage.typeIntoCreateProfilePhone();
-//		createNewProfilePage.typeIntoCreateProfilePhoneExt();
-//		createNewProfilePage.selectProfilePhysicalCountryDropDown(country1);
-//		createNewProfilePage.typeIntoCreateProfilePhysicalAddress1(newAddress1);
-//		createNewProfilePage.typeIntoCreateProfilePhysicalAddress2(newAddress2);
-//		createNewProfilePage.typeIntoCreateProfilePhysicalCity(newCity);
-//		createNewProfilePage.selectFromPhysicalStateNameDropdownList(newState);
-//		createNewProfilePage.typeIntoCreateProfilePhysicalZip(newZip);
-//		createNewProfilePage.
-//		createNewProfilePage.
-		
-//		createProfilePhysicalCountry
-//		createProfilePhysicalAddress1
-//		createProfilePhysicalAddress2
-//		createProfilePhysicalCity
-//		createProfilePhysicalState
-//		createProfilePhysicalZip
-//
-//		createProfileaddressIsSame
-//		createProfileMailingCountry
-//		createProfileMailingAddress1
-//		createProfileMailingAddress2
-//		createProfileMailingCity
-//		createProfileMailingState
-//		createProfileMailingZip
-		
-//		firstNameField.typeAndEnter(DataGenerator.randomFirstName());
-//		middleInitialField.typeAndEnter(DataGenerator.randomAlphabetic(1));
-//		formLastNameField.typeAndEnter(DataGenerator.randomLastName());
-//		nameSuffixField.typeAndEnter(DataGenerator.randomSuffixName());
-//		clickSaveButton();
-//		if(messageUpdateProfileSuccess.isCurrentlyVisible()) {
-//			System.out.println("Profile has been updated successfully");
-//		} else {
-//			System.out.println("Error occured. Profile has NOT been updated");
-//			}
-//}
-//	
-//	
-	
-	
-//	editPrimaryEmail
-//	editPersonalInformation
-//	editOrganizationInformation	
-	
+	}	
+
+
 	
 	
 	public WebElementFacade elementLocatedByCss(String cssLocator) {
@@ -282,7 +234,8 @@ public class EditUserPage extends BasePageObject {
 		//Retrieve Session Variable
 		String varPrimaryEmailChangeVerificationCode = Serenity.sessionVariableCalled("primaryEmailChangeVerificationCode").toString();
 		System.out.println("Type Into Verification Code Field->Primary Email Change Verification Code-->" + varPrimaryEmailChangeVerificationCode );
-		changeVerificationCode.clear();
+		//changeVerificationCode.clear();
+        Serenity.takeScreenshot();
 		changeVerificationCode.type(varPrimaryEmailChangeVerificationCode);
 	}
 	
@@ -306,6 +259,7 @@ public class EditUserPage extends BasePageObject {
 		changeConfirmNewEmail.type(varNewEmail);
 		changePassword.type("Dummy$11");
 		changeCheckboxToConfirm.click();
+        Serenity.takeScreenshot();
 		changeSubmitButton.click();
 		
 		gmailLoginPage.clickToOpenNewBrowserTab();
@@ -334,27 +288,22 @@ public class EditUserPage extends BasePageObject {
         getDriver().switchTo().window(windowHandleBefore);  
         System.out.println("Title 7-->" + getTitle());
         typeIntoVerificationCodeField();
-        //Serenity.takeScreenshot();
-        verificationCodeSubmit();
-        //Serenity.takeScreenshot();
-        //assertThat(messagePrimaryEmailChangeSuccess.getText().contains("Your Primary Email has successfully been changed."));
-        assertThat(messagePrimaryEmailChangeSuccess.getText()).contains("Your Primary Email has successfully been changed.").overridingErrorMessage("ERROR: Primary Email Address was not successfully completed");
-//		assertThat(successfullyChangedPasswordMessage.getText()).containsIgnoringCase("You have successfully changed your password. You may now login.")
-//		.overridingErrorMessage("ERROR: User change password message was not displayed");
-
-        
-        //Assert.assertTrue(messagePrimaryEmailChangeSuccess.getText().contains("Your Primary Email has successfully been changed."), "ERROR: Primary Email Address was not successfully completed");
-//      assertThat(messagePrimaryEmailChangeSuccess.getText().contains("Your Primary Email has successfully been changed."), "ERROR: Primary Email Address was not successfully completed");
-//        assertThat("Your Primary Email has successfully been changed.", messagePrimaryEmailChangeSuccess.getText().contains("Your Primary Email has successfully been changed."));  // ,"ERROR: Primary Email Address was not successfully completed");
-        //        String messageEmailChange = messagePrimaryEmailChangeSuccess.getValue();
-//		assertThat(messageEmailChange).containsIgnoringCase(string);
-        
-        
+        //changeSubmitButton.click();
+        Serenity.takeScreenshot();
+        changeSubmitButton.click();
+        Serenity.takeScreenshot();
+        assertThat(messagePrimaryEmailChangeSuccess.getText()).contains("Your primary email has been successfully updated to " + varNewEmail).overridingErrorMessage("ERROR: Primary Email Address was not successfully completed");
+        waitABit(2000);
+        if (messagePrimaryEmailChangeSuccess.isCurrentlyVisible()){
+        	 System.out.println("Your primary email has been successfully updated!!!! ");
+        } else {
+        	 System.out.println("Your primary email has NOT been updated!!!! ");
+        }
 	}   
         
 	
-	public void verificationCodeSubmit(){
-		changeSubmitVerificationCode.click();
-	}
+//	public void verificationCodeSubmit(){
+//		changeSubmitButton.click();
+//	}
 	
 }

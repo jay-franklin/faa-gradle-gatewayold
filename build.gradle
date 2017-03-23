@@ -45,40 +45,23 @@ dependencies {
 // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
 compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.1.23'
 
-// https://mvnrepository.com/artifact/com.google.guava/guava
-compile group: 'com.google.guava', name: 'guava', version: '21.0'
-
 
 	testCompile 'junit:junit:4.12'
-// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.24'
-//	testCompile 'org.slf4j:slf4j-simple:1.7.12'
-// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.24'
-//testCompile 'org.slf4j:slf4j-api:1.7.12
-// https://mvnrepository.com/artifact/org.assertj/assertj-core
-compile group: 'org.assertj', name: 'assertj-core', version: '3.6.2'
-//testCompile 'org.assertj:assertj-core:3.1.0'
-
+	testCompile 'org.slf4j:slf4j-simple:1.7.12'
+	testCompile 'org.slf4j:slf4j-api:1.7.12'
+	testCompile 'org.assertj:assertj-core:3.1.0'
 	testCompile 'org.hamcrest:hamcrest-all:1.3'
 	testCompile 'com.jayway.restassured:json-path:2.7.0'
 	testCompile 'com.jayway.restassured:xml-path:2.7.0'
 	testCompile 'com.jayway.restassured:json-schema-validator:2.7.0'
 	//testCompile 'com.jayway.restassured:spring-mock-mvc:2.5.0'
 	//testCompile 'com.oracle:ojdbc6:11.2.0.3.0'
-// https://mvnrepository.com/artifact/org.springframework/spring-core
-////compile group: 'org.springframework', name: 'spring-core', version: '5.0.0.M5'
-//	testCompile 'org.springframework:spring-core:4.2.5.RELEASE'
-
+	testCompile 'org.springframework:spring-core:4.2.5.RELEASE'
 	testCompile 'com.thoughtworks.paranamer:paranamer:2.6'
 	testCompile 'commons-lang:commons-lang:2.6'
 	testCompile 'org.codehaus.plexus:plexus-utils:3.0.22'
-	
-//https://mvnrepository.com/artifact/org.jsoup/jsoup
-compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
-//testCompile 'org.jsoup:jsoup:1.8.3'
-	
-	
+	testCompile 'org.jsoup:jsoup:1.8.3'
+	//testCompile 'io.appium:java-client:2.1.0'
 	//testCompile 'com.google.inject:guice:3.0'
 	testCompile 'org.freemarker:freemarker:2.3.21'
 	testCompile 'org.asciidoctor:asciidoctor-java-integration:0.1.3'
@@ -88,36 +71,33 @@ compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
 	testCompile 'com.typesafe:config:1.3.0'
 	testCompile 'com.thoughtworks.xstream:xstream:1.4.8'
 	//testCompile 'com.opera:operadriver:1.5'
-	//testCompile 'com.codeborne:phantomjsdriver:1.2.1'
-	
-// https://mvnrepository.com/artifact/org.fluentlenium/fluentlenium-core
-compile group: 'org.fluentlenium', name: 'fluentlenium-core', version: '3.1.1'
-//testCompile 'org.fluentlenium:fluentlenium-core:0.10.2'
 
-// https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
-compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.2.0'
-//testCompile 'com.jayway.jsonpath:json-path:2.0.0'
-	
-	
-// https://mvnrepository.com/artifact/joda-time/joda-time
-compile group: 'joda-time', name: 'joda-time', version: '2.9.7'
-//testCompile 'joda-time:joda-time:2.9.2'
-	
-	
-	
+	//testCompile 'com.codeborne:phantomjsdriver:1.2.1'
+
+// 09Mar2017 Not yet.  Not working
+// https://mvnrepository.com/artifact/org.webjars.npm/phantomjs
+///compile group: 'org.webjars.npm', name: 'phantomjs', version: '2.1.7'
+
+	testCompile 'org.fluentlenium:fluentlenium-core:0.10.2'
+	testCompile 'com.jayway.jsonpath:json-path:2.0.0'
+/////////	testCompile 'com.github.groovy-wslite:groovy-wslite:1.1.2'
+	testCompile 'joda-time:joda-time:2.9.2'
 	//testCompile 'org.apache.httpcomponents:httpclient:4.5.1'
 	testCompile 'com.jayway.jsonpath:json-path:2.0.0'
 	testCompile 'org.glassfish:javax.json:1.0.4'
-	testCompile 'org.apache.poi:poi:3.9'
-	testCompile 'org.apache.poi:poi-ooxml:3.14'
+
+// 06Mar2017   https://mvnrepository.com/artifact/org.apache.poi/poi
+compile group: 'org.apache.poi', name: 'poi', version: '3.15'
+//testCompile 'org.apache.poi:poi:3.9'
+
+// 06Mar2017  https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+//	testCompile 'org.apache.poi:poi-ooxml:3.14'
+	
+	
 	compile 'com.google.api-client:google-api-client:1.22.0'
     compile 'com.google.oauth-client:google-oauth-client-jetty:1.22.0'
-
-// https://mvnrepository.com/artifact/com.google.apis/google-api-services-gmail
-compile group: 'com.google.apis', name: 'google-api-services-gmail', version: 'v1-rev62-1.22.0'
-//compile 'com.google.apis:google-api-services-gmail:v1-rev48-1.22.0'
-    
-
+    compile 'com.google.apis:google-api-services-gmail:v1-rev48-1.22.0'
 // https://mvnrepository.com/artifact/au.com.bytecode/opencsv
 /////compile group: 'au.com.bytecode', name: 'opencsv', version: '2.4'
 // https://mvnrepository.com/artifact/com.opencsv/opencsv
@@ -127,54 +107,52 @@ compile group: 'com.opencsv', name: 'opencsv', version: '3.9'
 
 //Android 
 // https://mvnrepository.com/artifact/io.appium/java-client
-/////compile group: 'io.appium', name: 'java-client', version: '4.1.2'
-// https://mvnrepository.com/artifact/io.appium/java-client
-//////compile group: 'io.appium', name: 'java-client', version: '5.0.0-BETA3'
-// https://mvnrepository.com/artifact/io.appium/java-client
-compile group: 'io.appium', name: 'java-client', version: '4.0.0'
+compile group: 'io.appium', name: 'java-client', version: '4.1.2'
+
 
     
 // Drivers
+// 08Mar2017  **Version 3.1.0, 3.2.0, 3.3.0, 3.3.1 causes Error**
 // http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
-compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.2.0'
+compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.0.1'
+
 
 // http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver
-compile group: 'org.seleniumhq.selenium', name: 'selenium-ie-driver', version: '3.2.0'
+compile group: 'org.seleniumhq.selenium', name: 'selenium-ie-driver', version: '3.0.1'
 // http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver
-/////compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.2.0'
+compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.0.1'
 
 /////New HtmlUnit Driver///
 // https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
-compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.25'
-
-// https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver
-compile group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.25'
+compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.24'
 
 
 //// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver
 ///compile group: 'org.seleniumhq.selenium', name: 'selenium-htmlunit-driver', version: '2.52.0'
 // http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver
-///////////compile group: 'org.seleniumhq.selenium', name: 'selenium-edge-driver', version: '3.2.0'
+compile group: 'org.seleniumhq.selenium', name: 'selenium-edge-driver', version: '3.0.1'
 
 // https://mvnrepository.com/artifact/com.github.temyers/cucumber-jvm-parallel-plugin
-compile group: 'com.github.temyers', name: 'cucumber-jvm-parallel-plugin', version: '2.2.0'
+compile group: 'com.github.temyers', name: 'cucumber-jvm-parallel-plugin', version: '2.1.0'
 
 
 // https://mvnrepository.com/artifact/mysql/mysql-connector-java
 compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.5'
 
+// 06Mar2017   
 // https://mvnrepository.com/artifact/info.cukes/cucumber-junit
-//compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.4'
+compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
+
+// 06Mar2017   
 // https://mvnrepository.com/artifact/info.cukes/cucumber-java
 compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+
+// 06Mar2017   
 // https://mvnrepository.com/artifact/info.cukes/cucumber-core
 compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
 
-//// https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting
-///compile group: 'net.masterthought', name: 'cucumber-reporting', version: '3.5.1'
-
-
 compile 'net.serenity-bdd:serenity-screenplay:1.1.42'
+
 // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
 compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '2.19.1'
 

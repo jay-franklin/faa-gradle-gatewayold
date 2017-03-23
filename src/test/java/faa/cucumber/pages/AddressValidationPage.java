@@ -62,7 +62,6 @@ public class AddressValidationPage extends BasePageObject  {
 //	@FindBy(xpath="//button[@class='btn btn-primary' and contains(text(), 'Cancel')]") private WebElementFacade cancelButton;
 	/** Cancel Button on Address Validation Screen  //button[@class='btn btn-primary' and contains(text(), 'Cancel')] New Gateway **/
 	@FindBy(xpath="//button[@id='cancelValidation' and contains(text(), 'Cancel')]") private WebElementFacade cancelButton;
-
 	
 	/** Cancel Button on Confirm Your Address Screen  //button[@class='btn btn-primary' and contains(text(), 'Cancel')] **/
 	@FindBy(xpath="//button[@class='btn' and contains(text(), 'Cancel')]") private WebElementFacade cancelConfirmAddressButton;
@@ -72,8 +71,6 @@ public class AddressValidationPage extends BasePageObject  {
 	@FindBy(xpath="//button[@id='saveEditButton' and contains(text(), 'Save')]") private WebElementFacade saveButton;
 	
 	
-	
-
 	/** Your profile has been successfully updated.  Confirm Your Profile Updated Successfully  //p[contains(text(), 'Your profile has been successfully updated.')] **/
 	@FindBy(xpath="//p[contains(text(), 'Your profile has been successfully updated.')]") private WebElementFacade confirmProfileSuccessfullyUpdated;
 	
@@ -165,8 +162,6 @@ public class AddressValidationPage extends BasePageObject  {
 		profileTab.click();
 		System.out.println("Profile Tab has been clicked");
 	}
-
-	
 	
 	
 	//originalPhysicalAddress
@@ -248,23 +243,23 @@ public class AddressValidationPage extends BasePageObject  {
 		if (proceedToDashboardButton.isCurrentlyVisible()){
 		System.out.println("Click the Proceed to Dashboard Button");
 		createNewProfilePage.clickOnProceedToDashboardButton();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		} else if (saveButton.isCurrentlyVisible()){
 			System.out.println("Click the Save Button");
 			saveButton.click();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else if (proceedToCheckoutButton.isCurrentlyVisible()){
 			System.out.println("Click the Proceed to Checkout Button");
 			createNewProfilePage.clickOnProceedToCheckoutButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else if(nextButton.isCurrentlyVisible()) {
 			System.out.println("Click the Next Button");
 			createNewProfilePage.clickOnNextButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else if(editProfileButton.isCurrentlyVisible()) {
 			System.out.println("Addresses have been saved.  Test is complete.");
 			//createNewProfilePage.clickOnEditProfileButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 	}
 	
@@ -273,11 +268,11 @@ public class AddressValidationPage extends BasePageObject  {
 		if (saveButton.isCurrentlyVisible()){
 			System.out.println("Click the Save Button");
 			saveButton.click();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else if (nextButton.isCurrentlyVisible()){
 			System.out.println("Click the Next Button");
 			nextButton.click();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}
 	}
 	
@@ -286,14 +281,14 @@ public class AddressValidationPage extends BasePageObject  {
 		waitABit(3000);
 //		if(profileTab.isCurrentlyVisible()) {
 //			System.out.println("Profile Tab must be clicked to update the address.");
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //			profileTab.click();
 //		}		
 //		if (confirmYourAddress.isCurrentlyVisible() | confirmYourPhysicalAddress.isCurrentlyVisible() | confirmYourMailingAddress.isCurrentlyVisible()){
 		//if (editProfileButton.isCurrentlyVisible() | addUasButton.isCurrentlyVisible()){
 		if(hobbyistNextButton.isCurrentlyVisible() | editProfileButton.isCurrentlyVisible()| addUasButton.isCurrentlyVisible()) {
 			System.out.println("Addresses have been saved.  No additional Validation is required. Test is complete.");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		} else { 
 		if (unableToConfirmCloseMatchTo1PhysicalAddress.isCurrentlyVisible() & unableToConfirmCloseMatchTo1MailingAddress.isCurrentlyVisible()){
 			System.out.println("1 XXXXXXXXXunableToConfirmCloseMatchToPhysicalAddressXXXXXXXXXX");
@@ -305,13 +300,12 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("***If Number 1***");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			waitABit(1000);
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			System.out.println("***If Number 1 Complete***");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			waitABit(3000);
 		} 
-		
 		if (unableToConfirmCloseMatchTo2PhysicalAddress.isCurrentlyVisible() & unableToConfirmCloseMatchTo1MailingAddress.isCurrentlyVisible()){
 			System.out.println("1 XXXXXXXXXunableToConfirmCloseMatchToPhysicalAddressXXXXXXXXXX");
 			System.out.println("...UI Scenario 1 Physical Address and Mailing Address...");
@@ -322,10 +316,10 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("***If Number 2***");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			waitABit(1000);
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			System.out.println("***If Number 2 Complete***");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			waitABit(3000);
 		} else if ( unableToConfirmCloseMatchTo1PhysicalAddress.isCurrentlyVisible() & unableToConfirmCloseMatchTo2MailingAddress.isCurrentlyVisible()){
 			System.out.println("***If Number 3 ***");
@@ -335,12 +329,12 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
 			System.out.println("***If Number 3 Complete***");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			if(editProfileButton.isCurrentlyVisible()) {
 				System.out.println("Addresses have been saved.  Test is complete.");
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 			}
 		}	else if (unableToConfirmCloseMatchTo2PhysicalAddress.isCurrentlyVisible() & unableToConfirmCloseMatchTo2MailingAddress.isCurrentlyVisible()){
 				System.out.println("2 or more XXXXXXXXXunableToConfirmCloseMatchToPhysicalAddressXXXXXXXXXX");
@@ -352,13 +346,13 @@ public class AddressValidationPage extends BasePageObject  {
 				System.out.println("***If Number 4***");
 				clickOnSmartyStreetMailingAddressRadioButton();
 				waitABit(1000);
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				clickOnSubmitSelectionButton();
 				System.out.println("***If Number 4 Complete***");
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				waitABit(3000);
 		} else if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()){
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("...UI Scenario 2 Physical Address and Mailing Address..");
 			System.out.println("***If Number 5***");
 			waitABit(2000);
@@ -366,13 +360,13 @@ public class AddressValidationPage extends BasePageObject  {
 			//clickOnProfileTab();
 			System.out.println("***If Number 5 Complete now must update Physical and Mailing Address***");
 			updatePhysicalAndMailingAddress();	
-			//Serenity.takeScreenshot(); 			
+			Serenity.takeScreenshot(); 			
 
 		} else if (unableToConfirmCloseMatchTo1PhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()){
 			System.out.println("...UI Scenario 4 Physical Address and Mailing Address..");
 			System.out.println("***If Number 6***");
 			clickOnSmartyStreetPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			System.out.println("***If Number 6 Complete now update the Mailing Address***");
 			waitABit(3000);
@@ -384,7 +378,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("...UI Scenario 4 Physical Address and UI Scenario 5 Mailing Address..");
 			System.out.println("***If Number 7***");
 			clickOnSmartyStreetPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnOriginalMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
 			waitABit(3000);
@@ -395,7 +389,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("2...UI Scenario 4 Physical Address and Mailing Address..");
 			System.out.println("***If Number 8***");
 			clickOnSmartyStreetPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			waitABit(3000);
 			System.out.println("2 Accept the SS Physical Address and Update the Mailing Address");
@@ -406,7 +400,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("2...UI Scenario 4 Physical Address and UI Scenario 5 Mailing Address..");
 			System.out.println("***If Number 9***");
 			clickOnSmartyStreetPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
 			waitABit(3000);
@@ -416,10 +410,10 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("...UI Scenario 2 Physical Address and UI Scenario 1 and 4 for Mailing Address..");
 			System.out.println("***If Number 10***");
 			clickOnSmartyStreetMailingAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Update the Physical Address and Accept the SS Mailing Address");
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAddress();
 		}	else if (unableToValidatePhysicalAddressNoPo.isCurrentlyVisible() & unableToConfirmCloseMatchTo1MailingAddress.isCurrentlyVisible()){
 			System.out.println("...UI Scenario 3 Physical Address NO PO Boxes and UI Scenario 1 and 4 for Mailing Address...");
@@ -428,7 +422,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("The Mailing Address was found. Click Submit Button to Accept the Mailing Address and to Update the Physical Address");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			updatePhysicalAddress();
@@ -436,10 +430,10 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("2...UI Scenario 2 Physical Address and UI Scenario 1 and 4 for Mailing Address..");
 			System.out.println("***If Number 12***");
 			clickOnSmartyStreetMailingAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Update the Physical Address and Accept the SS Mailing Address");
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAddress();
 		}	else if (unableToValidatePhysicalAddressNoPo.isCurrentlyVisible() & unableToConfirmCloseMatchTo2MailingAddress.isCurrentlyVisible()){
 			System.out.println("2...UI Scenario 3 Physical Address NO PO Boxes and UI Scenario 1 and 4 for Mailing Address...");
@@ -448,7 +442,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("The Mailing Address was found. Click Submit Button to Accept the Mailing Address and to Update the Physical Address");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			updatePhysicalAddress();
@@ -463,7 +457,7 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnConfirmMailingAddressCheckbox();
 //			clickOnOriginalPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			clickOnSubmitSelectionButton();
@@ -478,7 +472,7 @@ public class AddressValidationPage extends BasePageObject  {
 //			clickOnSmartyStreetMailingAddressRadioButton();
 //			clickOnConfirmMailingAddressCheckbox();
 //			clickOnOriginalPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			clickOnSubmitSelectionButton();
@@ -491,7 +485,7 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnConfirmMailingAddressCheckbox();
 //			clickOnOriginalPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update mailing address!!!!!!!");
 			waitABit(3000);
 			clickOnSubmitSelectionButton();
@@ -510,16 +504,16 @@ public class AddressValidationPage extends BasePageObject  {
 			if (cancelConfirmAddressButton.isCurrentlyVisible()){
 				clickOnCancelConfirmAddressButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Confirmation Button is clicked");
 			} 
 			if (cancelButton.isCurrentlyVisible()){
 				clickOnCancelButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Button is clicked");
 			}
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAndMailingAddress();
 		} 
 		//Physical Address -- 1 Match Found
@@ -528,7 +522,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("XXXXXXXXXunableToConfirmCloseMatchToPhysicalAddressXXXXXXXXXX");
 			clickOnSmartyStreetPhysicalAddressRadioButton();
 			waitABit(1000);
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			System.out.println("Smarty Street clicks the Physical Addresses Radio Button");
 		} 
@@ -539,7 +533,7 @@ public class AddressValidationPage extends BasePageObject  {
 //			System.out.println("XXXXXXXXXunableToConfirmCloseMatchTo2PhysicalAddressXXXXXXXXXX");
 //			clickOnSmartyStreetPhysicalAddressRadioButton();
 //			waitABit(1000);
-//			//Serenity.takeScreenshot(); 
+//			Serenity.takeScreenshot(); 
 //			clickOnSubmitSelectionButton();
 //			System.out.println("Smarty Street clicks the Physical Addresses Radio Button for 2 or more potential physical address matches");
 //		}  
@@ -557,7 +551,7 @@ public class AddressValidationPage extends BasePageObject  {
 			}
 			System.out.println("3 SECOND DELAY!!!!!!!");
 			waitABit(3000);
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAddress();
 		}   else if (unableToValidatePhysicalAddressNoPo.isCurrentlyVisible() & keepEnteredMailingAddress.isCurrentlyVisible() ){
 			System.out.println("***If Number 20***");
@@ -565,7 +559,7 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnSmartyStreetMailingAddressRadioButton();
 			System.out.println("3 SECOND DELAY!!!!!!!");
 			waitABit(3000);
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			updatePhysicalAddress();
 		}	else if (keepEnteredPhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()) {
@@ -574,7 +568,7 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("Physical Address cannot be validated, but will keep Physical address. Mailing address to be updated");
 			//clickOnSmartyStreetPhysicalAddressRadioButton();
 			clickOnOriginalPhysicalAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			updateStrikeMailingAddress();
 			//updateMailingAddress();
@@ -584,16 +578,16 @@ public class AddressValidationPage extends BasePageObject  {
 			if (cancelConfirmAddressButton.isCurrentlyVisible()){
 				clickOnCancelConfirmAddressButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Confirmation Button is clicked");
 			} 
 			if (cancelButton.isCurrentlyVisible()){
 				clickOnCancelButton();
 				//clickOnProfileTab();
-				////Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Button is clicked");
 			}
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAddress();
 		}	else if ((unableToConfirmMailingAddress.isCurrentlyVisible() & cancelConfirmAddressButton.isCurrentlyVisible())||(unableToConfirmMailingAddress.isCurrentlyVisible() & cancelButton.isCurrentlyVisible())){
 			System.out.println("***If Number 23***");
@@ -601,23 +595,23 @@ public class AddressValidationPage extends BasePageObject  {
 			if (cancelConfirmAddressButton.isCurrentlyVisible()){
 				clickOnCancelConfirmAddressButton();
 				//clickOnProfileTab();
-				////Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Confirmation Button is clicked");
 			} 
 			if (cancelButton.isCurrentlyVisible()){
 				clickOnCancelButton();
 				//clickOnProfileTab();
-				////Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Button is clicked");
 			}
 
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updateMailingAddress();
 		} 	else if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & keepEnteredMailingAddress.isCurrentlyVisible()){
 			System.out.println("***If Number 24***");
 			System.out.println("Physical Address cannot be validated. Keep entered mailing addres and update physicl address again");
 			clickOnOriginalMailingAddressRadioButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			clickOnSubmitSelectionButton();
 			updatePhysicalAddress();
 		}	else if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & cancelButton.isCurrentlyVisible()){
@@ -626,17 +620,17 @@ public class AddressValidationPage extends BasePageObject  {
 			if (cancelConfirmAddressButton.isCurrentlyVisible()){
 				clickOnCancelConfirmAddressButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Confirmation Button is clicked");
 			} 
 			if (cancelButton.isCurrentlyVisible()){
 				clickOnCancelButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Button is clicked");
 			}
 
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updatePhysicalAddress();
 		}	else if (unableToConfirmMailingAddress.isCurrentlyVisible() & cancelButton.isCurrentlyVisible()){
 			System.out.println("***If Number 26***");
@@ -644,30 +638,33 @@ public class AddressValidationPage extends BasePageObject  {
 			if (cancelConfirmAddressButton.isCurrentlyVisible()){
 				clickOnCancelConfirmAddressButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Confirmation Button is clicked");
 			} 
 			if (cancelButton.isCurrentlyVisible()){
 				clickOnCancelButton();
 				//clickOnProfileTab();
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				System.out.println("Cancel Button is clicked");
 			}
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			updateMailingAddress();
 		}	else if (keepEnteredPhysicalAddress.isCurrentlyVisible() & keepEnteredMailingAddress.isCurrentlyVisible()) {
 			System.out.println("...UI Scenario 5 Physical Address and Mailing Address..");
 			System.out.println("***If Number 27***");
 			System.out.println("Physical and Mailing Address cannot be validated.  Click Submit Selection Button to keep both addresses you entered");
-			clickOnSmartyStreetPhysicalAddressRadioButton();
-			clickOnConfirmPhysicalAddressCheckbox();
-			clickOnSmartyStreetMailingAddressRadioButton();
-			clickOnConfirmMailingAddressCheckbox();
+			clickOnOriginalPhysicalAddressRadioButton();
+			clickOnOriginalMailingAddressRadioButton();
+
+//			clickOnSmartyStreetPhysicalAddressRadioButton();
+//			clickOnConfirmPhysicalAddressCheckbox();
+//			clickOnSmartyStreetMailingAddressRadioButton();
+//			clickOnConfirmMailingAddressCheckbox();
 			clickOnSubmitSelectionButton();
 //			clickOnOriginalPhysicalAddressRadioButton();
 //			clickOnOriginalMailingAddressRadioButton();
 //			clickOnSubmitSelectionButton();
-//			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 //			
 //clickOnSmartyStreetPhysicalAddressRadioButton();
 //clickOnConfirmPhysicalAddressCheckbox();
@@ -687,7 +684,7 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
 			System.out.println("***If Number 28 is complete and will keep the Physical Address***");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Originally entered Physical address will be saved");
 		}	else if (keepEnteredPhysicalAddress.isCurrentlyVisible() & unableToConfirmCloseMatchTo2MailingAddress.isCurrentlyVisible()  ) {
 			System.out.println("***If Number 29***");
@@ -695,14 +692,14 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnOriginalPhysicalAddressRadioButton();
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Originally entered Physical address will be saved");
 		}	else if (keepEnteredMailingAddress.isCurrentlyVisible() & originalMailingAddress.isCurrentlyVisible()) {
 			System.out.println("***If Number 30***");
 			System.out.println("Mailing Address cannot be validated.  Click Submit Selection Button to keep the mailing address you entered");
 			clickOnOriginalMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Originally entered mailing address will be saved");
 		}	else if (keepEnteredPhysicalAddress.isCurrentlyVisible()) {
 			System.out.println("***If Number 31***");
@@ -710,7 +707,7 @@ public class AddressValidationPage extends BasePageObject  {
 			clickOnOriginalPhysicalAddressRadioButton();
 			clickOnSubmitSelectionButton();
 			System.out.println("Originally entered Physical address will be saved");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		}   else if (unableToConfirmCloseMatchTo1MailingAddress.isCurrentlyVisible() & smartyStreetMailingAddress.isCurrentlyVisible()){
 			System.out.println("***If Number 32***");
 			System.out.println("Physical Address is valid");
@@ -718,17 +715,17 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("The Mailing Address was found. Click Submit Button to Accept the Mailing Address");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 //			if(editProfileButton.isCurrentlyVisible()) {
 //				System.out.println("Addresses have been saved.  Test is complete.");
-//				//Serenity.takeScreenshot(); 
+//				Serenity.takeScreenshot(); 
 //			}
 //			else if (editProfileButton.isCurrentlyVisible()){
 //			System.out.println("***If Number 32***");
 //			System.out.println("Smarty Street Addresses have been Validated and Excepted.  No further updates are required");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 		
 		
 	
@@ -739,12 +736,12 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("2 The Mailing Address was found. Click Submit Button to Accept the Mailing Address");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			if(editProfileButton.isCurrentlyVisible()) {
 				System.out.println("Addresses have been saved.  Test is complete.");
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 			}
 
 			
@@ -752,13 +749,13 @@ public class AddressValidationPage extends BasePageObject  {
 			else if (editProfileButton.isCurrentlyVisible()){
 			System.out.println("***If Number 34***");
 			System.out.println("Smarty Street Addresses have been Validated and Excepted.  No further updates are required");
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			} else if (keepEnteredPhysicalAddress.isCurrentlyVisible() & originalPhysicalAddress.isCurrentlyVisible()  ) {
 			System.out.println("***If Number 35");
 			System.out.println("Physical cannot be validated.  Click Submit Selection Button to keep the Physical address you entered");
 			clickOnOriginalPhysicalAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("Originally entered Physical address will be saved");
 		}
 	} 
@@ -769,12 +766,12 @@ public class AddressValidationPage extends BasePageObject  {
 			System.out.println("The Mailing Address was found. Click Submit Button to Accept the Mailing Address and to Update the Physical Address");
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnSubmitSelectionButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 			waitABit(3000);
 			if(editProfileButton.isCurrentlyVisible()) {
 				System.out.println("Addresses have been saved.  Test is complete.");
-				//Serenity.takeScreenshot(); 
+				Serenity.takeScreenshot(); 
 				}
 			
 			} 
@@ -782,6 +779,7 @@ public class AddressValidationPage extends BasePageObject  {
 		waitABit(5000);
 		System.out.println("Address Validation on Physical Address and Mailing Address is complete...");
 		//completeNewProfileSteps.clickOnProceedToDashboardButton();
+		Serenity.takeScreenshot();
 		createNewProfilePage.clickOnProceedToDashboardButton();
 		
 	}
@@ -792,59 +790,218 @@ public class AddressValidationPage extends BasePageObject  {
 	
 //	
 //	if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()){
-//		//Serenity.takeScreenshot(); 
+//		Serenity.takeScreenshot(); 
 //		System.out.println("...UI Scenario 2 Physical Address and Mailing Address..");
 //		System.out.println("***If Number 3***");
 //		waitABit(2000);
 //		clickOnCancelButton();
 //		//clickOnProfileTab();
 //		updatePhysicalAndMailingAddress();	
-//		//Serenity.takeScreenshot(); 		
+//		Serenity.takeScreenshot(); 		
 //	
 //	
 	
 	
-	
-	
-
 	public void validateAllStrikeAddreses(){
 		System.out.println("Validate All Strike Physical and Mailing Address Steps");
-		waitABit(3000);
+		waitABit(2000);
 		if (confirmProfileSuccessfullyUpdated.isCurrentlyVisible()){
 			System.out.println("Strike Physical Address and Mailing Address have already been updated.  No additional validation is required...");
-		} else if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()){
-			//Serenity.takeScreenshot(); 
+		} 
+		if (unableToConfirmPhysicalAddress.isCurrentlyVisible() & unableToConfirmMailingAddress.isCurrentlyVisible()){
+			Serenity.takeScreenshot(); 
 			System.out.println("...UI Scenario 2 Physical Address and Mailing Address.Strike Test.");
 			System.out.println("***If Number 38 Strike Test***");
-			waitABit(2000);
+			waitABit(1000);
 			////clickOnCancelConfirmAddressButton();
 			clickOnCancelButton();
-			waitABit(2000);
+			waitABit(1000);
 			clickOnNextOrSaveButton();
-			//Serenity.takeScreenshot(); 		
-			waitABit(2000);
+			Serenity.takeScreenshot(); 		
+			waitABit(1000);
 			//clickOnCancelConfirmAddressButton();
 			clickOnCancelButton();
-			waitABit(2000);
+			waitABit(1000);
 			clickOnNextOrSaveButton();
 			//clickOnCancelConfirmAddressButton();
-			//Serenity.takeScreenshot(); 
+			Serenity.takeScreenshot(); 
 //			validateAllAddreses();
 			
 			clickOnSmartyStreetPhysicalAddressRadioButton();  
 			clickOnConfirmPhysicalAddressCheckbox();
 			clickOnSmartyStreetMailingAddressRadioButton();
 			clickOnConfirmMailingAddressCheckbox();
-			waitABit(2000);
-			//Serenity.takeScreenshot(); 		
+			waitABit(1000);
+			Serenity.takeScreenshot(); 		
 			clickOnSubmitSelectionButton();
 			////AddressValidationThreeStrike();
 //			click selectedPhysicalAddr0
 //			check confirmPhysicalAddress
 //			click selectedMailingAddr0
 //			check confirmMailingAddress
-			//Serenity.takeScreenshot(); 		
-		}	
+			Serenity.takeScreenshot(); 		
+		} else if (unableToConfirmPhysicalAddress.isCurrentlyVisible()) {
+				//& unableToConfirmMailingAddress.isCurrentlyVisible()){
+			Serenity.takeScreenshot(); 
+			System.out.println("...UI Scenario 2 Physical Address and Mailing Address.Strike Test.");
+			System.out.println("***If Number 38 Strike Test***");
+			waitABit(1000);
+			////clickOnCancelConfirmAddressButton();
+			clickOnCancelButton();
+			waitABit(1000);
+			clickOnNextOrSaveButton();
+			Serenity.takeScreenshot(); 		
+			waitABit(1000);
+			//clickOnCancelConfirmAddressButton();
+			clickOnCancelButton();
+			waitABit(1000);
+			clickOnNextOrSaveButton();
+			//clickOnCancelConfirmAddressButton();
+			Serenity.takeScreenshot(); 
+
+			clickOnSmartyStreetPhysicalAddressRadioButton();  
+			clickOnConfirmPhysicalAddressCheckbox();
+//			clickOnSmartyStreetMailingAddressRadioButton();
+//			clickOnConfirmMailingAddressCheckbox();
+			waitABit(1000);
+			Serenity.takeScreenshot(); 		
+			clickOnSubmitSelectionButton();
+			////AddressValidationThreeStrike();
+//			click selectedPhysicalAddr0
+//			check confirmPhysicalAddress
+//			click selectedMailingAddr0
+//			check confirmMailingAddress
+			Serenity.takeScreenshot(); 		
+		}	else if (unableToConfirmMailingAddress.isCurrentlyVisible()){
+		Serenity.takeScreenshot(); 
+		System.out.println("...UI Scenario 2 Physical Address and Mailing Address.Strike Test.");
+		System.out.println("***If Number 38 Strike Test Update Mailing Address***");
+		waitABit(1000);
+		////clickOnCancelConfirmAddressButton();
+		clickOnCancelButton();
+		waitABit(1000);
+		clickOnNextOrSaveButton();
+		Serenity.takeScreenshot(); 		
+		waitABit(1000);
+		//clickOnCancelConfirmAddressButton();
+		clickOnCancelButton();
+		waitABit(1000);
+		clickOnNextOrSaveButton();
+		//clickOnCancelConfirmAddressButton();
+		Serenity.takeScreenshot(); 
+
+//	clickOnSmartyStreetPhysicalAddressRadioButton();  
+//		clickOnConfirmPhysicalAddressCheckbox();
+		clickOnSmartyStreetMailingAddressRadioButton();
+		clickOnConfirmMailingAddressCheckbox();
+		waitABit(1000);
+		Serenity.takeScreenshot(); 		
+		clickOnSubmitSelectionButton();
+		////AddressValidationThreeStrike();
+//		click selectedPhysicalAddr0
+//		check confirmPhysicalAddress
+//		click selectedMailingAddr0
+//		check confirmMailingAddress
+		Serenity.takeScreenshot(); 		
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		else if (strikePhysicalAddress.isCurrentlyVisible() & strikeMailingAddress.isCurrentlyVisible()){
+			System.out.println("***Strike Test Primary and Mailing Address***");
+			System.out.println("***If Number 14***");
+			System.out.println("Physical and Mailing address cannot be validated. Keep previously entered address or click the Checkbox to confirm the physical address is valid");
+			clickOnSmartyStreetPhysicalAddressRadioButton();
+			clickOnConfirmPhysicalAddressCheckbox();
+			clickOnSmartyStreetMailingAddressRadioButton();
+			clickOnConfirmMailingAddressCheckbox();
+//			clickOnOriginalPhysicalAddressRadioButton();
+			Serenity.takeScreenshot(); 
+			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
+			waitABit(3000);
+			clickOnSubmitSelectionButton();
+			System.out.println("Strike Address validation is complete, no need to update address anyfurther");
+//			updatePhysicalAddress();
+		} 	else if (strikePhysicalAddress.isCurrentlyVisible()){
+			System.out.println("...UI Scenario 6 Physical Address Only..Strike Test");
+			System.out.println("***If Number 15***");
+			System.out.println("Physical Address cannot be validated. Keep previously entered address or click the Checkbox to confirm the physical address is valid");
+			clickOnSmartyStreetPhysicalAddressRadioButton();
+			clickOnConfirmPhysicalAddressCheckbox();
+//			clickOnSmartyStreetMailingAddressRadioButton();
+//			clickOnConfirmMailingAddressCheckbox();
+//			clickOnOriginalPhysicalAddressRadioButton();
+			Serenity.takeScreenshot(); 
+			System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
+			waitABit(3000);
+			clickOnSubmitSelectionButton();
+			System.out.println("Address validation is complete, no need to update address anyfurther");
+//			updatePhysicalAddress();
+		} 	else if (strikeMailingAddress.isCurrentlyVisible()){
+			System.out.println("...UI Scenario 6 Mailing Address Only..Strike Test");
+			System.out.println("***If Number 16***");
+			System.out.println("Mailing Address cannot be validated. Keep previously entered address or click the Checkbox to confirm the physical address is valid");
+			clickOnSmartyStreetMailingAddressRadioButton();
+			clickOnConfirmMailingAddressCheckbox();
+//			clickOnOriginalPhysicalAddressRadioButton();
+			Serenity.takeScreenshot(); 
+			System.out.println("3 SECOND DELAY to then update mailing address!!!!!!!");
+			waitABit(3000);
+			clickOnSubmitSelectionButton();
+			System.out.println("Address validation is complete, no need to update address anyfurther");
+//			updatePhysicalAddress();
+		} 
+		
+		//////////////////
+//		if (unableToConfirmPhysicalAddress.isCurrentlyVisible()){
+//			// & unableToConfirmMailingAddress.isCurrentlyVisible()){
+//			Serenity.takeScreenshot(); 
+//			System.out.println("...UI Scenario 2 Physical Address and Mailing Address.Strike Test.");
+//			System.out.println("***If Number 38 Strike Test***");
+//			System.out.println("***Confirm Physical Address***");
+//			waitABit(1000);
+//			////clickOnCancelConfirmAddressButton();
+//			clickOnCancelButton();
+//			waitABit(1000);
+//
+//			
+//			
+//			clickOnNextOrSaveButton();
+//			Serenity.takeScreenshot(); 		
+//			waitABit(1000);
+//			//clickOnCancelConfirmAddressButton();
+//			clickOnCancelButton();
+//			waitABit(2000);
+//			clickOnNextOrSaveButton();
+//			//clickOnCancelConfirmAddressButton();
+//			Serenity.takeScreenshot(); 
+////			validateAllAddreses();
+//			
+//			clickOnSmartyStreetPhysicalAddressRadioButton();  
+//			clickOnConfirmPhysicalAddressCheckbox();
+//			clickOnSmartyStreetMailingAddressRadioButton();
+//			clickOnConfirmMailingAddressCheckbox();
+//			waitABit(2000);
+//			Serenity.takeScreenshot(); 		
+//			clickOnSubmitSelectionButton();
+//			////AddressValidationThreeStrike();
+////			click selectedPhysicalAddr0
+////			check confirmPhysicalAddress
+////			click selectedMailingAddr0
+////			check confirmMailingAddress
+//			Serenity.takeScreenshot(); 		
+//		}
+//		
+		
+		
 	}
 	
 	//unableToConfirmPhysicalAddress
@@ -962,7 +1119,7 @@ public class AddressValidationPage extends BasePageObject  {
 		System.out.println("On Verify new Physical Zip is--->  " + updatedProfilePhysicalZip);
 		createNewProfilePage.typeIntoCreateProfilePhysicalZip(updatedProfilePhysicalZip);
 		//createNewProfilePage.typeIntoCreateProfileMailingZip(updatedProfilePhysicalZip);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 
 		//**Update Mailing Address **//
 		//updatedMailingCountry
@@ -1006,7 +1163,7 @@ public class AddressValidationPage extends BasePageObject  {
 		String updatedProfileMailingZip = Serenity.sessionVariableCalled("varProfileMailingZip").toString();
 		System.out.println("On Verify new mailing Zip is--->  " + updatedProfileMailingZip);
 		createNewProfilePage.typeIntoCreateProfileMailingZip(updatedProfileMailingZip);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
 		validatePhysicalAndMailingAddress();
 		
@@ -1066,7 +1223,7 @@ public class AddressValidationPage extends BasePageObject  {
 		String updatedPhysicalZip = Serenity.sessionVariableCalled("varPhysicalZip").toString();
 		System.out.println("On Verify new Physical Zipcode is--->  " + updatedPhysicalZip);
 		createNewProfilePage.typeIntoCreateProfilePhysicalZip(updatedPhysicalZip);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		waitABit(1000);
 		System.out.println("Next Step is to click on the Proceed To Checkout button");
 		clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
@@ -1123,10 +1280,10 @@ public class AddressValidationPage extends BasePageObject  {
 		String updatedMailingZip = Serenity.sessionVariableCalled("varMailingZip").toString();
 		System.out.println("On Verify new mailing Zipcode is--->  " + updatedMailingZip);
 		createNewProfilePage.typeIntoCreateProfileMailingZip(updatedMailingZip);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
 		waitABit(1000);
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		validatePhysicalAndMailingAddress();
 		}
 //	}
@@ -1189,7 +1346,7 @@ Serenity.setSessionVariable("varProfilePhysicalZip").to(newStrikeProfilePhysical
 String updatedProfilePhysicalZip = Serenity.sessionVariableCalled("varProfilePhysicalZip").toString();
 System.out.println("On Verify new Physical Zip is--->  " + updatedProfilePhysicalZip);
 updateStrikeProfilePage.typeIntoCreateProfileMailingZip(updatedProfilePhysicalZip);
-//Serenity.takeScreenshot(); 
+Serenity.takeScreenshot(); 
 
 //**Update Mailing Address **//
 //updatedMailingCountry
@@ -1233,7 +1390,7 @@ Serenity.setSessionVariable("varProfileMailingZip").to(newStrikeProfileMailingAd
 String updatedProfileMailingZip = Serenity.sessionVariableCalled("varProfileMailingZip").toString();
 System.out.println("On Verify new mailing Zip is--->  " + updatedProfileMailingZip);
 updateStrikeProfilePage.typeIntoCreateProfileMailingZip(updatedProfileMailingZip);
-//Serenity.takeScreenshot(); 
+Serenity.takeScreenshot(); 
 clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
 validatePhysicalAndMailingAddress();
 
@@ -1293,7 +1450,7 @@ Serenity.setSessionVariable("varPhysicalZip").to(newStrikePhysicalAddress[5]);
 String updatedPhysicalZip = Serenity.sessionVariableCalled("varPhysicalZip").toString();
 System.out.println("On Verify new Physical Zipcode is--->  " + updatedPhysicalZip);
 updateStrikeProfilePage.typeIntoCreateProfilePhysicalZip(updatedPhysicalZip);
-//Serenity.takeScreenshot(); 
+Serenity.takeScreenshot(); 
 waitABit(1000);
 clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
 validatePhysicalAndMailingAddress();
@@ -1350,10 +1507,10 @@ Serenity.setSessionVariable("varMailingZip").to(newStrikeMailingAddress[5]);
 String updatedMailingZip = Serenity.sessionVariableCalled("varMailingZip").toString();
 System.out.println("On Verify new mailing Zipcode is--->  " + updatedMailingZip);
 updateStrikeProfilePage.typeIntoCreateProfileMailingZip(updatedMailingZip);
-//Serenity.takeScreenshot(); 
+Serenity.takeScreenshot(); 
 clickOnProceedToDashboardOrCheckoutOrNextOrSaveButton();
 waitABit(1000);
-//Serenity.takeScreenshot(); 
+Serenity.takeScreenshot(); 
 validatePhysicalAndMailingAddress();
 }
 //}
@@ -1370,9 +1527,10 @@ validatePhysicalAndMailingAddress();
 		clickOnSmartyStreetMailingAddressRadioButton();
 		clickOnConfirmMailingAddressCheckbox();
 //		clickOnOriginalPhysicalAddressRadioButton();
-		//Serenity.takeScreenshot(); 
+		Serenity.takeScreenshot(); 
 		System.out.println("3 SECOND DELAY to then update physical address!!!!!!!");
 		waitABit(3000);
+		Serenity.takeScreenshot();
 		clickOnSubmitSelectionButton();
 		System.out.println("Strike Address validation is complete, no need to update address anyfurther");
 //		updatePhysicalAddress();
